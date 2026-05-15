@@ -1,0 +1,863 @@
+{
+    "@meta": {
+        "version": "3.3.8",
+        "build": 1778815743
+    },
+    "settings": {
+        "types_only": "0",
+        "dynamic_features_allow": "1",
+        "dynamic_features_enabled": ["display", "form"]
+    },
+    "pods": [
+        {
+            "name": "vorleitner_auftrag",
+            "label": "Aufträge",
+            "description": "",
+            "type": "post_type",
+            "storage": "meta",
+            "label_singular": "Auftrag",
+            "public": "0",
+            "show_ui": "1",
+            "publicly_queryable": "0",
+            "show_in_menu": "1",
+            "menu_icon": "dashicons-clipboard",
+            "supports_title": "1",
+            "supports_editor": "0",
+            "supports_thumbnail": "0",
+            "supports_excerpt": "0",
+            "supports_revisions": "0",
+            "dynamic_features_allow": "inherit",
+            "rest_enable": "1",
+            "_migrated_28": "1",
+            "groups": [
+                {
+                    "name": "gemeinsame_felder",
+                    "label": "Gemeinsame Felder",
+                    "description": "",
+                    "weight": 0,
+                    "fields": [
+                        {
+                            "name": "kennzeichen",
+                            "label": "Kennzeichen",
+                            "description": "",
+                            "weight": 0,
+                            "type": "text",
+                            "text_max_length": "20",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kunde_vorname",
+                            "label": "Vorname",
+                            "description": "",
+                            "weight": 1,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kunde_nachname",
+                            "label": "Nachname",
+                            "description": "",
+                            "weight": 2,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kunde_strasse",
+                            "label": "Straße",
+                            "description": "",
+                            "weight": 3,
+                            "type": "text",
+                            "text_max_length": "200",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kunde_hausnummer",
+                            "label": "Hausnummer",
+                            "description": "",
+                            "weight": 4,
+                            "type": "text",
+                            "text_max_length": "20",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kunde_plz",
+                            "label": "PLZ",
+                            "description": "",
+                            "weight": 5,
+                            "type": "text",
+                            "text_max_length": "10",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kunde_ort",
+                            "label": "Ort",
+                            "description": "",
+                            "weight": 6,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kunde_telefon",
+                            "label": "Telefon",
+                            "description": "",
+                            "weight": 7,
+                            "type": "text",
+                            "text_max_length": "50",
+                            "required": "0"
+                        },
+                        {
+                            "name": "datum",
+                            "label": "Datum",
+                            "description": "",
+                            "weight": 8,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "unterschrift_base64",
+                            "label": "Unterschrift (Base64 PNG)",
+                            "description": "",
+                            "weight": 9,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "pdf_dateipfad",
+                            "label": "PDF Dateipfad",
+                            "description": "",
+                            "weight": 10,
+                            "type": "text",
+                            "text_max_length": "500",
+                            "required": "0"
+                        },
+                        {
+                            "name": "interne_notizen",
+                            "label": "Interne Notizen",
+                            "description": "",
+                            "weight": 11,
+                            "type": "paragraph",
+                            "required": "0"
+                        }
+                    ]
+                },
+                {
+                    "name": "abschleppen_felder",
+                    "label": "Abschleppen – Felder",
+                    "description": "",
+                    "weight": 1,
+                    "fields": [
+                        {
+                            "name": "auftragsart",
+                            "label": "Auftragsgeber",
+                            "description": "",
+                            "weight": 0,
+                            "type": "pick",
+                            "pick_object": "custom-simple",
+                            "pick_custom": "adac|ADAC\ngdv|GDV\npolizei|Polizei\nversicherung|Versicherung\nsonstige|Sonstige\nprivat|Privat\nassistance|Assistance Partner",
+                            "pick_format_type": "single",
+                            "pick_format_single": "radio",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_typ",
+                            "label": "Fahrzeug Typ / Modell",
+                            "description": "",
+                            "weight": 1,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_gewicht_zulaessig",
+                            "label": "Zul. ges. Gesamtgewicht (kg)",
+                            "description": "",
+                            "weight": 2,
+                            "type": "number",
+                            "number_decimals": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "abholtermin",
+                            "label": "Abholtermin",
+                            "description": "",
+                            "weight": 3,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "abholzeit",
+                            "label": "Abholzeit",
+                            "description": "",
+                            "weight": 4,
+                            "type": "time",
+                            "time_format": "H:i",
+                            "required": "0"
+                        },
+                        {
+                            "name": "einsatzort",
+                            "label": "Einsatzort",
+                            "description": "",
+                            "weight": 5,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "schaden_beschreibung",
+                            "label": "Schaden / Bemerkung",
+                            "description": "",
+                            "weight": 6,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "sonstiges_bemerkung",
+                            "label": "Sonstiges",
+                            "description": "",
+                            "weight": 7,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_abgeholt_am",
+                            "label": "Fahrzeug abgeholt am",
+                            "description": "",
+                            "weight": 8,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_abgeholt_durch",
+                            "label": "Fahrzeug abgeholt durch",
+                            "description": "",
+                            "weight": 9,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        },
+                        {
+                            "name": "einsatz_typ",
+                            "label": "Auftragsart",
+                            "description": "",
+                            "weight": 10,
+                            "type": "pick",
+                            "pick_object": "custom-simple",
+                            "pick_custom": "panne|Panne\nunfall|Unfall\nbergung|Bergung\nsicherstellung|Sicherstellung",
+                            "pick_format_type": "multi",
+                            "pick_format_multi": "checkbox",
+                            "required": "0"
+                        },
+                        {
+                            "name": "standgeld_betrag_euro",
+                            "label": "Standgeld (€ zzgl. MwSt.)",
+                            "description": "",
+                            "weight": 11,
+                            "type": "number",
+                            "number_decimals": "2",
+                            "required": "0"
+                        },
+                        {
+                            "name": "standgeld_hingewiesen_am",
+                            "label": "Auf Standgeld hingewiesen am",
+                            "description": "",
+                            "weight": 12,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "standgeld_hingewiesen_per",
+                            "label": "Hingewiesen per",
+                            "description": "",
+                            "weight": 13,
+                            "type": "pick",
+                            "pick_object": "custom-simple",
+                            "pick_custom": "telefon|Telefon\nsms|SMS\nwhatsapp|WhatsApp\npost|Post\nemail|E-Mail\nmuendlich|Mündlich\npersoenlich|Persönlich",
+                            "pick_format_type": "multi",
+                            "pick_format_multi": "checkbox",
+                            "required": "0"
+                        },
+                        {
+                            "name": "zusatzleistungen",
+                            "label": "Zusatzleistungen",
+                            "description": "",
+                            "weight": 14,
+                            "type": "pick",
+                            "pick_object": "custom-simple",
+                            "pick_custom": "strassenreinigung|Straßenreinigung\nreinigung_einsatzfahrzeug|Reinigung Einsatzfahrzeug\nreinigung_standflaeche|Reinigung Standfläche\ngabelstapler|Gabelstaplereinsatz\ngdv_pauschale|GDV-Notdienstpauschale\nbergung_stunden|Bergung Std.\nbergungshelfer|Bergungshelfer\ngutachter|Gutachter beauftragen\nschluessel_vorhanden|Schlüssel vorhanden\ngewichtszuschlag|Gewichtszuschlag",
+                            "pick_format_type": "multi",
+                            "pick_format_multi": "checkbox",
+                            "required": "0"
+                        },
+                        {
+                            "name": "bergung_stunden_anzahl",
+                            "label": "Bergung Std. (Anzahl)",
+                            "description": "",
+                            "weight": 15,
+                            "type": "number",
+                            "number_decimals": "1",
+                            "required": "0"
+                        },
+                        {
+                            "name": "miet_ersatzfahrzeug",
+                            "label": "Miet- / Ersatzfahrzeug",
+                            "description": "",
+                            "weight": 16,
+                            "type": "text",
+                            "text_max_length": "200",
+                            "required": "0"
+                        },
+                        {
+                            "name": "weitertransport_ziel",
+                            "label": "Weitertransport (Ziel)",
+                            "description": "",
+                            "weight": 17,
+                            "type": "text",
+                            "text_max_length": "200",
+                            "required": "0"
+                        },
+                        {
+                            "name": "sammler",
+                            "label": "Sammler",
+                            "description": "",
+                            "weight": 18,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        },
+                        {
+                            "name": "einsatz_beginn",
+                            "label": "Einsatzbeginn",
+                            "description": "",
+                            "weight": 19,
+                            "type": "datetime",
+                            "datetime_format": "d.m.Y H:i",
+                            "required": "0"
+                        },
+                        {
+                            "name": "einsatz_ende",
+                            "label": "Einsatzende",
+                            "description": "",
+                            "weight": 20,
+                            "type": "datetime",
+                            "datetime_format": "d.m.Y H:i",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrer_name",
+                            "label": "Fahrer",
+                            "description": "",
+                            "weight": 21,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "einsatz_fahrzeug_bezeichnung",
+                            "label": "Einsatzfahrzeug",
+                            "description": "",
+                            "weight": 22,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_versichert_bei",
+                            "label": "Fahrzeug versichert bei",
+                            "description": "",
+                            "weight": 23,
+                            "type": "text",
+                            "text_max_length": "200",
+                            "required": "0"
+                        },
+                        {
+                            "name": "versicherung_schaden_nummer",
+                            "label": "Schadennummer der Versicherung",
+                            "description": "",
+                            "weight": 24,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kennzeichen_abgeholt_am",
+                            "label": "Kennzeichen abgeholt am",
+                            "description": "",
+                            "weight": 25,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kennzeichen_abgeholt_durch",
+                            "label": "Kennzeichen abgeholt durch",
+                            "description": "",
+                            "weight": 26,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeuginhalt_entnommen_am",
+                            "label": "Inhalt entnommen am",
+                            "description": "",
+                            "weight": 27,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeuginhalt_entnommen_durch",
+                            "label": "Inhalt entnommen durch",
+                            "description": "",
+                            "weight": 28,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeuginhalt_gegenstaende",
+                            "label": "Entnommene Gegenstände",
+                            "description": "",
+                            "weight": 29,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "sichergestellt_am",
+                            "label": "Sichergestellt am",
+                            "description": "",
+                            "weight": 30,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "sichergestellt_durch",
+                            "label": "Sichergestellt durch",
+                            "description": "",
+                            "weight": 31,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        },
+                        {
+                            "name": "freigabe_am",
+                            "label": "Freigabe am",
+                            "description": "",
+                            "weight": 32,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "freigabe_durch",
+                            "label": "Freigabe durch",
+                            "description": "",
+                            "weight": 33,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        },
+                        {
+                            "name": "besichtigt_am",
+                            "label": "Besichtigt am",
+                            "description": "",
+                            "weight": 34,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "besichtigt_durch",
+                            "label": "Besichtigt durch",
+                            "description": "",
+                            "weight": 35,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        }
+                    ]
+                },
+                {
+                    "name": "werkstatt_felder",
+                    "label": "Werkstatt – Felder",
+                    "description": "",
+                    "weight": 2,
+                    "fields": [
+                        {
+                            "name": "kunde_email",
+                            "label": "E-Mail Kunde",
+                            "description": "",
+                            "weight": 0,
+                            "type": "email",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_typ_modell",
+                            "label": "Fahrzeug Typ / Modell",
+                            "description": "",
+                            "weight": 1,
+                            "type": "text",
+                            "text_max_length": "150",
+                            "required": "0"
+                        },
+                        {
+                            "name": "motor_nummer",
+                            "label": "Motor-Nr.",
+                            "description": "",
+                            "weight": 2,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_ident_nummer",
+                            "label": "Fahrzeug-Ident-Nr. (FIN)",
+                            "description": "",
+                            "weight": 3,
+                            "type": "text",
+                            "text_max_length": "17",
+                            "required": "0"
+                        },
+                        {
+                            "name": "annahmetermin",
+                            "label": "Annahmetermin",
+                            "description": "",
+                            "weight": 4,
+                            "type": "datetime",
+                            "datetime_format": "d.m.Y H:i",
+                            "required": "0"
+                        },
+                        {
+                            "name": "abholtermin_werkstatt",
+                            "label": "Abholtermin (Werkstatt)",
+                            "description": "",
+                            "weight": 5,
+                            "type": "datetime",
+                            "datetime_format": "d.m.Y H:i",
+                            "required": "0"
+                        },
+                        {
+                            "name": "ersatzfahrzeug_typ",
+                            "label": "Ersatzfahrzeug",
+                            "description": "",
+                            "weight": 6,
+                            "type": "pick",
+                            "pick_object": "custom-simple",
+                            "pick_custom": "keines|Keines\nmietfahrzeug|Mietfahrzeug\nwerkstattersatzfahrzeug|Werkstattersatzfahrzeug\nclubmobil|Clubmobil",
+                            "pick_format_type": "single",
+                            "pick_format_single": "radio",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kundenbeanstandung",
+                            "label": "Kundenbeanstandung",
+                            "description": "",
+                            "weight": 7,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kostenangebot_euro",
+                            "label": "Kostenangebot (€)",
+                            "description": "",
+                            "weight": 8,
+                            "type": "number",
+                            "number_decimals": "2",
+                            "required": "0"
+                        },
+                        {
+                            "name": "arbeitsgang_und_ersatzteile",
+                            "label": "Arbeitsgang / Ersatzteile",
+                            "description": "",
+                            "weight": 9,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "arbeitszeit_stunden",
+                            "label": "Arbeitszeit (Stunden)",
+                            "description": "",
+                            "weight": 10,
+                            "type": "number",
+                            "number_decimals": "1",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kundenberater_name",
+                            "label": "Kundenberater",
+                            "description": "",
+                            "weight": 11,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "zustaendiger_monteur_name",
+                            "label": "Zuständiger Monteur",
+                            "description": "",
+                            "weight": 12,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "probefahrt_durchgefuehrt",
+                            "label": "Probefahrt durchgeführt",
+                            "description": "",
+                            "weight": 13,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "probefahrt_minuten",
+                            "label": "Probefahrt (Minuten)",
+                            "description": "",
+                            "weight": 14,
+                            "type": "number",
+                            "number_decimals": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "motorraum_verschluesse_zu",
+                            "label": "Alle Verschlüsse / Deckel im Motorraum zu",
+                            "description": "",
+                            "weight": 15,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_abholfertig_hergerichtet",
+                            "label": "Fahrzeug abholfertig hergerichtet",
+                            "description": "",
+                            "weight": 16,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "abschlepphaken_entfernt",
+                            "label": "Abschlepphaken entfernt",
+                            "description": "",
+                            "weight": 17,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "lack_spuren_entfernt",
+                            "label": "Alle Spuren / Fingerabdrücke auf Lack entfernt",
+                            "description": "",
+                            "weight": 18,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "beleuchtung_ok",
+                            "label": "Beleuchtung ok",
+                            "description": "",
+                            "weight": 19,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "serviceheft_eintrag_gemacht",
+                            "label": "Servicehefteintrag gemacht",
+                            "description": "",
+                            "weight": 20,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "service_intervall_zurueckgestellt",
+                            "label": "Service zurückgestellt",
+                            "description": "",
+                            "weight": 21,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "radschrauben_angezogen_durch",
+                            "label": "Radschrauben / Muttern angezogen durch",
+                            "description": "",
+                            "weight": 22,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "oelablassschraube_nachgezogen_durch",
+                            "label": "Ölablassschraube nachgezogen durch",
+                            "description": "",
+                            "weight": 23,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "fahrzeug_gereinigt_innen_aussen",
+                            "label": "Fahrzeug gereinigt innen + außen",
+                            "description": "",
+                            "weight": 24,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "motoroel_stand_ok",
+                            "label": "Motorölstand ok",
+                            "description": "",
+                            "weight": 25,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "motoroel_korrigiert_liter",
+                            "label": "Motoröl korrigiert (Liter)",
+                            "description": "",
+                            "weight": 26,
+                            "type": "number",
+                            "number_decimals": "1",
+                            "required": "0"
+                        },
+                        {
+                            "name": "motoroel_spezifikation",
+                            "label": "Motoröl-Spezifikation",
+                            "description": "",
+                            "weight": 27,
+                            "type": "text",
+                            "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kuehlmittel_ok",
+                            "label": "Kühlmittel ok",
+                            "description": "",
+                            "weight": 28,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kuehlmittel_korrigiert_liter",
+                            "label": "Kühlmittel korrigiert (Liter)",
+                            "description": "",
+                            "weight": 29,
+                            "type": "number",
+                            "number_decimals": "1",
+                            "required": "0"
+                        },
+                        {
+                            "name": "frostschutz_ok",
+                            "label": "Frostschutz ok",
+                            "description": "",
+                            "weight": 30,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "frostschutz_temperatur_grad",
+                            "label": "Frostschutz Temperatur (°C)",
+                            "description": "",
+                            "weight": 31,
+                            "type": "number",
+                            "number_decimals": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "endkontrolle_fahrzeug_abholbereit",
+                            "label": "Endkontrolle: Fahrzeug abholbereit",
+                            "description": "",
+                            "weight": 32,
+                            "type": "boolean",
+                            "boolean_yes_label": "Abholbereit",
+                            "boolean_no_label": "Nicht abholbereit – darf nicht bewegt werden",
+                            "boolean_default_state": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "naechste_hauptuntersuchung",
+                            "label": "Nächste HU",
+                            "description": "",
+                            "weight": 33,
+                            "type": "date",
+                            "date_format": "d.m.Y",
+                            "required": "0"
+                        },
+                        {
+                            "name": "werkstatt_notizen",
+                            "label": "Werkstatt – Interne Notizen",
+                            "description": "",
+                            "weight": 34,
+                            "type": "paragraph",
+                            "required": "0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "auftrag_typ",
+            "label": "Auftragstypen",
+            "description": "",
+            "type": "taxonomy",
+            "storage": "meta",
+            "label_singular": "Auftragstyp",
+            "public": "0",
+            "show_ui": "1",
+            "hierarchical": "1",
+            "publicly_queryable": "0",
+            "object_type": "vorleitner_auftrag",
+            "dynamic_features_allow": "inherit",
+            "rest_enable": "1",
+            "_migrated_28": "1",
+            "groups": [
+                {
+                    "name": "weitere_felder",
+                    "label": "Weitere Felder",
+                    "description": "",
+                    "weight": 0,
+                    "fields": []
+                }
+            ]
+        }
+    ]
+}

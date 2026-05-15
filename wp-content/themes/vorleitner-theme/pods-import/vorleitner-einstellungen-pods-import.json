@@ -1,0 +1,47 @@
+{
+    "@meta": {
+        "version": "3.3.8",
+        "build": 1778815743
+    },
+    "settings": {
+        "types_only": "0",
+        "dynamic_features_allow": "1",
+        "dynamic_features_enabled": ["display", "form"]
+    },
+    "pods": [
+        {
+            "name": "vorleitner_einstellungen",
+            "label": "Vorleitner Einstellungen",
+            "label_singular": "Einstellung",
+            "description": "Einstellungen für die digitalen Auftragsformulare",
+            "type": "settings",
+            "storage": "option",
+            "menu_location": "settings",
+            "capability": "manage_options",
+            "groups": [
+                {
+                    "name": "email_einstellungen",
+                    "label": "E-Mail Empfänger",
+                    "fields": [
+                        {
+                            "name": "recipient_email_abschleppen",
+                            "label": "Empfänger Abschlepp-Aufträge",
+                            "description": "An diese Adresse werden neue Abschlepp-Aufträge gesendet.",
+                            "type": "email",
+                            "required": "1",
+                            "weight": 10
+                        },
+                        {
+                            "name": "recipient_email_werkstatt",
+                            "label": "Empfänger Werkstatt-Aufträge",
+                            "description": "An diese Adresse werden neue Werkstatt-Aufträge gesendet.",
+                            "type": "email",
+                            "required": "1",
+                            "weight": 20
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

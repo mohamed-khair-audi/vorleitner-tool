@@ -1,0 +1,217 @@
+/* Hub – baut auf form-steps.css auf (gleiche Typo, Farben, Karten) */
+
+.auftrag-hub .auftrag-form-container {
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+}
+
+.auftrag-hub__panel {
+    position: relative;
+    overflow: hidden;
+}
+
+.auftrag-hub__panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #D92B1A 0%, #1d4ed8 100%);
+}
+
+.auftrag-hub__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.auftrag-hub__logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.auftrag-hub__header-copy {
+    flex: 1;
+    min-width: 200px;
+}
+
+.auftrag-hub__title.auftrag-form-title {
+    margin-bottom: 0.5rem;
+}
+
+.auftrag-hub__lead {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: #6b7280;
+}
+
+.auftrag-hub__alert {
+    margin: 0 0 1.25rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    color: #92400e;
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    border-radius: 6px;
+}
+
+.auftrag-hub__section-label {
+    margin: 0 0 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #111827;
+    letter-spacing: 0.02em;
+}
+
+.auftrag-hub__grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .auftrag-hub__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.auftrag-hub__tile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 5.5rem;
+    padding: 1.125rem 1.25rem;
+    text-decoration: none;
+    color: #111827;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.auftrag-hub__tile:hover {
+    background: #fff;
+    text-decoration: none;
+    color: #111827;
+}
+
+.auftrag-hub__tile--abschlepp:hover {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+}
+
+.auftrag-hub__tile--abschlepp:focus-visible {
+    outline: none;
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2);
+}
+
+.auftrag-hub__tile--werkstatt:hover {
+    border-color: #D92B1A;
+    box-shadow: 0 0 0 3px rgba(217, 43, 26, 0.12);
+}
+
+.auftrag-hub__tile--werkstatt:focus-visible {
+    outline: none;
+    border-color: #D92B1A;
+    box-shadow: 0 0 0 3px rgba(217, 43, 26, 0.2);
+}
+
+.auftrag-hub__tile-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.auftrag-hub__tile--abschlepp .auftrag-hub__tile-icon {
+    background: #1d4ed8;
+}
+
+.auftrag-hub__tile--werkstatt .auftrag-hub__tile-icon {
+    background: #D92B1A;
+}
+
+.auftrag-hub__tile-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.auftrag-hub__tile-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.auftrag-hub__tile-desc {
+    font-size: 0.8125rem;
+    color: #6b7280;
+}
+
+.auftrag-hub__tile-chevron {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #9ca3af;
+    border-bottom: 2px solid #9ca3af;
+    transform: rotate(-45deg);
+    margin-right: 4px;
+}
+
+.auftrag-hub__tile:hover .auftrag-hub__tile-chevron {
+    border-color: #4b5563;
+}
+
+.auftrag-hub__tile--missing {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    background: #f9fafb;
+    border-style: dashed;
+    cursor: default;
+}
+
+.auftrag-hub__tile--missing:hover {
+    border-color: #e5e7eb;
+    box-shadow: none;
+    background: #f9fafb;
+}
+
+.auftrag-hub__guest {
+    text-align: center;
+    padding: 0.5rem 0 0.25rem;
+}
+
+.auftrag-hub__login.btn-next {
+    margin-left: 0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auftrag-hub__guest-note {
+    margin: 1rem 0 0;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: #6b7280;
+    max-width: 26rem;
+    margin-left: auto;
+    margin-right: auto;
+}
