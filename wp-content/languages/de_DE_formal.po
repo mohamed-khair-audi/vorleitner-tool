@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.9.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-14 15:24:01+0000\n"
+"PO-Revision-Date: 2026-05-18 10:12:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -76,35 +76,15 @@ msgctxt "block title"
 msgid "Social Icon"
 msgstr "Social Icon"
 
-#: wp-includes/blocks/query-pagination-next/block.json
-msgctxt "block description"
-msgid "Displays the next posts page link."
-msgstr "Zeigt den nächsten Beitrags-Seiten-Link an."
-
 #: wp-includes/blocks/query-pagination-numbers/block.json
 msgctxt "block description"
 msgid "Displays a list of page numbers for pagination."
 msgstr "Zeigt eine Liste von Seitenzahlen für die Seitennummerierung an."
 
-#: wp-includes/blocks/query-pagination-previous/block.json
-msgctxt "block description"
-msgid "Displays the previous posts page link."
-msgstr "Zeigt den vorherigen Beitrags-Seiten-Link an."
-
 #: wp-includes/blocks/query-pagination/block.json
 msgctxt "block description"
 msgid "Displays a paginated navigation to next/previous set of posts, when applicable."
 msgstr "Zeigt – falls verfügbar – eine seitenweise Navigation zum nächsten/vorherigen Satz von Beiträgen an."
-
-#: wp-includes/blocks/query-title/block.json
-msgctxt "block title"
-msgid "Query Title"
-msgstr "Abfrage-Titel"
-
-#: wp-includes/blocks/query-title/block.json
-msgctxt "block description"
-msgid "Display the query title."
-msgstr "Den Abfrage-Titel anzeigen."
 
 #: wp-includes/blocks/query/block.json
 msgctxt "block title"
@@ -618,11 +598,6 @@ msgid "Displays the post count of a taxonomy term."
 msgstr "Zeigt die Anzahl der Beiträge eines Taxonomiebegriffs an."
 
 #: wp-includes/blocks/term-name/block.json
-msgctxt "block title"
-msgid "Term Name"
-msgstr "Name des Begriffs"
-
-#: wp-includes/blocks/term-name/block.json
 msgctxt "block description"
 msgid "Displays the name of a taxonomy term."
 msgstr "Zeigt den Namen eines Taxonomiebegriffs an."
@@ -681,6 +656,31 @@ msgstr "Lyrik, Poesie"
 msgctxt "block title"
 msgid "Tag Cloud"
 msgstr "Schlagwortwolke"
+
+#: wp-includes/blocks/query-title/block.json
+msgctxt "block title"
+msgid "Query Title"
+msgstr "Abfragetitel"
+
+#: wp-includes/blocks/term-name/block.json
+msgctxt "block title"
+msgid "Term Name"
+msgstr "Begriffsname"
+
+#: wp-includes/blocks/query-pagination-previous/block.json
+msgctxt "block description"
+msgid "Displays the previous posts page link."
+msgstr "Zeigt den Link zur vorherigen Beitragsseite an."
+
+#: wp-includes/blocks/query-pagination-next/block.json
+msgctxt "block description"
+msgid "Displays the next posts page link."
+msgstr "Zeigt den Link zur nächsten Beitragsseite an."
+
+#: wp-includes/blocks/query-title/block.json
+msgctxt "block description"
+msgid "Display the query title."
+msgstr "Zeigt den Abfragetitel an."
 
 #: wp-includes/js/dist/editor.js:4982
 #: wp-admin/includes/class-wp-comments-list-table.php:384
@@ -1457,11 +1457,6 @@ msgid "Display a post's comments form."
 msgstr "Ein Beitrags-Kommentarformular anzeigen."
 
 #: wp-includes/blocks/post-navigation-link/block.json
-msgctxt "block title"
-msgid "Post Navigation Link"
-msgstr "Beitrags-Navigations-Link"
-
-#: wp-includes/blocks/post-navigation-link/block.json
 msgctxt "block description"
 msgid "Displays the next or previous post link that is adjacent to the current post."
 msgstr "Zeigt den Link zum unmittelbar nächsten oder vorherigen Beitrag an."
@@ -1531,20 +1526,10 @@ msgctxt "block description"
 msgid "Contains the block elements used to display a comment, like the title, date, author, avatar and more."
 msgstr "Enthält die Block-Elemente für das Anzeigen eines Kommentars wie Titel, Datum, Autor, Avatar und mehr."
 
-#: wp-includes/blocks/comments-pagination-next/block.json
-msgctxt "block description"
-msgid "Displays the next comment's page link."
-msgstr "Zeit den nächsten Kommentar-Seiten-Link an."
-
 #: wp-includes/blocks/comments-pagination-numbers/block.json
 msgctxt "block description"
 msgid "Displays a list of page numbers for comments pagination."
 msgstr "Zeigt eine Liste von Seitenzahlen für die Kommentarpaginierung an."
-
-#: wp-includes/blocks/comments-pagination-previous/block.json
-msgctxt "block description"
-msgid "Displays the previous comment's page link."
-msgstr "Zeigt den vorherigen Kommentar-Seiten-Link an."
 
 #: wp-includes/blocks/comments-pagination/block.json
 msgctxt "block title"
@@ -1636,11 +1621,6 @@ msgstr "Vorherige Kommentarseite"
 msgctxt "block title"
 msgid "Comments"
 msgstr "Kommentare"
-
-#: wp-includes/blocks/list-item/block.json
-msgctxt "block title"
-msgid "List Item"
-msgstr "Listen-Element"
 
 #: wp-includes/blocks/page-list-item/block.json
 msgctxt "block title"
@@ -1868,11 +1848,6 @@ msgid "mathematics"
 msgstr "Mathematik"
 
 #: wp-includes/blocks/post-comments-count/block.json
-msgctxt "block title"
-msgid "Comments Count"
-msgstr "Anzahl der Kommentare"
-
-#: wp-includes/blocks/post-comments-count/block.json
 msgctxt "block description"
 msgid "Display a post's comments count."
 msgstr "Zeigt die Anzahl der Kommentare eines Beitrags an."
@@ -1921,6 +1896,31 @@ msgstr "Spoiler"
 msgctxt "block description"
 msgid "Displays the link to the current post comments."
 msgstr "Zeigt den Link zu den Kommentaren des aktuellen Beitrags an."
+
+#: wp-includes/blocks/list-item/block.json
+msgctxt "block title"
+msgid "List Item"
+msgstr "Listenelement"
+
+#: wp-includes/blocks/post-navigation-link/block.json
+msgctxt "block title"
+msgid "Post Navigation Link"
+msgstr "Beitrags-Navigationslink"
+
+#: wp-includes/blocks/post-comments-count/block.json
+msgctxt "block title"
+msgid "Comments Count"
+msgstr "Kommentaranzahl"
+
+#: wp-includes/blocks/comments-pagination-previous/block.json
+msgctxt "block description"
+msgid "Displays the previous comment's page link."
+msgstr "Zeigt den Link zur vorherigen Kommentarseite an."
+
+#: wp-includes/blocks/comments-pagination-next/block.json
+msgctxt "block description"
+msgid "Displays the next comment's page link."
+msgstr "Zeigt den Link zur nächsten Kommentarseite an."
 
 #: wp-includes/js/dist/block-library.js:51914
 #: wp-admin/includes/class-plugin-installer-skin.php:223
@@ -2143,18 +2143,6 @@ msgstr "Keine Kommentare"
 msgid "Default Avatar"
 msgstr "Standard-Avatar"
 
-#: wp-includes/js/dist/block-library.js:9566
-#: wp-includes/blocks/comment-content/block.json
-msgctxt "block title"
-msgid "Comment Content"
-msgstr "Kommentar-Inhalt"
-
-#: wp-includes/js/dist/block-library.js:9675
-#: wp-includes/blocks/comment-date/block.json
-msgctxt "block title"
-msgid "Comment Date"
-msgstr "Kommentar-Datum"
-
 #: wp-includes/js/dist/block-library.js:8953 wp-admin/includes/upgrade.php:280
 msgid "A WordPress Commenter"
 msgstr "Ein WordPress-Kommentator"
@@ -2252,6 +2240,18 @@ msgstr "Sichtbar"
 #: wp-admin/includes/image-edit.php:64 wp-admin/includes/image-edit.php:161
 msgid "Scale"
 msgstr "Skalieren"
+
+#: wp-includes/js/dist/block-library.js:9675
+#: wp-includes/blocks/comment-date/block.json
+msgctxt "block title"
+msgid "Comment Date"
+msgstr "Kommentardatum"
+
+#: wp-includes/js/dist/block-library.js:9566
+#: wp-includes/blocks/comment-content/block.json
+msgctxt "block title"
+msgid "Comment Content"
+msgstr "Kommentarinhalt"
 
 #: wp-signup.php:229 wp-admin/includes/class-wp-debug-data.php:205
 #: wp-admin/includes/class-wp-debug-data.php:210
@@ -2394,22 +2394,6 @@ msgstr "Seiten-IDs, durch Kommas getrennt."
 msgid "Your blogroll"
 msgstr "Ihre Blogroll"
 
-#: wp-includes/widgets/class-wp-widget-links.php:167
-msgid "Show Link Image"
-msgstr "Link-Bild anzeigen"
-
-#: wp-includes/widgets/class-wp-widget-links.php:171
-msgid "Show Link Name"
-msgstr "Link-Namen anzeigen"
-
-#: wp-includes/widgets/class-wp-widget-links.php:175
-msgid "Show Link Description"
-msgstr "Link-Beschreibung anzeigen"
-
-#: wp-includes/widgets/class-wp-widget-links.php:179
-msgid "Show Link Rating"
-msgstr "Link-Bewertung anzeigen"
-
 #: wp-includes/widgets/class-wp-widget-archives.php:243
 #: wp-includes/widgets/class-wp-widget-categories.php:214
 #: wp-includes/js/dist/block-library.js:2946
@@ -2424,6 +2408,26 @@ msgstr "Beitragsanzahl anzeigen"
 #: wp-includes/js/dist/components.js:50845
 msgid "Calendar"
 msgstr "Kalender"
+
+#: wp-includes/widgets/class-wp-widget-text.php:43
+#: wp-includes/js/dist/block-editor.js:20078
+#: wp-includes/js/dist/block-editor.js:24265
+#: wp-includes/js/dist/block-editor.js:24273
+#: wp-includes/js/dist/block-editor.js:24407
+#: wp-includes/js/dist/block-library.js:32666
+#: wp-includes/js/dist/block-library.js:34099
+#: wp-includes/js/dist/block-library.js:34107
+#: wp-includes/js/dist/block-library.js:48705
+#: wp-includes/js/dist/block-library.js:48714
+#: wp-includes/js/dist/block-library.js:48737
+#: wp-includes/js/dist/block-library.js:48747
+#: wp-includes/js/dist/blocks.js:7367 wp-includes/js/dist/edit-site.js:11896
+#: wp-includes/js/dist/edit-site.js:18584
+#: wp-includes/js/dist/edit-site.js:21045
+#: wp-includes/js/dist/edit-site.js:21104
+#: wp-includes/js/dist/format-library.js:1282
+msgid "Text"
+msgstr "Text"
 
 #: wp-includes/widgets/class-wp-widget-text.php:515
 msgid "Automatically add paragraphs"
@@ -2464,26 +2468,6 @@ msgstr "Geben Sie dem Feed einen Titel (optional):"
 #: wp-includes/widgets.php:1746
 msgid "How many items would you like to display?"
 msgstr "Wie viele Einträge sollen angezeigt werden?"
-
-#: wp-includes/widgets/class-wp-widget-text.php:43
-#: wp-includes/js/dist/block-editor.js:20078
-#: wp-includes/js/dist/block-editor.js:24265
-#: wp-includes/js/dist/block-editor.js:24273
-#: wp-includes/js/dist/block-editor.js:24407
-#: wp-includes/js/dist/block-library.js:32666
-#: wp-includes/js/dist/block-library.js:34099
-#: wp-includes/js/dist/block-library.js:34107
-#: wp-includes/js/dist/block-library.js:48705
-#: wp-includes/js/dist/block-library.js:48714
-#: wp-includes/js/dist/block-library.js:48737
-#: wp-includes/js/dist/block-library.js:48747
-#: wp-includes/js/dist/blocks.js:7367 wp-includes/js/dist/edit-site.js:11896
-#: wp-includes/js/dist/edit-site.js:18584
-#: wp-includes/js/dist/edit-site.js:21045
-#: wp-includes/js/dist/edit-site.js:21104
-#: wp-includes/js/dist/format-library.js:1282
-msgid "Text"
-msgstr "Text"
 
 #: wp-includes/widgets.php:1758
 msgid "Display item content?"
@@ -2687,10 +2671,6 @@ msgstr "Ihre Registrierungs-E-Mail wird an diese Adresse gesendet. (Bitte überp
 msgid "Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
 msgstr "Bitte warten Sie noch ein bisschen. Manchmal kann sich die Zustellung von E-Mails durch Vorgänge außerhalb unserer Kontrolle verzögern."
 
-#: wp-signup.php:881
-msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
-msgstr "Überprüfen Sie den Junk/Spam-Ordner Ihres E-Mail-Postfachs, da E-Mails manchmal fälschlicherweise als Spam gekennzeichnet werden."
-
 #: wp-signup.php:1015
 msgid "Sorry, new registrations are not allowed at this time."
 msgstr "Neue Registrierungen sind derzeit leider nicht erlaubt."
@@ -2755,10 +2735,6 @@ msgstr "Konfigurationsdatei erstellen"
 #: wp-signup.php:220
 msgid "Allow search engines to index this site."
 msgstr "Suchmaschinen dürfen diese Website indexieren."
-
-#: wp-includes/widgets/class-wp-widget-links.php:158
-msgid "Link title"
-msgstr "Link-Titel"
 
 #: wp-includes/widgets/class-wp-widget-links.php:160
 msgid "Link ID"
@@ -3805,10 +3781,6 @@ msgstr "Menü auswählen:"
 msgid "Sort by:"
 msgstr "Sortieren nach:"
 
-#: wp-includes/widgets/class-wp-widget-links.php:159
-msgid "Link rating"
-msgstr "Link-Bewertung"
-
 #: wp-includes/widgets/class-wp-widget-text.php:540
 msgid "New Custom HTML Widget"
 msgstr "Neues individuelles HTML-Widget"
@@ -3856,6 +3828,34 @@ msgstr "Die Schlagwortwolke kann nicht angezeigt werden, da keine Taxonomien vor
 #: wp-includes/widgets/class-wp-widget-text.php:544
 msgid "Did you know there is a &#8220;Custom HTML&#8221; widget now? You can find it by scanning the list of available widgets on this screen. Check it out to add some custom code to your site!"
 msgstr "Wussten Sie, dass es jetzt ein Widget „Individuelles HTML“ gibt? Sie finden es, wenn Sie in dieser Ansicht die Liste der verfügbaren Widgets durchsehen. Probieren Sie es aus und fügen Sie Ihrer Website individuellen Code hinzu!"
+
+#: wp-includes/widgets/class-wp-widget-links.php:171
+msgid "Show Link Name"
+msgstr "Linknamen anzeigen"
+
+#: wp-includes/widgets/class-wp-widget-links.php:158
+msgid "Link title"
+msgstr "Linktitel"
+
+#: wp-includes/widgets/class-wp-widget-links.php:159
+msgid "Link rating"
+msgstr "Linkbewertung"
+
+#: wp-includes/widgets/class-wp-widget-links.php:179
+msgid "Show Link Rating"
+msgstr "Linkbewertung anzeigen"
+
+#: wp-includes/widgets/class-wp-widget-links.php:175
+msgid "Show Link Description"
+msgstr "Linkbeschreibung anzeigen"
+
+#: wp-includes/widgets/class-wp-widget-links.php:167
+msgid "Show Link Image"
+msgstr "Linkbild anzeigen"
+
+#: wp-signup.php:881
+msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
+msgstr "Überprüfen Sie den Junk- oder Spamordner Ihres E-Mail-Postfachs. Manchmal gelangen E-Mails versehentlich dorthin."
 
 #. translators: Hidden accessibility text.
 #: wp-includes/revision.php:34 wp-includes/js/dist/block-library.js:25465
@@ -5678,10 +5678,6 @@ msgstr "Planen Sie Ihre Änderungen im Customizer so, dass sie zu einem spätere
 msgid "Sorry, you cannot preview new themes when you have changes scheduled or saved as a draft. Please publish your changes, or wait until they publish to preview new themes."
 msgstr "Sie können leider keine Vorschau der neuen Themes sehen, wenn Sie Änderungen geplant oder als Entwurf gespeichert haben. Bitte veröffentlichen Sie Ihre Änderungen oder warten Sie, bis sie veröffentlicht werden, um eine Vorschau neuer Themes zu sehen."
 
-#: wp-includes/taxonomy.php:154
-msgid "&larr; Go to Link Categories"
-msgstr "&larr; Zu den Link-Kategorien"
-
 #: wp-includes/user.php:3833
 msgid "<strong>Error:</strong> The email address is already used."
 msgstr "<strong>Fehler:</strong> Diese E-Mail-Adresse wird bereits verwendet."
@@ -6463,14 +6459,6 @@ msgstr "Beschreibung der Seitenleiste."
 msgid "Extra CSS class to assign to the sidebar in the Widgets interface."
 msgstr "Zusätzliche CSS-Klasse, die der Seitenleiste in der Widgets-Oberfläche zugewiesen wird."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-sidebars-controller.php:470
-msgid "HTML content to prepend to each widget's HTML output when assigned to this sidebar. Default is an opening list item element."
-msgstr "HTML-Inhalt, der den HTML-Ausgaben jedes Widgets vorangestellt wird, wenn er dieser Seitenleiste zugewiesen wird. Standard ist ein öffnendes Listen-Element."
-
-#: wp-includes/rest-api/endpoints/class-wp-rest-sidebars-controller.php:477
-msgid "HTML content to append to each widget's HTML output when assigned to this sidebar. Default is a closing list item element."
-msgstr "HTML-Inhalt, der an die HTML-Ausgabe jedes Widgets angehängt wird, wenn es dieser Seitenleiste zugewiesen wird. Standard ist ein schließendes Listen-Element."
-
 #: wp-includes/rest-api/endpoints/class-wp-rest-sidebars-controller.php:484
 msgid "HTML content to prepend to the sidebar title when displayed. Default is an opening h2 element."
 msgstr "HTML-Inhalt, der dem angezeigten Titel der Seitenleiste vorangestellt wird. Standard ist ein öffnendes h2-Element."
@@ -6757,14 +6745,6 @@ msgstr "Ein benannter Status für das Objekt."
 msgid "The ID for the parent of the object."
 msgstr "Die ID des übergeordneten Objekts."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:800
-msgid "Text for the title attribute of the link element for this menu item."
-msgstr "Text für das Titelattribut des Link-Elements dieses Menüeintrags."
-
-#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:809
-msgid "Class names for the link element of this menu item."
-msgstr "Klassennamen für das Link-Element dieses Menüeintrags."
-
 #: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:823
 msgid "The description of this menu item."
 msgstr "Die Beschreibung dieses Menüeintrags."
@@ -6780,10 +6760,6 @@ msgstr "Der ursprünglich repräsentierte Objekttyp, z. B. „category“, „p
 #: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:849
 msgid "The database ID of the original object this menu item represents, for example the ID for posts or the term_id for categories."
 msgstr "Die Datenbank-ID des ursprünglichen Objekts, das dieser Menüeintrag repräsentiert, zum Beispiel die ID für Beiträge oder die term_id für Kategorien."
-
-#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:857
-msgid "The target attribute of the link element for this menu item."
-msgstr "Das Zielattribut des Link-Elements für diesen Menüeintrag."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:769
 msgid "The singular label used to describe this type of menu item."
@@ -7471,6 +7447,17 @@ msgstr ""
 "Das Team von ###SITENAME###\n"
 "###SITEURL###"
 
+#. translators: %s: Name of parameter being updated:
+#. font_family_settings[slug]".
+#: wp-includes/rest-api/endpoints/class-wp-rest-font-families-controller.php:114
+msgid "%s cannot be updated."
+msgstr "%s konnte nicht aktualisiert werden."
+
+#: wp-includes/theme.php:2469
+msgctxt "Theme starter content"
+msgid "This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form."
+msgstr "Das ist eine Seite mit einigen grundlegenden Kontaktinformationen, wie Adresse und Telefonnummer. Sie können auch ein Plugin nutzen, um ein Kontaktformular einzufügen."
+
 #. translators: Do not translate USERNAME, ADMIN_EMAIL, NEW_EMAIL, EMAIL,
 #. SITENAME, SITEURL: those are placeholders.
 #: wp-includes/user.php:2820
@@ -7500,17 +7487,6 @@ msgstr ""
 "Viele Grüße\n"
 "Das Team von ###SITENAME###\n"
 "###SITEURL###"
-
-#. translators: %s: Name of parameter being updated:
-#. font_family_settings[slug]".
-#: wp-includes/rest-api/endpoints/class-wp-rest-font-families-controller.php:114
-msgid "%s cannot be updated."
-msgstr "%s konnte nicht aktualisiert werden."
-
-#: wp-includes/theme.php:2469
-msgctxt "Theme starter content"
-msgid "This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form."
-msgstr "Das ist eine Seite mit einigen grundlegenden Kontaktinformationen, wie Adresse und Telefonnummer. Sie können auch ein Plugin nutzen, um ein Kontaktformular einzufügen."
 
 #. translators: Do not translate USERNAME, ADMIN_EMAIL, EMAIL, SITENAME,
 #. SITEURL: those are placeholders.
@@ -7780,6 +7756,30 @@ msgstr "Sie werden von hier aus noch keine neuen Themes installieren können, da
 #: wp-includes/user.php:215
 msgid "<strong>Error:</strong> The password you entered for the username %s is incorrect."
 msgstr "<strong>Fehler:</strong> Das eingegebene Passwort für den Benutzernamen %s ist nicht korrekt."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-sidebars-controller.php:470
+msgid "HTML content to prepend to each widget's HTML output when assigned to this sidebar. Default is an opening list item element."
+msgstr "HTML-Inhalt, der den HTML-Ausgaben jedes Widgets vorangestellt wird, wenn er dieser Seitenleiste zugewiesen wird. Standard ist ein öffnendes Listenelement."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-sidebars-controller.php:477
+msgid "HTML content to append to each widget's HTML output when assigned to this sidebar. Default is a closing list item element."
+msgstr "HTML-Inhalt, der an die HTML-Ausgabe jedes Widgets angehängt wird, wenn es dieser Seitenleiste zugewiesen wird. Standard ist ein schließendes Listenelement."
+
+#: wp-includes/taxonomy.php:154
+msgid "&larr; Go to Link Categories"
+msgstr "&larr; Zu den Linkkategorien"
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:800
+msgid "Text for the title attribute of the link element for this menu item."
+msgstr "Text für das Titelattribut des Linkelements dieses Menüeintrags."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:857
+msgid "The target attribute of the link element for this menu item."
+msgstr "Das Zielattribut des Linkelements für diesen Menüeintrag."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:809
+msgid "Class names for the link element of this menu item."
+msgstr "Klassennamen für das Linkelement dieses Menüeintrags."
 
 #: wp-includes/post.php:1326 wp-includes/post.php:1346
 #: wp-includes/script-loader.php:1301 wp-includes/js/dist/edit-site.js:46420
@@ -8159,11 +8159,6 @@ msgstr "Schleife"
 #: wp-includes/js/dist/block-editor.js:17786
 msgid "Align"
 msgstr "Ausrichtung"
-
-#: wp-includes/media-template.php:1271
-#: wp-includes/widgets/class-wp-widget-media-image.php:137
-msgid "Link Rel"
-msgstr "Link-Beziehung"
 
 #: wp-includes/link-template.php:840
 msgid "Comments Feed"
@@ -9725,40 +9720,6 @@ msgstr "Die Option %1$s ist für die Funktionsfamilie %2$s veraltet. %3$s sollte
 msgid "Drag and drop to reorder media files."
 msgstr "Nutzen Sie Drag-and-drop zum Umsortieren der Mediendateien."
 
-#. translators: Do not translate USERNAME, SITE_NAME, BLOG_URL, PASSWORD: those
-#. are placeholders.
-#: wp-includes/ms-functions.php:1672 wp-admin/includes/schema.php:1295
-msgid ""
-"Howdy USERNAME,\n"
-"\n"
-"Your new SITE_NAME site has been successfully set up at:\n"
-"BLOG_URL\n"
-"\n"
-"You can log in to the administrator account with the following information:\n"
-"\n"
-"Username: USERNAME\n"
-"Password: PASSWORD\n"
-"Log in here: BLOG_URLwp-login.php\n"
-"\n"
-"We hope you enjoy your new site. Thanks!\n"
-"\n"
-"--The Team @ SITE_NAME"
-msgstr ""
-"Hallo USERNAME,\n"
-"\n"
-"Ihre neue Website SITE_NAME wurde erfolgreich eingerichtet:\n"
-"BLOG_URL\n"
-"\n"
-"Sie können sich mit den folgenden Angaben als Administrator anmelden:\n"
-"\n"
-"Benutzername: USERNAME\n"
-"Passwort: PASSWORD\n"
-"Melden Sie sich hier an: BLOG_URLwp-login.php\n"
-"\n"
-"Wir hoffen, Ihnen gefällt Ihre neue Website. Vielen Dank!\n"
-"\n"
-"-- Das Team von SITE_NAME"
-
 #. translators: Do not translate USERNAME, PASSWORD, LOGINLINK, SITE_NAME:
 #. those are placeholders.
 #: wp-includes/ms-functions.php:2399
@@ -9805,6 +9766,40 @@ msgstr "<strong>Die Website %1$s wurde nicht gefunden.</strong> Es wurde nach de
 msgctxt "revision date format"
 msgid "F j, Y @ H:i:s"
 msgstr "j. F Y, G:i:s"
+
+#. translators: Do not translate USERNAME, SITE_NAME, BLOG_URL, PASSWORD: those
+#. are placeholders.
+#: wp-includes/ms-functions.php:1672 wp-admin/includes/schema.php:1295
+msgid ""
+"Howdy USERNAME,\n"
+"\n"
+"Your new SITE_NAME site has been successfully set up at:\n"
+"BLOG_URL\n"
+"\n"
+"You can log in to the administrator account with the following information:\n"
+"\n"
+"Username: USERNAME\n"
+"Password: PASSWORD\n"
+"Log in here: BLOG_URLwp-login.php\n"
+"\n"
+"We hope you enjoy your new site. Thanks!\n"
+"\n"
+"--The Team @ SITE_NAME"
+msgstr ""
+"Hallo USERNAME,\n"
+"\n"
+"Ihre neue Website SITE_NAME wurde erfolgreich eingerichtet:\n"
+"BLOG_URL\n"
+"\n"
+"Sie können sich mit den folgenden Angaben als Administrator anmelden:\n"
+"\n"
+"Benutzername: USERNAME\n"
+"Passwort: PASSWORD\n"
+"Melden Sie sich hier an: BLOG_URLwp-login.php\n"
+"\n"
+"Wir hoffen, Ihnen gefällt Ihre neue Website. Vielen Dank!\n"
+"\n"
+"-- Das Team von SITE_NAME"
 
 #: wp-includes/post.php:1826 wp-includes/post.php:1827
 msgid "Post type names must be between 1 and 20 characters in length."
@@ -10331,6 +10326,12 @@ msgstr "Ergebnissatz auf Kommentare begrenzen, denen ein bestimmter Status zugew
 msgid "Limit result set to comments assigned a specific type. Requires authorization."
 msgstr "Ergebnissatz auf Kommentare begrenzen, denen ein bestimmter Typ zugewiesen ist. Erfordert eine Autorisierung."
 
+#: wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-categories-controller.php:279
+#: wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-list-controller.php:344
+#: wp-includes/rest-api/endpoints/class-wp-rest-controller.php:345
+msgid "Current page of the collection."
+msgstr "Aktuelle Seite der Sammlung."
+
 #. translators: %s: Method name.
 #: wp-includes/rest-api/endpoints/class-wp-rest-controller.php:70
 #: wp-includes/rest-api/endpoints/class-wp-rest-controller.php:87
@@ -10346,12 +10347,6 @@ msgstr "Ergebnissatz auf Kommentare begrenzen, denen ein bestimmter Typ zugewies
 #: wp-includes/rest-api/endpoints/class-wp-rest-controller.php:258
 msgid "Method '%s' not implemented. Must be overridden in subclass."
 msgstr "Die Methode ‚%s‘ wurde nicht implementiert. Sie muss in der Unterklasse überschrieben werden."
-
-#: wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-categories-controller.php:279
-#: wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-list-controller.php:344
-#: wp-includes/rest-api/endpoints/class-wp-rest-controller.php:345
-msgid "Current page of the collection."
-msgstr "Aktuelle Seite der Sammlung."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-categories-controller.php:285
 #: wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-list-controller.php:350
@@ -10741,10 +10736,6 @@ msgstr "Sie haben Ihr Speicherplatzkontingent aufgebraucht. Bitte löschen Sie D
 msgid "There is no autosave revision for this post."
 msgstr "Es gibt keine automatisch gespeicherte Revision von diesem Beitrag."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:342
-msgid "Preview link for the post."
-msgstr "Vorschau-Link für diesen Beitrag."
-
 #: wp-includes/rest-api/endpoints/class-wp-rest-block-renderer-controller.php:43
 msgid "Unique registered name for the block."
 msgstr "Eindeutiger registrierter Name für den Block."
@@ -11004,12 +10995,6 @@ msgstr "55"
 #: wp-includes/meta.php:1494
 msgid "When registering an \"array\" meta type to show in the REST API, you must specify the schema for each array item in \"show_in_rest.schema.items\"."
 msgstr "Wenn Sie einen Metatyp „Array“ registrieren, der im REST-API angezeigt wird, müssen Sie das Schema für jedes Array-Element in „show_in_rest.schema.items“ angeben."
-
-#. translators: 1: "srclang" HTML attribute, 2: "label" HTML attribute, 3:
-#. "kind" HTML attribute.
-#: wp-includes/media-template.php:1492
-msgid "The %1$s, %2$s, and %3$s values can be edited to set the video track language and kind."
-msgstr "Die Werte %1$s, %2$s und %3$s können bearbeitet werden, um die Sprache und Art der Videospur festzulegen."
 
 #: wp-includes/load.php:228 wp-admin/install.php:291 wp-admin/install.php:313
 msgid "Requirements Not Met"
@@ -13632,6 +13617,21 @@ msgstr "<a href=\"%1$s\" %2$s>Erfahren Sie, wie Sie den Zweck des Bildes beschre
 msgid "You are not currently logged in."
 msgstr "Sie sind derzeit nicht angemeldet."
 
+#. translators: 1: "srclang" HTML attribute, 2: "label" HTML attribute, 3:
+#. "kind" HTML attribute.
+#: wp-includes/media-template.php:1492
+msgid "The %1$s, %2$s, and %3$s values can be edited to set the video track language and kind."
+msgstr "Die Werte %1$s, %2$s und %3$s können bearbeitet werden, um die Sprache und Art der Video-Textspur festzulegen."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:342
+msgid "Preview link for the post."
+msgstr "Der Vorschaulink für diesen Beitrag."
+
+#: wp-includes/media-template.php:1271
+#: wp-includes/widgets/class-wp-widget-media-image.php:137
+msgid "Link Rel"
+msgstr "Linkbeziehung"
+
 #: wp-includes/class-wp-post-type.php:999
 #: wp-includes/js/dist/block-library.js:25843
 msgid "No posts found."
@@ -15069,6 +15069,10 @@ msgstr "Gibt es keinen Link zu uns?"
 msgid "The source URL does not contain a link to the target URL, and so cannot be used as a source."
 msgstr "Die Quell-URL enthält keinen Link zur Ziel-URL und kann deshalb nicht als Quelle genutzt werden."
 
+#: wp-includes/class-wp-xmlrpc-server.php:7188
+msgid "The specified target URL does not exist."
+msgstr "Die angegebene Ziel-URL existiert nicht."
+
 #: wp-includes/class-wp-customize-nav-menus.php:957
 #: wp-includes/class-wp-xmlrpc-server.php:1454
 #: wp-includes/class-wp-xmlrpc-server.php:2011
@@ -15085,10 +15089,6 @@ msgstr "Die Quell-URL enthält keinen Link zur Ziel-URL und kann deshalb nicht a
 #: wp-admin/post.php:283 wp-admin/post.php:312 wp-admin/site-editor.php:170
 msgid "Invalid post type."
 msgstr "Der Inhaltstyp ist ungültig."
-
-#: wp-includes/class-wp-xmlrpc-server.php:7188
-msgid "The specified target URL does not exist."
-msgstr "Die angegebene Ziel-URL existiert nicht."
 
 #: wp-includes/class-wp-image-editor-gd.php:225
 #: wp-includes/class-wp-image-editor-imagick.php:363
@@ -15387,10 +15387,6 @@ msgstr "Sie sind leider nicht berechtigt, diese Kategorie zu löschen."
 msgid "Sorry, you are not allowed to edit posts in this post type."
 msgstr "Sie sind leider nicht berechtigt, Beiträge dieses Inhaltstyps zu bearbeiten."
 
-#: wp-includes/class-wp-xmlrpc-server.php:562
-msgid "Image default link type"
-msgstr "Standard-Bildlink"
-
 #: wp-includes/class-wp-xmlrpc-server.php:1464
 #: wp-includes/class-wp-xmlrpc-server.php:1952
 #: wp-includes/class-wp-xmlrpc-server.php:4804
@@ -15408,6 +15404,10 @@ msgstr "Standard-Bildlink"
 #: wp-admin/includes/post.php:2095
 msgid "Sorry, you are not allowed to edit this post."
 msgstr "Sie sind leider nicht berechtigt, diesen Beitrag zu bearbeiten."
+
+#: wp-includes/class-wp-xmlrpc-server.php:562
+msgid "Image default link type"
+msgstr "Standard-Bildlink"
 
 #: wp-includes/class-wp-xmlrpc-server.php:567
 msgid "Image default size"
@@ -15456,21 +15456,6 @@ msgstr "Template"
 msgid "Stylesheet"
 msgstr "Stylesheet"
 
-#: wp-includes/class-wp-xmlrpc-server.php:2112
-#: wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php:511
-#: wp-admin/edit-tags.php:86
-msgid "Sorry, you are not allowed to create terms in this taxonomy."
-msgstr "Sie sind leider nicht berechtigt, in dieser Taxonomie Begriffe zu erstellen."
-
-#: wp-includes/class-wp-xmlrpc-server.php:2122
-#: wp-includes/class-wp-xmlrpc-server.php:2239
-msgid "The term name cannot be empty."
-msgstr "Der Name des Begriffs darf nicht leer sein."
-
-#: wp-includes/class-wp-xmlrpc-server.php:2127
-msgid "This taxonomy is not hierarchical."
-msgstr "Diese Taxonomie ist nicht hierarchisch."
-
 #: wp-includes/class-wp-tax-query.php:549
 #: wp-includes/class-wp-tax-query.php:556 wp-includes/class-wp-term.php:173
 #: wp-includes/class-wp-xmlrpc-server.php:2106
@@ -15489,6 +15474,21 @@ msgstr "Diese Taxonomie ist nicht hierarchisch."
 #: wp-admin/includes/class-wp-terms-list-table.php:57
 msgid "Invalid taxonomy."
 msgstr "Die Taxonomie ist ungültig."
+
+#: wp-includes/class-wp-xmlrpc-server.php:2112
+#: wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php:511
+#: wp-admin/edit-tags.php:86
+msgid "Sorry, you are not allowed to create terms in this taxonomy."
+msgstr "Sie sind leider nicht berechtigt, in dieser Taxonomie Begriffe zu erstellen."
+
+#: wp-includes/class-wp-xmlrpc-server.php:2122
+#: wp-includes/class-wp-xmlrpc-server.php:2239
+msgid "The term name cannot be empty."
+msgstr "Der Name des Begriffs darf nicht leer sein."
+
+#: wp-includes/class-wp-xmlrpc-server.php:2127
+msgid "This taxonomy is not hierarchical."
+msgstr "Diese Taxonomie ist nicht hierarchisch."
 
 #: wp-includes/class-wp-xmlrpc-server.php:2138
 #: wp-includes/class-wp-xmlrpc-server.php:2256
@@ -15745,6 +15745,18 @@ msgstr "Anmelde-Adresse (URL)"
 msgid "The URL to the admin area"
 msgstr "Die URL des Administrationsbereichs"
 
+#. translators: Localized date and time format, see
+#. https://www.php.net/manual/datetime.format.php
+#. translators: Date/Time format, see
+#. https://www.php.net/manual/datetime.format.php
+#. translators: Links last updated date format, see
+#. https://www.php.net/manual/datetime.format.php
+#: wp-includes/class-wp-locale.php:424 wp-includes/script-loader.php:159
+#: wp-includes/script-loader.php:471 wp-admin/includes/schema.php:440
+#: wp-admin/options-general.php:449
+msgid "F j, Y g:i a"
+msgstr "j. F Y, G:i"
+
 #. translators: Localized date format, see
 #. https://www.php.net/manual/datetime.format.php
 #. translators: Date format, see https://www.php.net/manual/datetime.format.php
@@ -15792,18 +15804,6 @@ msgstr "j. F Y"
 #: wp-admin/includes/schema.php:438 wp-admin/options-general.php:522
 msgid "g:i a"
 msgstr "G:i"
-
-#. translators: Localized date and time format, see
-#. https://www.php.net/manual/datetime.format.php
-#. translators: Date/Time format, see
-#. https://www.php.net/manual/datetime.format.php
-#. translators: Links last updated date format, see
-#. https://www.php.net/manual/datetime.format.php
-#: wp-includes/class-wp-locale.php:424 wp-includes/script-loader.php:159
-#: wp-includes/script-loader.php:471 wp-admin/includes/schema.php:440
-#: wp-admin/options-general.php:449
-msgid "F j, Y g:i a"
-msgstr "j. F Y, G:i"
 
 #: wp-includes/class-wp-http-streams.php:205
 #: wp-includes/class-wp-http-streams.php:214
@@ -16547,12 +16547,6 @@ msgstr "Vorschau für:"
 msgid "Live Preview"
 msgstr "Live-Vorschau"
 
-#: wp-includes/class-wp-customize-nav-menus.php:1282
-#: wp-includes/class-wp-editor.php:1897 wp-includes/media-template.php:1057
-#: wp-admin/includes/nav-menu.php:375
-msgid "Link Text"
-msgstr "Link-Text"
-
 #. translators: %s: Post title.
 #: wp-includes/comment-template.php:1651
 msgid "No Comments<span class=\"screen-reader-text\"> on %s</span>"
@@ -16625,13 +16619,6 @@ msgstr "Title-Attribut"
 #: wp-admin/includes/nav-menu.php:1358
 msgid "CSS Classes"
 msgstr "CSS-Klassen"
-
-#: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:142
-#: wp-admin/edit-link-form.php:33
-#: wp-admin/includes/class-walker-nav-menu-edit.php:230
-#: wp-admin/includes/nav-menu.php:1359
-msgid "Link Relationship (XFN)"
-msgstr "Link-Beziehungen (XFN)"
 
 #. translators: Nav menu item original title. %s: Original title.
 #. translators: %s: Link to menu item's original object.
@@ -16779,12 +16766,6 @@ msgstr "Individuelle Links"
 #: wp-admin/includes/nav-menu.php:1128
 msgid "Add to Menu"
 msgstr "Zum Menü hinzufügen"
-
-#. translators: Hidden accessibility text.
-#: wp-includes/customize/class-wp-customize-nav-menu-auto-add-control.php:42
-#: wp-includes/customize/class-wp-customize-nav-menus-panel.php:98
-msgid "Menu Options"
-msgstr "Menü-Optionen"
 
 #: wp-includes/class-wp-customize-section.php:248
 #: wp-includes/js/dist/customize-widgets.js:1851
@@ -17392,10 +17373,6 @@ msgstr "&#8222;%1$s&#8220; &#8211; %2$s"
 msgid "%s is required to strip image meta."
 msgstr "%s ist erforderlich, um die Bild-Metadaten zu entfernen."
 
-#: wp-includes/class-wp-editor.php:1397
-msgid "Link options"
-msgstr "Link-Optionen"
-
 #: wp-includes/class-wp-xmlrpc-server.php:2785
 #: wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php:500
 #: wp-admin/users.php:16
@@ -18000,18 +17977,9 @@ msgstr "Als Beitragsbild verwenden"
 msgid "No audio selected"
 msgstr "Keine Audiodatei ausgewählt"
 
-#: wp-includes/class-wp-customize-manager.php:4371
-msgid "Share Preview Link"
-msgstr "Vorschau-Link teilen"
-
 #: wp-includes/class-wp-customize-manager.php:4373
 msgid "See how changes would look live on your website, and share the preview with people who can't access the Customizer."
 msgstr "Schauen Sie sich direkt an, wie Änderungen auf Ihrer Website aussehen würden und teilen Sie die Vorschau mit Menschen, die keinen Zugriff auf den Customizer haben."
-
-#. translators: Hidden accessibility text.
-#: wp-includes/class-wp-customize-manager.php:4379
-msgid "Preview Link"
-msgstr "Vorschau-Link"
 
 #: wp-includes/class-wp-customize-manager.php:4392
 msgid "Copied"
@@ -18029,10 +17997,6 @@ msgstr "WordPress.org-Themes"
 msgid "Homepage Settings"
 msgstr "Homepage-Einstellungen"
 
-#: wp-includes/class-wp-customize-manager.php:5642
-msgid "You can choose what&#8217;s displayed on the homepage of your site. It can be posts in reverse chronological order (classic blog), or a fixed/static page. To set a static homepage, you first need to create two Pages. One will become the homepage, and the other will be where your posts are displayed."
-msgstr "Sie können auswählen, was auf der Homepage Ihrer Website angezeigt wird. Das können Beiträge in umgekehrter chronologischer Reihenfolge (klassischer Blog) oder eine feststehende/statische Seite sein. Um eine statische Homepage festzulegen, müssen Sie erst zwei Seiten erstellen. Eine wird die Homepage und die andere wird die, auf der Ihre Beiträge angezeigt werden."
-
 #: wp-includes/class-wp-customize-manager.php:5659
 #: wp-admin/options-reading.php:85
 msgid "Your homepage displays"
@@ -18047,6 +18011,10 @@ msgstr "Fügen Sie hier Ihren eigenen CSS-Code ein, um das Erscheinungsbild und 
 #: wp-admin/plugin-editor.php:144 wp-admin/theme-editor.php:33
 msgid "When using a keyboard to navigate:"
 msgstr "Bei der Navigation mit der Tastatur:"
+
+#: wp-includes/class-wp-customize-manager.php:5642
+msgid "You can choose what&#8217;s displayed on the homepage of your site. It can be posts in reverse chronological order (classic blog), or a fixed/static page. To set a static homepage, you first need to create two Pages. One will become the homepage, and the other will be where your posts are displayed."
+msgstr "Sie können auswählen, was auf der Homepage Ihrer Website angezeigt wird. Das können Beiträge in umgekehrter chronologischer Reihenfolge (klassischer Blog) oder eine feststehende/statische Seite sein. Um eine statische Homepage festzulegen, müssen Sie erst zwei Seiten erstellen. Eine wird die Homepage und die andere wird die, auf der Ihre Beiträge angezeigt werden."
 
 #: wp-includes/class-wp-customize-manager.php:5719
 #: wp-includes/widgets/class-wp-widget-custom-html.php:326
@@ -18326,14 +18294,6 @@ msgstr "WordPress-Kommentare"
 #: wp-includes/comment.php:3869
 msgid "Comment Author Email"
 msgstr "E-Mail-Adresse des Kommentarautors"
-
-#: wp-includes/comment.php:3873
-msgid "Comment Date"
-msgstr "Kommentar-Datum"
-
-#: wp-includes/comment.php:3874
-msgid "Comment Content"
-msgstr "Kommentar-Inhalt"
 
 #: wp-includes/comment.php:3875
 msgid "Comment URL"
@@ -18866,11 +18826,6 @@ msgstr "Ein Link zu einer Seite."
 msgctxt "navigation link block title"
 msgid "Tag Link"
 msgstr "Schlagwort-Link"
-
-#: wp-includes/class-wp-taxonomy.php:642
-msgctxt "navigation link block title"
-msgid "Category Link"
-msgstr "Kategorie-Link"
 
 #: wp-includes/class-wp-taxonomy.php:645
 msgctxt "navigation link block description"
@@ -20076,6 +20031,51 @@ msgstr "Nach oben verschieben"
 msgid "Move down"
 msgstr "Nach unten verschieben"
 
+#: wp-includes/class-wp-taxonomy.php:642
+msgctxt "navigation link block title"
+msgid "Category Link"
+msgstr "Kategorielink"
+
+#: wp-includes/comment.php:3873
+msgid "Comment Date"
+msgstr "Kommentardatum"
+
+#: wp-includes/comment.php:3874
+msgid "Comment Content"
+msgstr "Kommentarinhalt"
+
+#: wp-includes/class-wp-customize-manager.php:4371
+msgid "Share Preview Link"
+msgstr "Vorschaulink teilen"
+
+#. translators: Hidden accessibility text.
+#: wp-includes/class-wp-customize-manager.php:4379
+msgid "Preview Link"
+msgstr "Vorschaulink"
+
+#: wp-includes/class-wp-customize-nav-menus.php:1282
+#: wp-includes/class-wp-editor.php:1897 wp-includes/media-template.php:1057
+#: wp-admin/includes/nav-menu.php:375
+msgid "Link Text"
+msgstr "Linktext"
+
+#: wp-includes/class-wp-editor.php:1397
+msgid "Link options"
+msgstr "Linkoptionen"
+
+#. translators: Hidden accessibility text.
+#: wp-includes/customize/class-wp-customize-nav-menu-auto-add-control.php:42
+#: wp-includes/customize/class-wp-customize-nav-menus-panel.php:98
+msgid "Menu Options"
+msgstr "Menüoptionen"
+
+#: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:142
+#: wp-admin/edit-link-form.php:33
+#: wp-admin/includes/class-walker-nav-menu-edit.php:230
+#: wp-admin/includes/nav-menu.php:1359
+msgid "Link Relationship (XFN)"
+msgstr "Linkbeziehung (XFN)"
+
 #: wp-activate.php:126
 msgid "Activation Key Required"
 msgstr "Aktivierungsschlüssel erforderlich"
@@ -20650,18 +20650,6 @@ msgstr "Die Menü-ID darf nicht leer sein."
 msgctxt "admin bar menu group label"
 msgid "New"
 msgstr "Neu"
-
-#. translators: 1: Login URL, 2: Username, 3: User email address, 4: Lost
-#. password URL.
-#: wp-activate.php:148
-msgid "Your account has been activated. You may now <a href=\"%1$s\">log in</a> to the site using your chosen username of &#8220;%2$s&#8221;. Please check your email inbox at %3$s for your password and login instructions. If you do not receive an email, please check your junk or spam folder. If you still do not receive an email within an hour, you can <a href=\"%4$s\">reset your password</a>."
-msgstr "Ihr Konto wurde aktiviert. Sie können sich nun mit dem gewählten Benutzernamen &#8222;%2$s&#8220; <a href=\"%1$s\">anmelden</a>. Bitte überprüfen Sie Ihren E-Mail-Posteingang %3$s für Ihr Passwort und die Anmelde-Instruktionen. Falls Sie keine E-Mail erhalten haben, überprüfen Sie bitte auch Ihren Spam-Ordner. Sollten Sie nicht innerhalb von einer Stunde eine E-Mail erhalten haben, können Sie Ihr <a href=\"%4$s\">Passwort zurücksetzen</a>."
-
-#. translators: 1: Site URL, 2: Username, 3: User email address, 4: Lost
-#. password URL.
-#: wp-activate.php:157
-msgid "Your site at %1$s is active. You may now log in to your site using your chosen username of &#8220;%2$s&#8221;. Please check your email inbox at %3$s for your password and login instructions. If you do not receive an email, please check your junk or spam folder. If you still do not receive an email within an hour, you can <a href=\"%4$s\">reset your password</a>."
-msgstr "Ihre Website unter %1$s ist aktiviert. Sie können sich nun mit dem gewählten Benutzernamen &#8222;%2$s&#8220; anmelden. Bitte überprüfen Sie Ihren E-Mail-Posteingang %3$s für Ihr Passwort und die Anmelde-Instruktionen. Falls Sie keine E-Mail erhalten haben, überprüfen Sie bitte auch Ihren Spam-Ordner. Sollten Sie nicht innerhalb von einer Stunde eine E-Mail erhalten haben, können Sie Ihr <a href=\"%4$s\">Passwort zurücksetzen</a>."
 
 #: wp-includes/admin-bar.php:478 wp-admin/site-editor.php:316
 msgid "Edit Site"
@@ -21961,6 +21949,10 @@ msgstr "Zeigt ein Archiv für Beitragsschlagwörter an. Dieses Template dient al
 msgid "Displays when a visitor views the dedicated page that exists for any media attachment."
 msgstr "Wird angezeigt, wenn ein Besucher die zugehörige Seite anzeigt, die für jeden Medienanhang existiert."
 
+#: wp-includes/block-template-utils.php:181
+msgid "Displays a custom taxonomy archive. Like categories and tags, taxonomies have terms which you use to classify things. For example: a taxonomy named \"Art\" can have multiple terms, such as \"Modern\" and \"18th Century.\" This template will serve as a fallback when a more specific template (e.g. Taxonomy: Art) cannot be found."
+msgstr "Zeigt ein Archiv für eine individuelle Taxonomie an. Wie Kategorien und Schlagwörter haben Taxonomien Begriffe, die Sie benutzen, um Dinge zu klassifizieren. Zum Beispiel: Eine Taxonomie namens „Kunst“ kann mehrere Begriffe beinhalten, wie „Modern“ und „18. Jahrhundert“. Dieses Template wird als Fallback ausgeliefert, wenn kein spezifischeres Template (z. B. Taxonomie: Kunst) gefunden werden kann."
+
 #: wp-includes/block-template-utils.php:197
 msgid "Displays when a visitor performs a search on your website."
 msgstr "Wird angezeigt, wenn ein Besucher auf Ihrer Website eine Suche durchführt."
@@ -21972,10 +21964,6 @@ msgstr "Zeigt die Datenschutzerklärungs-Seite Ihrer Website an."
 #: wp-includes/block-template-utils.php:205
 msgid "Displays when a visitor views a non-existent page, such as a dead link or a mistyped URL."
 msgstr "Wird angezeigt, wenn ein Besucher eine nicht vorhandene Seite anzeigt, wie etwa einen toten Link oder eine falsch getippte URL."
-
-#: wp-includes/block-template-utils.php:181
-msgid "Displays a custom taxonomy archive. Like categories and tags, taxonomies have terms which you use to classify things. For example: a taxonomy named \"Art\" can have multiple terms, such as \"Modern\" and \"18th Century.\" This template will serve as a fallback when a more specific template (e.g. Taxonomy: Art) cannot be found."
-msgstr "Zeigt ein Archiv für eine individuelle Taxonomie an. Wie Kategorien und Schlagwörter haben Taxonomien Begriffe, die Sie benutzen, um Dinge zu klassifizieren. Zum Beispiel: Eine Taxonomie namens „Kunst“ kann mehrere Begriffe beinhalten, wie „Modern“ und „18. Jahrhundert“. Dieses Template wird als Fallback ausgeliefert, wenn kein spezifischeres Template (z. B. Taxonomie: Kunst) gefunden werden kann."
 
 #: wp-includes/admin-bar.php:176 wp-admin/about.php:60
 #: wp-admin/contribute.php:13 wp-admin/contribute.php:33
@@ -22922,3 +22910,15 @@ msgstr "Bei der Aktivierung ist ein Fehler aufgetreten"
 #: wp-includes/script-loader.php:1309
 msgid "You must supply a future date to schedule."
 msgstr "Sie müssen ein in der Zukunft liegendes Datum für die Planung angeben."
+
+#. translators: 1: Site URL, 2: Username, 3: User email address, 4: Lost
+#. password URL.
+#: wp-activate.php:157
+msgid "Your site at %1$s is active. You may now log in to your site using your chosen username of &#8220;%2$s&#8221;. Please check your email inbox at %3$s for your password and login instructions. If you do not receive an email, please check your junk or spam folder. If you still do not receive an email within an hour, you can <a href=\"%4$s\">reset your password</a>."
+msgstr "Ihre Website unter %1$s ist aktiviert. Sie können sich nun mit dem gewählten Benutzernamen &#8222;%2$s&#8220; anmelden. Bitte überprüfen Sie Ihren E-Mail-Posteingang %3$s für Ihr Passwort und die Anweisungen zur Anmeldung. Falls Sie keine E-Mail erhalten haben, überprüfen Sie bitte auch Ihren Spamordner. Sollten Sie nicht innerhalb von einer Stunde eine E-Mail erhalten haben, können Sie Ihr <a href=\"%4$s\">Passwort zurücksetzen</a>."
+
+#. translators: 1: Login URL, 2: Username, 3: User email address, 4: Lost
+#. password URL.
+#: wp-activate.php:148
+msgid "Your account has been activated. You may now <a href=\"%1$s\">log in</a> to the site using your chosen username of &#8220;%2$s&#8221;. Please check your email inbox at %3$s for your password and login instructions. If you do not receive an email, please check your junk or spam folder. If you still do not receive an email within an hour, you can <a href=\"%4$s\">reset your password</a>."
+msgstr "Ihr Konto wurde aktiviert. Sie können sich nun mit dem gewählten Benutzernamen &#8222;%2$s&#8220; <a href=\"%1$s\">anmelden</a>. Bitte überprüfen Sie Ihren E-Mail-Posteingang %3$s für Ihr Passwort und die Anweisungen zur Anmeldung. Falls Sie keine E-Mail erhalten haben, überprüfen Sie bitte auch Ihren Spamordner. Sollten Sie nicht innerhalb von einer Stunde eine E-Mail erhalten haben, können Sie Ihr <a href=\"%4$s\">Passwort zurücksetzen</a>."

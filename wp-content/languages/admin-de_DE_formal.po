@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.9.x - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-14 21:16:58+0000\n"
+"PO-Revision-Date: 2026-05-18 10:15:25+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -645,6 +645,10 @@ msgstr "Einen Kommentar in die Warteschlange schieben, wenn er %s oder mehr Link
 msgid "When a comment contains any of these words in its content, author name, URL, email, IP address, or browser&#8217;s user agent string, it will be held in the <a href=\"edit-comments.php?comment_status=moderated\">moderation queue</a>. One word or IP address per line. It will match inside words, so &#8220;press&#8221; will match &#8220;WordPress&#8221;."
 msgstr "Wenn ein Kommentar eines der folgenden Wörter im Inhalt, im Autorennamen, in der URL, in der E-Mail-Adresse, in der IP-Adresse oder in der User-Agent-Zeichenfolge des Browsers enthält, wird er in der <a href=\"edit-comments.php?comment_status=moderated\">Moderations-Warteschlange</a> zurückgehalten. Ein Wort oder eine IP-Adresse pro Zeile. Auch Wortteile werden berücksichtigt; so wird durch „press“ beispielsweise auch „WordPress“ gefiltert."
 
+#: wp-admin/options-discussion.php:205
+msgid "When a comment contains any of these words in its content, author name, URL, email, IP address, or browser&#8217;s user agent string, it will be put in the Trash. One word or IP address per line. It will match inside words, so &#8220;press&#8221; will match &#8220;WordPress&#8221;."
+msgstr "Wenn ein Kommentar eines der folgenden Wörter im Inhalt, im Autorennamen, in der URL, in der E-Mail-Adresse, in der IP-Adresse oder in der User-Agent-Zeichenfolge des Browsers enthält, wird er in den Papierkorb verschoben. Ein Wort oder eine IP-Adresse pro Zeile. Auch Wortteile werden berücksichtigt; so wird durch „press“ beispielsweise auch „WordPress“ gefiltert."
+
 #: wp-admin/options-discussion.php:214
 msgid "Avatars"
 msgstr "Avatare"
@@ -684,10 +688,6 @@ msgstr "R &#8211; Entspricht in etwa dem deutschen FSK18"
 #: wp-admin/options-discussion.php:252
 msgid "X &#8212; Even more mature than above"
 msgstr "X &#8211; Keine Jugendfreigabe"
-
-#: wp-admin/options-discussion.php:205
-msgid "When a comment contains any of these words in its content, author name, URL, email, IP address, or browser&#8217;s user agent string, it will be put in the Trash. One word or IP address per line. It will match inside words, so &#8220;press&#8221; will match &#8220;WordPress&#8221;."
-msgstr "Wenn ein Kommentar eines der folgenden Wörter im Inhalt, im Autorennamen, in der URL, in der E-Mail-Adresse, in der IP-Adresse oder in der User-Agent-Zeichenfolge des Browsers enthält, wird er in den Papierkorb verschoben. Ein Wort oder eine IP-Adresse pro Zeile. Auch Wortteile werden berücksichtigt; so wird durch „press“ beispielsweise auch „WordPress“ gefiltert."
 
 #: wp-admin/options-discussion.php:268
 msgid "For users without a custom avatar of their own, you can either display a generic logo or a generated one based on their email address."
@@ -935,11 +935,6 @@ msgstr "Alle Einstellungen"
 msgid "Edit Plugins"
 msgstr "Plugins bearbeiten"
 
-#. translators: 1, 2, 3: Examples of random email addresses.
-#: wp-admin/options-writing.php:149
-msgid "To post to WordPress by email, you must set up a secret email account with POP3 access. Any mail received at this address will be posted, so it&#8217;s a good idea to keep this address very secret. Here are three random strings you could use: %1$s, %2$s, %3$s."
-msgstr "Um Beiträge in WordPress via E-Mail zu veröffentlichen, müssen Sie ein geheimes E-Mail-Konto mit POP3-Zugang einrichten. Jede an diese Adresse gesendete E-Mail wird auf Ihrer Website veröffentlicht. Halten Sie deshalb diese Adresse strengstens geheim. Hier sind drei Beispiele zufälliger Zeichenfolgen, die Sie verwenden könnten: %1$s, %2$s, %3$s."
-
 #: wp-admin/plugin-editor.php:256
 msgid "Select plugin to edit:"
 msgstr "Zu bearbeitendes Plugin wählen:"
@@ -951,6 +946,11 @@ msgstr "Plugin-Dateien"
 #: wp-admin/plugin-editor.php:310 wp-admin/theme-editor.php:370
 msgid "Documentation:"
 msgstr "Dokumentation:"
+
+#. translators: 1, 2, 3: Examples of random email addresses.
+#: wp-admin/options-writing.php:149
+msgid "To post to WordPress by email, you must set up a secret email account with POP3 access. Any mail received at this address will be posted, so it&#8217;s a good idea to keep this address very secret. Here are three random strings you could use: %1$s, %2$s, %3$s."
+msgstr "Um Beiträge in WordPress via E-Mail zu veröffentlichen, müssen Sie ein geheimes E-Mail-Konto mit POP3-Zugang einrichten. Jede an diese Adresse gesendete E-Mail wird auf Ihrer Website veröffentlicht. Halten Sie deshalb diese Adresse strengstens geheim. Hier sind drei Beispiele zufälliger Zeichenfolgen, die Sie verwenden könnten: %1$s, %2$s, %3$s."
 
 #: wp-admin/plugin-editor.php:331 wp-admin/theme-editor.php:396
 msgid "Update File"
@@ -1789,10 +1789,6 @@ msgstr "Wenn Sie auf <strong>Dateien auswählen</strong> klicken, öffnet sich e
 msgid "You can change your password, turn on keyboard shortcuts, change the color scheme of your WordPress administration screens, and turn off the WYSIWYG (Visual) editor, among other things. You can hide the Toolbar (formerly called the Admin Bar) from the front end of your site, however it cannot be disabled on the admin screens."
 msgstr "Sie können unter anderem Ihr Passwort ändern, Tastaturbefehle aktivieren, das Farbschema Ihres WordPress-Administrationsbereichs ändern oder den visuellen Editor deaktivieren. Sie können die Werkzeugleiste (vorher Adminleiste genannt) im Frontend Ihrer Website verbergen, allerdings nicht im Administrationsbereich."
 
-#: wp-admin/options-discussion.php:25
-msgid "This screen provides many options for controlling the management and display of comments and links to your posts/pages. So many, in fact, they will not all fit here! :) Use the documentation links to get information on what each discussion setting does."
-msgstr "Diese Ansicht bietet zahlreiche Optionen, mit denen Sie die Verwaltung und Darstellung von Kommentaren sowie Links zu Ihren Beiträgen/Seiten steuern können. So viele, dass sie nicht alle hier Platz finden! ;-) Nutzen Sie die Dokumentations-Links für Informationen darüber, was jede einzelne Diskussions-Einstellung bewirkt."
-
 #: wp-admin/options-writing.php:34
 msgid "Post Via Email"
 msgstr "Beiträge per E-Mail veröffentlichen"
@@ -2195,10 +2191,6 @@ msgstr "Um ein bestehendes Menü zu bearbeiten, <strong>wählen Sie ein Menü au
 msgid "Menu Management"
 msgstr "Menüverwaltung"
 
-#: wp-admin/nav-menus.php:742
-msgid "Each navigation menu may contain a mix of links to pages, categories, custom URLs or other content types. Menu links are added by selecting items from the expanding boxes in the left-hand column below."
-msgstr "Jedes Navigationsmenü kann eine Kombination aus Links zu internen Seiten, Kategorien, individuellen URLs oder anderen Inhaltsarten enthalten. Menü-Links werden über die expandierenden Felder in der linken Spalte hinzugefügt."
-
 #: wp-admin/nav-menus.php:746
 msgid "To reorganize menu items, <strong>drag and drop items with your mouse or use your keyboard</strong>. Drag or move a menu item a little to the right to make it a submenu"
 msgstr "Um Menüeinträge zu verschieben, <strong>ziehen Sie diese mit der Maus oder der Tastatur</strong>. Ziehen oder bewegen Sie einen Menüeintrag etwas nach rechts, um ein Untermenü daraus zu machen"
@@ -2334,16 +2326,6 @@ msgstr "Entschuldigung, aber das ist keine gültige E-Mail-Adresse. E-Mail-Adres
 msgid "Your theme does not natively support menus, but you can use them in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%s\">Widgets</a> screen."
 msgstr "Ihr Theme unterstützt keine Menüs, aber Sie können sie in Seitenleisten verwenden, indem Sie ein &#8222;Navigationsmenü&#8220;-Widget im <a href=\"%s\">Widgets-Bereich</a> hinzufügen."
 
-#. translators: 1: URL to Widgets screen, 2 and 3: The names of the default
-#. themes.
-#: wp-admin/nav-menus.php:712
-msgid "Menus can be displayed in locations defined by your theme, even used in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%1$s\">Widgets</a> screen. If your theme does not support the navigation menus feature (the default themes, %2$s and %3$s, do), you can learn about adding this support by following the documentation link to the side."
-msgstr "Menüs können in Ihrem Theme an vordefinierten Positionen angezeigt oder sogar in Seitenleisten verwendet werden, indem Sie ein &#8222;Navigationsmenü&#8220;-Widget im <a href=\"%1$s\">Widgets</a>-Bereich hinzufügen. Wenn Ihr Theme keine Navigationsmenüs unterstützt (die Standard-Themes %2$s und %3$s tun dies), können Sie über den Link zur Dokumentation erfahren, wie Sie eine solche Unterstützung hinzufügen können."
-
-#: wp-admin/nav-menus.php:743
-msgid "<strong>Clicking the arrow to the right of any menu item</strong> in the editor will reveal a standard group of settings. Additional settings such as link target, CSS classes, link relationships, and link descriptions can be enabled and disabled via the Screen Options tab."
-msgstr "<strong>Durch Anklicken des Pfeils rechts von jedem Menüeintrag</strong> im Editor wird eine Gruppe üblicher Einstellungen eingeblendet. Zusätzliche Einstellungen wie zum Beispiel Link-Ziele, CSS-Klassen, Link-Beziehungen und Link-Beschreibungen können über den Tab &#8222;Ansicht anpassen&#8220; aktiviert und deaktiviert werden."
-
 #: wp-admin/options-discussion.php:176
 msgid "Comment must be manually approved"
 msgstr "muss der Kommentar manuell freigegeben werden"
@@ -2356,6 +2338,12 @@ msgstr "Bei einer Aktualisierung auf eine neuere Version dieses Themes, werden h
 #: wp-admin/user-new.php:518
 msgid "Create a brand new user and add them to this site."
 msgstr "Legen Sie einen neuen Benutzer an und fügen Sie ihn dieser Website hinzu."
+
+#. translators: 1: URL to Widgets screen, 2 and 3: The names of the default
+#. themes.
+#: wp-admin/nav-menus.php:712
+msgid "Menus can be displayed in locations defined by your theme, even used in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%1$s\">Widgets</a> screen. If your theme does not support the navigation menus feature (the default themes, %2$s and %3$s, do), you can learn about adding this support by following the documentation link to the side."
+msgstr "Menüs können in Ihrem Theme an vordefinierten Positionen angezeigt oder sogar in Seitenleisten verwendet werden, indem Sie ein &#8222;Navigationsmenü&#8220;-Widget im <a href=\"%1$s\">Widgets</a>-Bereich hinzufügen. Wenn Ihr Theme keine Navigationsmenüs unterstützt (die Standard-Themes %2$s und %3$s tun dies), können Sie über den Link zur Dokumentation erfahren, wie Sie eine solche Unterstützung hinzufügen können."
 
 #: wp-admin/includes/update-core.php:1408
 msgid "There is not enough free disk space to complete the update."
@@ -2617,6 +2605,17 @@ msgstr "Sie sind nur an diesem Ort angemeldet."
 msgid "Close details dialog"
 msgstr "Dialogfenster mit Detailansicht schließen"
 
+#. translators: Date and time format for exact current time, mainly about
+#. timezones, see https://www.php.net/manual/datetime.format.php
+#: wp-admin/options-general.php:23
+msgctxt "timezone date format"
+msgid "Y-m-d H:i:s"
+msgstr "j.n.Y, G:i:s"
+
+#: wp-admin/theme-install.php:531
+msgid "This theme has not been rated yet."
+msgstr "Dieses Theme wurde noch nicht bewertet."
+
 #. translators: Do not translate USERNAME, URL_DELETE, SITENAME, SITEURL: those
 #. are placeholders.
 #: wp-admin/ms-delete-site.php:58
@@ -2648,21 +2647,6 @@ msgstr ""
 "Danke, dass Sie diese Website nutzen,\n"
 "von allen auf ###SITENAME### \n"
 "###SITEURL###"
-
-#: wp-admin/nav-menus.php:745
-msgid "To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>"
-msgstr "Um einen individuellen Link hinzuzufügen, <strong>erweitern Sie den Abschnitt für individuelle Links, geben Sie eine URL und einen Link-Text ein und klicken Sie auf &#8222;Zum Menü hinzufügen&#8220;</strong>"
-
-#. translators: Date and time format for exact current time, mainly about
-#. timezones, see https://www.php.net/manual/datetime.format.php
-#: wp-admin/options-general.php:23
-msgctxt "timezone date format"
-msgid "Y-m-d H:i:s"
-msgstr "j.n.Y, G:i:s"
-
-#: wp-admin/theme-install.php:531
-msgid "This theme has not been rated yet."
-msgstr "Dieses Theme wurde noch nicht bewertet."
 
 #: wp-admin/user-edit.php:64
 msgid "You can log out of other devices, such as your phone or a public computer, by clicking the Log Out Everywhere Else button."
@@ -3234,14 +3218,14 @@ msgstr "Neue Benutzer bekommen automatisch ein Passwort zugewiesen, welches sie 
 msgid "By default, new users will receive an email letting them know they&#8217;ve been added as a user for your site. This email will also contain a password reset link. Uncheck the box if you do not want to send the new user a welcome email."
 msgstr "Neue Benutzer erhalten standardmäßig eine E-Mail, die ihnen mitteilt, dass sie als Benutzer Ihrer Website hinzugefügt wurden. Diese E-Mail enthält auch einen Link zum Zurücksetzen des Passworts. Wählen Sie diese Option ab, wenn Sie einem neuen Benutzer keine Willkommens-E-Mail senden möchten."
 
+#: wp-admin/plugin-install.php:103
+msgid "You can find new plugins to install by searching or browsing the directory right here in your own Plugins section."
+msgstr "Sie finden neue Plugins zur Installation über eine Suche oder Durchblättern des Verzeichnisses gleich hier in Ihrem eigenen Plugin-Bereich."
+
 #. translators: %s: https://wordpress.org/plugins
 #: wp-admin/plugin-install.php:100
 msgid "Plugins hook into WordPress to extend its functionality with custom features. Plugins are developed independently from the core WordPress application by thousands of developers all over the world. All plugins in the official <a href=\"%s\">WordPress Plugin Directory</a> are compatible with the license WordPress uses."
 msgstr "Plugins klinken sich in WordPress ein, um die Funktionalität von WordPress um individuelle Funktionen zu erweitern. Plugins werden unabhängig vom WordPress-Core von tausenden Personen auf der ganzen Welt entwickelt. Alle Plugins im offiziellen <a href=\"%s\">WordPress-Plugin-Verzeichnis</a> sind mit der von WordPress genutzten Lizenz (GPL) kompatibel."
-
-#: wp-admin/plugin-install.php:103
-msgid "You can find new plugins to install by searching or browsing the directory right here in your own Plugins section."
-msgstr "Sie finden neue Plugins zur Installation über eine Suche oder Durchblättern des Verzeichnisses gleich hier in Ihrem eigenen Plugin-Bereich."
 
 #. translators: %s: Number of ratings.
 #: wp-admin/includes/theme.php:885 wp-admin/theme-install.php:526
@@ -3562,14 +3546,14 @@ msgid "<strong>Error:</strong> \"Table Prefix\" must not be empty."
 msgstr "<strong>Fehler:</strong> „Tabellenpräfix“ darf nicht leer sein."
 
 #. translators: First page content.
-#: wp-admin/includes/upgrade.php:315
-msgid "This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:"
-msgstr "Dies ist eine Beispiel-Seite. Sie unterscheidet sich von Beiträgen, da sie stets an derselben Stelle bleibt und (bei den meisten Themes) in der Website-Navigation angezeigt wird. Die meisten starten mit einem Impressum, der Datenschutzerklärung oder einer „Über uns“-Seite, um sich potenziellen Besuchern der Website vorzustellen. Dort könnte zum Beispiel stehen:"
-
-#. translators: First page content.
 #: wp-admin/includes/upgrade.php:320
 msgid "Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)"
 msgstr "Hallo! Tagsüber arbeite ich als Fahrradkurier, nachts bin ich ein aufstrebender Schauspieler und dies hier ist meine Website. Ich lebe in Berlin, habe einen großen Hund namens Jack, mag Pi&#241;a Coladas, jedoch weniger (ohne Schirm) im Regen stehen gelassen zu werden."
+
+#. translators: First page content.
+#: wp-admin/includes/upgrade.php:315
+msgid "This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:"
+msgstr "Dies ist eine Beispiel-Seite. Sie unterscheidet sich von Beiträgen, da sie stets an derselben Stelle bleibt und (bei den meisten Themes) in der Website-Navigation angezeigt wird. Die meisten starten mit einem Impressum, der Datenschutzerklärung oder einer „Über uns“-Seite, um sich potenziellen Besuchern der Website vorzustellen. Dort könnte zum Beispiel stehen:"
 
 #. translators: First page content.
 #: wp-admin/includes/upgrade.php:325
@@ -4476,6 +4460,16 @@ msgstr "RoboHash (automatisch generiert)"
 msgid "Two terms you will want to know are the WordPress URL and the site URL. The WordPress URL is where the core WordPress installation files are, and the site URL is the address a visitor uses in the browser to go to your site."
 msgstr "Zwei Begriffe, die Sie kennen sollten, sind die WordPress-URL und die Website-URL. Unter der WordPress-URL liegen die Dateien der WordPress-Installation; die Website-URL ist die Adresse, die Besucher im Browser eingeben, um auf Ihre Website zu gelangen."
 
+#. translators: %s: Documentation URL.
+#: wp-admin/options-general.php:34
+msgid "Though the terms refer to two different concepts, in practice, they can be the same address or different. For example, you can have the core WordPress installation files in the root directory (<code>https://example.com</code>), in which case the two URLs would be the same. Or the <a href=\"%s\">WordPress files can be in a subdirectory</a> (<code>https://example.com/wordpress</code>). In that case, the WordPress URL and the site URL would be different."
+msgstr "Obwohl sich die Begriffe auf zwei verschiedene Konzepte beziehen, kann es sich in der Praxis um dieselbe oder um eine andere Adresse handeln. Zum Beispiel können Sie die Kerndateien der WordPress-Installation im Stammverzeichnis haben (<code>https://example.com</code>), in diesem Fall wären die beiden URLs gleich. Oder die <a href=\"%s\">WordPress-Dateien können sich in einem Unterverzeichnis befinden (engl.)</a> (<code>https://example.com/wordpress</code>). In diesem Fall würden die WordPress-URL und die Website-URL unterschiedlich sein."
+
+#. translators: 1: http://, 2: https:
+#: wp-admin/options-general.php:39
+msgid "Both WordPress URL and site URL can start with either %1$s or %2$s. A URL starting with %2$s requires an SSL certificate, so be sure that you have one before changing to %2$s. With %2$s, a padlock will appear next to the address in the browser address bar. Both %2$s and the padlock signal that your site meets some basic security requirements, which can build trust with your visitors and with search engines."
+msgstr "Sowohl die WordPress-URL als auch die Website-URL können entweder mit %1$s oder mit %2$s beginnen. Eine URL, die mit %2$s anfängt, erfordert ein SSL-Zertifikat. Stellen Sie also sicher, dass Sie eins haben, bevor Sie zu %2$s wechseln. Mit %2$s wird neben der Adresse in der Adresszeile des Browsers ein Schloss angezeigt. Beide, %2$s und Schloss, signalisieren, dass Ihre Website einige grundlegende Sicherheitsanforderungen erfüllt, was Vertrauen für Besucher und Suchmaschinen aufbauen kann."
+
 #: wp-admin/options-general.php:46 wp-admin/network/settings.php:56
 msgid "You can set the language, and WordPress will automatically download and install the translation files (available if your filesystem is writable)."
 msgstr "Sie können die Sprache festlegen und WordPress lädt automatisch die Übersetzungsdateien herunter und installiert sie (sofern Ihr Dateisystem beschreibbar ist)."
@@ -4488,16 +4482,6 @@ msgstr "<a href=\"https://wordpress.org/documentation/article/customize-date-and
 msgctxt "site editor title tag"
 msgid "Editor"
 msgstr "Editor"
-
-#. translators: %s: Documentation URL.
-#: wp-admin/options-general.php:34
-msgid "Though the terms refer to two different concepts, in practice, they can be the same address or different. For example, you can have the core WordPress installation files in the root directory (<code>https://example.com</code>), in which case the two URLs would be the same. Or the <a href=\"%s\">WordPress files can be in a subdirectory</a> (<code>https://example.com/wordpress</code>). In that case, the WordPress URL and the site URL would be different."
-msgstr "Obwohl sich die Begriffe auf zwei verschiedene Konzepte beziehen, kann es sich in der Praxis um dieselbe oder um eine andere Adresse handeln. Zum Beispiel können Sie die Kerndateien der WordPress-Installation im Stammverzeichnis haben (<code>https://example.com</code>), in diesem Fall wären die beiden URLs gleich. Oder die <a href=\"%s\">WordPress-Dateien können sich in einem Unterverzeichnis befinden (engl.)</a> (<code>https://example.com/wordpress</code>). In diesem Fall würden die WordPress-URL und die Website-URL unterschiedlich sein."
-
-#. translators: 1: http://, 2: https:
-#: wp-admin/options-general.php:39
-msgid "Both WordPress URL and site URL can start with either %1$s or %2$s. A URL starting with %2$s requires an SSL certificate, so be sure that you have one before changing to %2$s. With %2$s, a padlock will appear next to the address in the browser address bar. Both %2$s and the padlock signal that your site meets some basic security requirements, which can build trust with your visitors and with search engines."
-msgstr "Sowohl die WordPress-URL als auch die Website-URL können entweder mit %1$s oder mit %2$s beginnen. Eine URL, die mit %2$s anfängt, erfordert ein SSL-Zertifikat. Stellen Sie also sicher, dass Sie eins haben, bevor Sie zu %2$s wechseln. Mit %2$s wird neben der Adresse in der Adresszeile des Browsers ein Schloss angezeigt. Beide, %2$s und Schloss, signalisieren, dass Ihre Website einige grundlegende Sicherheitsanforderungen erfüllt, was Vertrauen für Besucher und Suchmaschinen aufbauen kann."
 
 #: wp-admin/upload.php:387
 msgid "<strong>Download file</strong> downloads the original media file to your device."
@@ -5161,10 +5145,6 @@ msgstr "Das Navigationsmenü auf der linken Seite enthält Links zu allen Ansich
 msgid "The Categories and Tags Converter link on this screen will take you to the Import screen, where that Converter is one of the plugins you can install. Once that plugin is installed, the Activate Plugin &amp; Run Importer link will take you to a screen where you can choose to convert tags into categories or vice versa."
 msgstr "Über den Link „Kategorien- und Schlagwort-Konverter“ dieser Ansicht gelangen Sie zur Import-Ansicht, auf welcher Sie den Konverter als Plugin installieren können. Sobald das Plugin installiert ist, gelangen Sie über den Link „Plugin aktivieren und Importer ausführen“ zu einer Ansicht, auf der Sie auswählen können, ob Sie Kategorien in Schlagwörter umwandeln möchten (oder umgekehrt)."
 
-#: wp-admin/options-writing.php:24
-msgid "You can submit content in several different ways; this screen holds the settings for all of them. The top section controls the editor within the dashboard, while the rest control external publishing methods. For more information on any of these methods, use the documentation links."
-msgstr "Sie können Inhalte auf verschiedene Arten einreichen. In dieser Ansicht finden Sie Einstellungen für all diese Möglichkeiten. Der obere Abschnitt steuert den Backend-Editor, während der restliche Teil die externen Veröffentlichungsmethoden regelt. Weitere Informationen finden Sie in den weiterführenden Dokumentations-Links."
-
 #: wp-admin/options-discussion.php:90
 msgid "Show comments cookies opt-in checkbox, allowing comment author cookies to be set"
 msgstr "Das Opt-in-Kontrollkästchen für Kommentar-Cookies anzeigen, damit die Cookies des Kommentarautors gesetzt werden können"
@@ -5234,6 +5214,26 @@ msgstr "Mit dem Plugin-Datei-Editor können Sie Änderungen an den einzelnen PHP
 #: wp-admin/user-new.php:350
 msgid "Invitation email sent to new user. A confirmation link must be clicked before their account is created."
 msgstr "Eine Einladungs-E-Mail wurde dem neuen Benutzer zugesandt. Der Bestätigungslink muss noch angeklickt werden, bevor das Konto erstellt wird."
+
+#: wp-admin/options-writing.php:24
+msgid "You can submit content in several different ways; this screen holds the settings for all of them. The top section controls the editor within the dashboard, while the rest control external publishing methods. For more information on any of these methods, use the documentation links."
+msgstr "Sie können Inhalte auf verschiedene Arten einreichen. In dieser Ansicht finden Sie Einstellungen für all diese Möglichkeiten. Der obere Abschnitt steuert den Backend-Editor, während der restliche Teil die externen Veröffentlichungsmethoden regelt. Weitere Informationen finden Sie in den weiterführenden Dokumentationslinks."
+
+#: wp-admin/nav-menus.php:742
+msgid "Each navigation menu may contain a mix of links to pages, categories, custom URLs or other content types. Menu links are added by selecting items from the expanding boxes in the left-hand column below."
+msgstr "Jedes Navigationsmenü kann eine Kombination aus Links zu internen Seiten, Kategorien, individuellen URLs oder anderen Inhaltsarten enthalten. Menülinks werden über die expandierenden Felder in der linken Spalte hinzugefügt."
+
+#: wp-admin/options-discussion.php:25
+msgid "This screen provides many options for controlling the management and display of comments and links to your posts/pages. So many, in fact, they will not all fit here! :) Use the documentation links to get information on what each discussion setting does."
+msgstr "Diese Ansicht bietet zahlreiche Optionen, mit denen Sie die Verwaltung und Darstellung von Kommentaren sowie Links zu Ihren Beiträgen/Seiten steuern können. So viele, dass sie nicht alle hier Platz finden! ;-) Nutzen Sie die Dokumentationslinks für Informationen darüber, was jede einzelne Diskussionseinstellung bewirkt."
+
+#: wp-admin/nav-menus.php:745
+msgid "To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>"
+msgstr "Um einen individuellen Link hinzuzufügen, <strong>erweitern Sie den Abschnitt für individuelle Links, geben Sie eine URL und einen Linktext ein und klicken Sie auf „Zum Menü hinzufügen“</strong>"
+
+#: wp-admin/nav-menus.php:743
+msgid "<strong>Clicking the arrow to the right of any menu item</strong> in the editor will reveal a standard group of settings. Additional settings such as link target, CSS classes, link relationships, and link descriptions can be enabled and disabled via the Screen Options tab."
+msgstr "<strong>Durch Anklicken des Pfeils rechts von jedem Menüeintrag</strong> im Editor wird eine Gruppe üblicher Einstellungen eingeblendet. Zusätzliche Einstellungen wie zum Beispiel Linkziele, CSS-Klassen, Linkbeziehungen und Linkbeschreibungen können über den Tab „Ansicht anpassen“ aktiviert und deaktiviert werden."
 
 #: wp-admin/includes/media.php:2839 wp-admin/includes/nav-menu.php:545
 #: wp-admin/includes/nav-menu.php:917
@@ -5758,10 +5758,6 @@ msgstr "Mit Bild verlinken:"
 #: wp-admin/includes/media.php:3009
 msgid "Link to image"
 msgstr "Mit Bild verlinken"
-
-#: wp-admin/includes/media.php:2978
-msgid "Link text, e.g. &#8220;Ransom Demands (PDF)&#8221;"
-msgstr "Link-Text, z. B. &#8222;Airheads – Sie haben den Beat (PDF)&#8220;"
 
 #: wp-admin/includes/meta-boxes.php:71
 msgid "Preview Changes"
@@ -7759,15 +7755,6 @@ msgstr "<strong>Information</strong> – Die URL einer Website wird selten ver�
 msgid "<strong>Users</strong> &mdash; This displays the users associated with this site. You can also change their role, reset their password, or remove them from the site. Removing the user from the site does not remove the user from the network."
 msgstr "<strong>Benutzer</strong> &ndash; Hier werden die mit dieser Website verknüpften Benutzer angezeigt. Sie können auch ihre Rolle ändern, ihr Passwort zurücksetzen oder sie von der Website entfernen. Das Entfernen des Benutzers von der Website entfernt ihn jedoch nicht aus dem Netzwerk."
 
-#. translators: %s: URL to Network Themes screen.
-#: wp-admin/includes/ms.php:1158
-msgid "<strong>Themes</strong> &mdash; This area shows themes that are not already enabled across the network. Enabling a theme in this menu makes it accessible to this site. It does not activate the theme, but allows it to show in the site&#8217;s Appearance menu. To enable a theme for the entire network, see the <a href=\"%s\">Network Themes</a> screen."
-msgstr "<strong>Themes</strong> &ndash; Dieser Bereich zeigt Themes, die noch nicht netzwerkweit aktiviert sind. Die Aktivierung eines Themes in diesem Menü macht es für diese Website zugänglich. Es aktiviert nicht das Theme, sondern ermöglicht, es im Menü der Website unter Design anzuzeigen. Um ein Theme für das gesamte Netzwerk zu aktivieren, nutzen Sie die <a href=\"%s\">Netzwerk-Themes</a>-Ansicht."
-
-#: wp-admin/includes/ms.php:1161
-msgid "<strong>Settings</strong> &mdash; This page shows a list of all settings associated with this site. Some are created by WordPress and others are created by plugins you activate. Note that some fields are grayed out and say Serialized Data. You cannot modify these values due to the way the setting is stored in the database."
-msgstr "<strong>Einstellungen</strong> &ndash; Diese Seite zeigt eine Liste aller Einstellungen, die mit dieser Website verknüpft sind. Einige werden von WordPress und andere werden von Plugins, die Sie aktiviert haben, erstellt. Beachten Sie, dass einige Felder ausgegraut sind und „SERIALIZED DATA“ beinhalten. Sie können diese Werte, aufgrund der Art und Weise, wie sie in der Datenbank gespeichert sind, nicht ändern."
-
 #: wp-admin/includes/plugin-install.php:600 wp-admin/update.php:128
 msgid "Plugin Installation"
 msgstr "Plugin-Installation"
@@ -7793,6 +7780,15 @@ msgstr "%s bearbeitet diesen Beitrag bereits."
 #: wp-admin/includes/theme-install.php:264
 msgid "Theme Installation"
 msgstr "Theme-Installation"
+
+#. translators: %s: URL to Network Themes screen.
+#: wp-admin/includes/ms.php:1158
+msgid "<strong>Themes</strong> &mdash; This area shows themes that are not already enabled across the network. Enabling a theme in this menu makes it accessible to this site. It does not activate the theme, but allows it to show in the site&#8217;s Appearance menu. To enable a theme for the entire network, see the <a href=\"%s\">Network Themes</a> screen."
+msgstr "<strong>Themes</strong> &ndash; Dieser Bereich zeigt Themes, die noch nicht netzwerkweit aktiviert sind. Die Aktivierung eines Themes in diesem Menü macht es für diese Website zugänglich. Es aktiviert nicht das Theme, sondern ermöglicht, es im Menü der Website unter Design anzuzeigen. Um ein Theme für das gesamte Netzwerk zu aktivieren, nutzen Sie die <a href=\"%s\">Netzwerk-Themes</a>-Ansicht."
+
+#: wp-admin/includes/ms.php:1161
+msgid "<strong>Settings</strong> &mdash; This page shows a list of all settings associated with this site. Some are created by WordPress and others are created by plugins you activate. Note that some fields are grayed out and say Serialized Data. You cannot modify these values due to the way the setting is stored in the database."
+msgstr "<strong>Einstellungen</strong> &ndash; Diese Seite zeigt eine Liste aller Einstellungen, die mit dieser Website verknüpft sind. Einige werden von WordPress und andere werden von Plugins, die Sie aktiviert haben, erstellt. Beachten Sie, dass einige Felder ausgegraut sind und „SERIALIZED DATA“ beinhalten. Sie können diese Werte, aufgrund der Art und Weise, wie sie in der Datenbank gespeichert sind, nicht ändern."
 
 #. translators: %s: Plugin filename.
 #: wp-admin/includes/plugin.php:1048
@@ -9047,11 +9043,6 @@ msgstr "Momentan wird Ihre WordPress-Adresse durch eine PHP-Konstante gesteuert 
 msgid "Talk to your web host about supporting HTTPS for your website."
 msgstr "Kontaktieren Sie Ihren Webhoster hinsichtlich der Unterstützung von HTTPS für Ihre Website."
 
-#. translators: 1: post_max_size, 2: upload_max_filesize
-#: wp-admin/includes/class-wp-site-health.php:2319
-msgid "The setting for %1$s is currently configured as 0, this could cause some problems when trying to upload files through plugin or theme features that rely on various upload methods. It is recommended to configure this setting to a fixed value, ideally matching the value of %2$s, as some upload methods read the value 0 as either unlimited, or disabled."
-msgstr "Die Einstellung für %1$s ist derzeit als 0 konfiguriert. Dies könnte zu Problemen führen, wenn Sie versuchen, Dateien über Plugin- oder Theme-Funktionen hochzuladen, die auf verschiedene Upload-Methoden angewiesen sind. Es wird empfohlen, diese Einstellung auf einen festen Wert zu konfigurieren, der idealerweise mit dem Wert von %2$s übereinstimmt, da einige Upload-Methoden den Wert 0 entweder als unbegrenzt oder deaktiviert interpretieren."
-
 #. translators: %s: Localized meetup organization documentation URL.
 #: wp-admin/includes/dashboard.php:1486
 msgid "Want more events? <a href=\"%s\">Help organize the next one</a>!"
@@ -9060,6 +9051,11 @@ msgstr "Sie möchten mehr Events? <a href=\"%s\">Helfen Sie bei der Organisation
 #: wp-admin/includes/dashboard.php:1487
 msgid "https://make.wordpress.org/community/organize-event-landing-page/"
 msgstr "https://make.wordpress.org/community/organize-event-landing-page/"
+
+#. translators: 1: post_max_size, 2: upload_max_filesize
+#: wp-admin/includes/class-wp-site-health.php:2319
+msgid "The setting for %1$s is currently configured as 0, this could cause some problems when trying to upload files through plugin or theme features that rely on various upload methods. It is recommended to configure this setting to a fixed value, ideally matching the value of %2$s, as some upload methods read the value 0 as either unlimited, or disabled."
+msgstr "Die Einstellung für %1$s ist derzeit als 0 konfiguriert. Dies könnte zu Problemen führen, wenn Sie versuchen, Dateien über Plugin- oder Theme-Funktionen hochzuladen, die auf verschiedene Upload-Methoden angewiesen sind. Es wird empfohlen, diese Einstellung auf einen festen Wert zu konfigurieren, der idealerweise mit dem Wert von %2$s übereinstimmt, da einige Upload-Methoden den Wert 0 entweder als unbegrenzt oder deaktiviert interpretieren."
 
 #: wp-admin/includes/dashboard.php:1720
 msgid "Internet Explorer does not give you the best WordPress experience. Switch to Microsoft Edge, or another more modern browser to get the most from your site."
@@ -9830,11 +9826,6 @@ msgstr "Welche automatisierte Entscheidungsfindung und/oder welches Profiling wi
 msgid "In this section you should explain what procedures you have in place to deal with data breaches, either potential or real, such as internal reporting systems, contact mechanisms, or bug bounties."
 msgstr "In diesem Abschnitt sollten Sie erläutern, welche Maßnahmen Sie ergriffen haben, um mit potenziellen oder realen Datenschutzverletzungen umzugehen, beispielsweise interne Meldeprozesse, Kontaktmechanismen oder Bug-Bounty-Programme."
 
-#. translators: Privacy policy tutorial.
-#: wp-admin/includes/class-wp-privacy-policy-content.php:642
-msgid "If your website receives data about users from third parties, including advertisers, this information must be included within the section of your privacy policy dealing with third party data."
-msgstr "Falls Ihre Website Daten über Benutzer von Dritten erhält, einschließlich Werbetreibender, muss diese Information in dem Abschnitt Ihrer Datenschutzerklärung enthalten sein, der sich mit Daten von Drittanbietern befasst."
-
 #: wp-admin/includes/class-wp-site-health.php:1479
 msgid "An HTTPS connection is a more secure way of browsing the web. Many services now have HTTPS as a requirement. HTTPS allows you to take advantage of new features that can increase site speed, improve search rankings, and gain the trust of your visitors by helping to protect their online privacy."
 msgstr "Eine HTTPS-Verbindung ist eine sicherere Möglichkeit, im Internet zu surfen. Viele Dienste setzen mittlerweile HTTPS voraus. HTTPS ermöglicht es Ihnen, neue Funktionen zu nutzen, die die Geschwindigkeit der Website erhöhen, das Suchranking verbessern und das Vertrauen Ihrer Besucher gewinnen können, indem sie zum Schutz ihrer Online-Privatsphäre beitragen."
@@ -9843,6 +9834,11 @@ msgstr "Eine HTTPS-Verbindung ist eine sicherere Möglichkeit, im Internet zu su
 #: wp-admin/includes/class-wp-privacy-policy-content.php:649
 msgid "If your website provides a service which includes automated decision making - for example, allowing customers to apply for credit, or aggregating their data into an advertising profile - you must note that this is taking place, and include information about how that information is used, what decisions are made with that aggregated data, and what rights users have over decisions made without human intervention."
 msgstr "Falls Ihre Website einen Dienst anbietet, der automatisierte Entscheidungsfindung beinhaltet, z. B. für Kreditanfragen von Benutzern oder das Zusammenführen ihrer Daten zu einem Werbeprofil, müssen Sie darauf hinweisen, dass dies geschieht und darüber informieren, wie diese Informationen genutzt werden, welche Entscheidungen aufgrund dieser zusammengetragenen Daten getroffen werden und welche Rechte Benutzern bei Entscheidungen zustehen, die ohne menschliches Zutun getroffen werden."
+
+#. translators: Privacy policy tutorial.
+#: wp-admin/includes/class-wp-privacy-policy-content.php:642
+msgid "If your website receives data about users from third parties, including advertisers, this information must be included within the section of your privacy policy dealing with third party data."
+msgstr "Falls Ihre Website Daten über Benutzer von Dritten erhält, einschließlich Werbetreibender, muss diese Information in dem Abschnitt Ihrer Datenschutzerklärung enthalten sein, der sich mit Daten von Drittanbietern befasst."
 
 #: wp-admin/includes/privacy-tools.php:794
 msgid "Invalid request ID when merging personal data to export."
@@ -10269,6 +10265,10 @@ msgstr "Sie haben versucht, auf das Dashboard von „%1$s“ zuzugreifen, verfü
 #: wp-admin/includes/file.php:2512
 msgid "<strong>Error:</strong> Could not connect to the server. Please verify the settings are correct."
 msgstr "<strong>Fehler:</strong> Es konnte keine Verbindung zum Server hergestellt werden. Bitte prüfen Sie, ob die Einstellungen korrekt sind."
+
+#: wp-admin/includes/media.php:2978
+msgid "Link text, e.g. &#8220;Ransom Demands (PDF)&#8221;"
+msgstr "Linktext, z. B. &#8222;Airheads – Sie haben den Beat (PDF)&#8220;"
 
 #. translators: %d: Comment ID.
 #: wp-admin/includes/ajax-actions.php:993
@@ -11744,10 +11744,6 @@ msgstr "Manche Themes bringen gleich mehrere zusätzliche Header-Bilder mit. Wen
 msgid "If your theme has more than one default header image, or you have uploaded more than one custom header image, you have the option of having WordPress display a randomly different image on each page of your site. Click the &#8220;Random&#8221; radio button next to the Uploaded Images or Default Images section to enable this feature."
 msgstr "Falls Ihr Theme mehr als ein Standard-Header-Bild hat oder Sie mehr als ein individuelles Bild hochgeladen haben, haben Sie die Wahl, WordPress ein zufällig ausgewähltes anderes Bild auf jeder Seite Ihrer Website anzeigen zu lassen. Klicken Sie dazu den Radiobutton &#8222;Zufällig&#8220; neben dem Bereich Bild hochladen oder Standard-Bild, um dieses Feature zu aktivieren."
 
-#: wp-admin/includes/class-custom-image-header.php:123
-msgid "If you do not want a header image to be displayed on your site at all, click the &#8220;Remove Header Image&#8221; button at the bottom of the Header Image section of this page. If you want to re-enable the header image later, you just have to select one of the other image options and click &#8220;Save Changes&#8221;."
-msgstr "Wenn Sie nicht möchten, dass das Header-Bild auf Ihrer Website angezeigt wird, klicken Sie den Button &#8222;Header-Bild entfernen&#8220; unten im Header-Bild-Abschnitt auf dieser Seite. Falls Sie es wieder aktivieren möchten, genügt es, eine der anderen Bildoptionen auszuwählen und auf &#8222;Änderungen speichern&#8220; zu klicken."
-
 #: wp-admin/includes/class-custom-background.php:350
 #: wp-admin/includes/class-custom-image-header.php:593
 msgid "Select Image"
@@ -11758,6 +11754,10 @@ msgstr "Bild auswählen"
 msgid "Or choose an image from your media library:"
 msgstr "Oder wählen Sie ein Bild aus der Mediathek:"
 
+#: wp-admin/includes/class-custom-image-header.php:123
+msgid "If you do not want a header image to be displayed on your site at all, click the &#8220;Remove Header Image&#8221; button at the bottom of the Header Image section of this page. If you want to re-enable the header image later, you just have to select one of the other image options and click &#8220;Save Changes&#8221;."
+msgstr "Wenn Sie nicht möchten, dass das Header-Bild auf Ihrer Website angezeigt wird, klicken Sie den Button &#8222;Header-Bild entfernen&#8220; unten im Header-Bild-Abschnitt auf dieser Seite. Falls Sie es wieder aktivieren möchten, genügt es, eine der anderen Bildoptionen auszuwählen und auf &#8222;Änderungen speichern&#8220; zu klicken."
+
 #: wp-admin/includes/class-custom-image-header.php:958
 msgid "Skip Cropping, Publish Image as Is"
 msgstr "Zuschneiden abbrechen und das Bild publizieren, wie es ist"
@@ -11765,10 +11765,6 @@ msgstr "Zuschneiden abbrechen und das Bild publizieren, wie es ist"
 #: wp-admin/includes/class-custom-image-header.php:595
 msgid "You can select an image to be shown at the top of your site by uploading from your computer or choosing from your media library. After selecting an image you will be able to crop it."
 msgstr "Sie können ein Bild auswählen, welches im oberen Bereich Ihrer Website angezeigt wird, indem Sie es vom Computer hochladen oder eines aus der Mediathek wählen. Nach dem Auswählen können Sie das Bild zuschneiden."
-
-#: wp-admin/edit-tags.php:263
-msgid "You can delete Link Categories in the Bulk Action pull-down, but that action does not delete the links within the category. Instead, it moves them to the default Link Category."
-msgstr "Sie können Link-Kategorien über das Drop-down-Menü Mehrfachaktionen löschen, jedoch löscht diese Aktion nicht die Links innerhalb der Kategorie. Stattdessen werden sie in die Standard-Linkkategorie verschoben."
 
 #. translators: %s: URL to Categories to Tags Converter tool.
 #: wp-admin/edit-tags.php:656
@@ -11788,6 +11784,10 @@ msgstr "Favoriten"
 #: wp-admin/includes/class-custom-background.php:103
 msgid "You can also choose a background color by clicking the Select Color button and either typing in a legitimate HTML hex value, e.g. &#8220;#ff0000&#8221; for red, or by choosing a color using the color picker."
 msgstr "Sie können auch eine Hintergrundfarbe auswählen, indem Sie auf den Button &#8222;Farbe wählen&#8220; klicken und dann einen gültigen HTML-Hex-Wert eingeben, wie z. B. &#8222;#ff0000&#8220; für Rot, oder indem Sie mit dem Farbwähler eine Farbe auswählen."
+
+#: wp-admin/includes/class-custom-image-header.php:138
+msgid "In the Header Text section of this page, you can choose whether to display this text or hide it. You can also choose a color for the text by clicking the Select Color button and either typing in a legitimate HTML hex value, e.g. &#8220;#ff0000&#8221; for red, or by choosing a color using the color picker."
+msgstr "Sie können wählen, ob Sie den Header-Text anzeigen lassen möchten oder nicht. Sie können auch eine Farbe für den Text auswählen, indem Sie auf den Button &#8222;Farbe wählen&#8220; klicken und entweder einen HTML-Hex-Wert eingeben, z. B. &#8222;#ff0000&#8220; für Rot, oder indem Sie mit dem Farbwähler eine Farbe auswählen."
 
 #: wp-admin/includes/ajax-actions.php:2625
 #: wp-admin/includes/class-custom-background.php:524
@@ -11815,17 +11815,13 @@ msgstr "Vergessen Sie nicht auf „Änderungen speichern“ zu klicken, wenn Sie
 msgid "Inserting Media"
 msgstr "Medien einfügen"
 
-#: wp-admin/includes/class-custom-image-header.php:138
-msgid "In the Header Text section of this page, you can choose whether to display this text or hide it. You can also choose a color for the text by clicking the Select Color button and either typing in a legitimate HTML hex value, e.g. &#8220;#ff0000&#8221; for red, or by choosing a color using the color picker."
-msgstr "Sie können wählen, ob Sie den Header-Text anzeigen lassen möchten oder nicht. Sie können auch eine Farbe für den Text auswählen, indem Sie auf den Button &#8222;Farbe wählen&#8220; klicken und entweder einen HTML-Hex-Wert eingeben, z. B. &#8222;#ff0000&#8220; für Rot, oder indem Sie mit dem Farbwähler eine Farbe auswählen."
+#: wp-admin/edit-form-advanced.php:367
+msgid "Several boxes on this screen contain settings for how your content will be published, including:"
+msgstr "Einige Boxen in dieser Ansicht enthalten Einstellungen dafür, wie der Inhalt veröffentlicht wird. Das betrifft:"
 
 #: wp-admin/edit-form-advanced.php:275
 msgid "The title field and the big Post Editing Area are fixed in place, but you can reposition all the other boxes using drag and drop. You can also minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen."
 msgstr "Das Titelfeld und das große Feld für den Inhalt sind fest positioniert, aber alle anderen Boxen können per Drag-and-drop neu angeordnet werden. Sie können diese auch minimieren oder maximieren durch Klicken auf die Titelleiste jeder Box. Nutzen Sie „Ansicht anpassen“, um weitere Boxen zu aktivieren oder deaktivieren (Textauszug, Trackbacks senden, individuelle Felder, Diskussionen, Titelform und Autor) oder wählen Sie das 1- oder 2-Spalten-Layout für diese Ansicht."
-
-#: wp-admin/edit-form-advanced.php:367
-msgid "Several boxes on this screen contain settings for how your content will be published, including:"
-msgstr "Einige Boxen in dieser Ansicht enthalten Einstellungen dafür, wie der Inhalt veröffentlicht wird. Das betrifft:"
 
 #: wp-admin/edit-tags.php:289
 msgid "<strong>Parent</strong> &mdash; Categories, unlike tags, can have a hierarchy. You might have a Jazz category, and under that have child categories for Bebop and Big Band. Totally optional. To create a subcategory, just choose another category from the Parent dropdown."
@@ -12307,10 +12303,6 @@ msgstr "<a href=\"https://codex.wordpress.org/Appearance_Header_Screen\">Dokumen
 msgid "<a href=\"https://codex.wordpress.org/Links_Add_New_Screen\">Documentation on Creating Links</a>"
 msgstr "<a href=\"https://codex.wordpress.org/Links_Add_New_Screen\">Dokumentation zu Links erstellen (engl.)</a>"
 
-#: wp-admin/edit-tags.php:310
-msgid "<a href=\"https://codex.wordpress.org/Links_Link_Categories_Screen\">Documentation on Link Categories</a>"
-msgstr "<a href=\"https://codex.wordpress.org/Links_Link_Categories_Screen\">Dokumentation zu Link-Kategorien (engl.)</a>"
-
 #: wp-admin/includes/class-custom-background.php:110
 msgid "<a href=\"https://codex.wordpress.org/Appearance_Background_Screen\">Documentation on Custom Background</a>"
 msgstr "<a href=\"https://codex.wordpress.org/Appearance_Background_Screen\">Dokumentation zu individueller Hintergrund (engl.)</a>"
@@ -12662,10 +12654,6 @@ msgstr "Der visuelle Modus bietet Ihnen einen Editor, der einem Textverarbeitung
 #: wp-admin/includes/class-custom-image-header.php:1122
 msgid "Sorry, you are not allowed to customize headers."
 msgstr "Sie sind leider nicht berechtigt, Header anzupassen."
-
-#: wp-admin/edit.php:265
-msgid "You can filter the list of posts by post status using the text links above the posts list to only show posts with that status. The default view is to show all posts."
-msgstr "Sie können die Beitragsliste nach Beitragsstatus filtern, indem Sie die Text-Links über der Beitragsliste benutzen, um nur Beiträge des gewählten Status anzuzeigen. Die Standardansicht ist, alle Beiträge anzuzeigen."
 
 #: wp-admin/export.php:13
 msgid "Sorry, you are not allowed to export the content of this site."
@@ -13093,11 +13081,6 @@ msgstr "Kontaktformulare"
 msgid "When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection."
 msgstr "Wenn Besucher Kommentare auf der Website hinterlassen, erfassen wir die im Kommentarformular angezeigten Daten sowie die IP-Adresse des Besuchers und die User-Agent-Zeichenfolge des Browsers, um Spam zu erkennen."
 
-#. translators: Default privacy policy text.
-#: wp-admin/includes/class-wp-privacy-policy-content.php:504
-msgid "An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment."
-msgstr "Aus Ihrer E-Mail-Adresse kann eine anonymisierte Zeichenfolge erstellt (auch Hash genannt) und dem Gravatar-Dienst übergeben werden, um zu prüfen, ob Sie diesen benutzen. Die Datenschutzerklärung des Gravatar-Dienstes finden Sie hier: https://automattic.com/privacy/. Nachdem Ihr Kommentar freigegeben wurde, ist Ihr Profilbild öffentlich im Kontext Ihres Kommentars sichtbar."
-
 #. translators: Default privacy policy heading.
 #: wp-admin/includes/class-wp-privacy-policy-content.php:526
 msgid "Cookies"
@@ -13107,6 +13090,11 @@ msgstr "Cookies"
 #: wp-admin/includes/class-wp-privacy-policy-content.php:530
 msgid "In this subsection you should list the cookies your website uses, including those set by your plugins, social media, and analytics. We have provided the cookies which WordPress installs by default."
 msgstr "In diesem Unterabschnitt sollten Sie die Cookies auflisten, die Ihre Website benutzt, inklusive solcher, die Ihre Plugins, Soziale Medien und Analysedienste setzen. Wir haben die Cookies angegeben, die WordPress standardmäßig installiert."
+
+#. translators: Default privacy policy text.
+#: wp-admin/includes/class-wp-privacy-policy-content.php:504
+msgid "An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment."
+msgstr "Aus Ihrer E-Mail-Adresse kann eine anonymisierte Zeichenfolge erstellt (auch Hash genannt) und dem Gravatar-Dienst übergeben werden, um zu prüfen, ob Sie diesen benutzen. Die Datenschutzerklärung des Gravatar-Dienstes finden Sie hier: https://automattic.com/privacy/. Nachdem Ihr Kommentar freigegeben wurde, ist Ihr Profilbild öffentlich im Kontext Ihres Kommentars sichtbar."
 
 #. translators: Default privacy policy heading.
 #: wp-admin/includes/class-wp-privacy-policy-content.php:544
@@ -13771,13 +13759,13 @@ msgstr "<a href=\"https://wordpress.org/documentation/article/pages-add-new-scre
 msgid "<a href=\"https://wordpress.org/documentation/article/pages-screen/\">Documentation on Editing Pages</a>"
 msgstr "<a href=\"https://wordpress.org/documentation/article/pages-screen/\">Dokumentation zur Bearbeitung von Seiten (engl.)</a>"
 
-#: wp-admin/import.php:32
-msgid "<a href=\"https://wordpress.org/documentation/article/tools-import-screen/\">Documentation on Import</a>"
-msgstr "<a href=\"https://wordpress.org/documentation/article/tools-import-screen/\">Dokumentation zum Import (engl.)</a>"
-
 #: wp-admin/edit-form-advanced.php:373
 msgid "<strong>Format</strong> &mdash; Post Formats designate how your theme will display a specific post. For example, you could have a <em>standard</em> blog post with a title and paragraphs, or a short <em>aside</em> that omits the title and contains a short text blurb. Your theme could enable all or some of 10 possible formats. <a href=\"https://developer.wordpress.org/advanced-administration/wordpress/post-formats/#supported-formats\">Learn more about each post format</a>."
 msgstr "<strong>Format</strong> &ndash; Die Beitragsformate geben an, wie Ihr Theme einen bestimmten Beitrag anzeigt. Zum Beispiel könnten Sie einen <em>Standard</em>-Blogbeitrag mit Titel und Absätzen haben, oder eine <em>Kurzmitteilung</em>, die den Titel auslässt und einen kurzen Textabschnitt enthält. Ihr Theme könnte alle oder einige der 10 möglichen Formate aktivieren. <a href=\"https://developer.wordpress.org/advanced-administration/wordpress/post-formats/#supported-formats\">Erfahren Sie mehr über jedes Beitragsformat (engl.)</a>."
+
+#: wp-admin/import.php:32
+msgid "<a href=\"https://wordpress.org/documentation/article/tools-import-screen/\">Documentation on Import</a>"
+msgstr "<a href=\"https://wordpress.org/documentation/article/tools-import-screen/\">Dokumentation zum Import (engl.)</a>"
 
 #: wp-admin/edit.php:301
 msgid "<a href=\"https://wordpress.org/documentation/article/posts-screen/\">Documentation on Managing Posts</a>"
@@ -14511,10 +14499,6 @@ msgstr "Dieser Beitrag wird sicherheitshalber in Ihrem Browser gesichert."
 msgid "<strong>Comments</strong> &mdash; WordPress does not delete comments. The software does anonymize (but, again, <em>never</em> publishes) the associated Email Address, IP Address, and User Agent (Browser/OS)."
 msgstr "<strong>Kommentare</strong> &ndash; WordPress löscht keine Kommentare. Die Software anonymisiert (aber veröffentlicht <em>niemals</em>) die zugehörige E-Mail-Adresse, IP-Adresse und den User Agent (Browser/Betriebssystem)."
 
-#: wp-admin/export-personal-data.php:39
-msgid "<strong>Community Events Location</strong> &mdash; The IP Address of the user, which populates the Upcoming Community Events dashboard widget with relevant information."
-msgstr "<strong>Community Events Location</strong> &ndash; Die IP-Adresse des Benutzers, die benutzt wird, um das Dashboard-Widget „Community Events“ mit relevanten Informationen zu füllen."
-
 #: wp-admin/export-personal-data.php:42
 msgid "<strong>Media</strong> &mdash; A list of URLs for media files the user uploads."
 msgstr "<strong>Medien</strong> &ndash; Eine Liste von URLs für alle Mediendatei-Uploads, die der Benutzer vorgenommen hat."
@@ -14702,12 +14686,6 @@ msgstr "Ihre WordPress-Version ist %1$s, das neue Plugin erfordert jedoch %2$s."
 msgid "The PHP version on your server is %1$s, however the new plugin version requires %2$s."
 msgstr "Die PHP-Version auf Ihrem Server ist %1$s, die neue Plugin-Version erfordert jedoch %2$s."
 
-#. translators: %s: The dismiss dashicon used for buttons that dismiss or
-#. remove.
-#: wp-admin/edit.php:293
-msgid "When using Bulk Edit, you can change the metadata (categories, author, etc.) for all selected posts at once. To remove a post from the grouping, just click the %s<span class=\"screen-reader-text\">remove</span> button next to its name in the Bulk Edit area that appears."
-msgstr "Mit der Mehrfachbearbeitung können Sie Metadaten (Kategorien, Autor usw.) für alle ausgewählten Beiträge auf einmal ändern. Um einen Beitrag aus der Gruppierung zu entfernen, klicken Sie einfach auf den %s<span class=\"screen-reader-text\">entfernen</span>-Button neben dessen Namen, der im Bereich der Mehrfachbearbeitung erscheint."
-
 #. translators: %s: Number of patterns.
 #: wp-admin/edit.php:385
 msgid "%s pattern updated."
@@ -14728,6 +14706,12 @@ msgid "%s pattern moved to the Trash."
 msgid_plural "%s patterns moved to the Trash."
 msgstr[0] "%s Vorlage wurde in den Papierkorb verschoben."
 msgstr[1] "%s Vorlagen wurden in den Papierkorb verschoben."
+
+#. translators: %s: The dismiss dashicon used for buttons that dismiss or
+#. remove.
+#: wp-admin/edit.php:293
+msgid "When using Bulk Edit, you can change the metadata (categories, author, etc.) for all selected posts at once. To remove a post from the grouping, just click the %s<span class=\"screen-reader-text\">remove</span> button next to its name in the Bulk Edit area that appears."
+msgstr "Mit der Mehrfachbearbeitung können Sie Metadaten (Kategorien, Autor usw.) für alle ausgewählten Beiträge auf einmal ändern. Um einen Beitrag aus der Gruppierung zu entfernen, klicken Sie einfach auf den %s<span class=\"screen-reader-text\">entfernen</span>-Button neben dessen Namen, der im Bereich der Mehrfachbearbeitung erscheint."
 
 #. translators: %s: Link to activate the Classic Editor plugin.
 #: wp-admin/edit-form-blocks.php:396
@@ -15014,6 +14998,11 @@ msgstr "Wenn Sie Ihre Website für kommerzielle Zwecke nutzen und eine komplexer
 msgid "You should also note any collection and retention of sensitive personal data, such as data concerning health."
 msgstr "Sie sollten auch jede Erfassung und Speicherung sensibler personenbezogener Daten, wie Gesundheitsdaten, angeben."
 
+#. translators: Default privacy policy text.
+#: wp-admin/includes/class-wp-privacy-policy-content.php:594
+msgid "If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
+msgstr "Wenn Sie ein Konto auf dieser Website besitzen oder Kommentare geschrieben haben, können Sie einen Export Ihrer personenbezogenen Daten bei uns anfordern, inklusive aller Daten, die Sie uns mitgeteilt haben. Darüber hinaus können Sie die Löschung aller personenbezogenen Daten, die wir über Sie gespeichert haben, anfordern. Dies umfasst nicht die Daten, die wir für administrative, rechtliche oder sicherheitsrelevante Zwecke aufbewahren müssen."
+
 #: wp-admin/export-personal-data.php:57
 msgid "Many plugins may collect or store personal data either in the WordPress database or remotely. Any Export Personal Data request should include data from plugins as well."
 msgstr "Viele Plugins erfassen oder speichern möglicherweise personenbezogene Daten entweder in der WordPress-Datenbank oder auf einem externen Server. Jede Anfrage auf den Export personenbezogener Daten sollte auch die Daten von Plugins umfassen."
@@ -15027,30 +15016,15 @@ msgstr "Viele Plugins erfassen oder speichern möglicherweise personenbezogene D
 msgid "What personal data we collect and why we collect it"
 msgstr "Welche personenbezogenen Daten wir erfassen und warum wir diese erheben"
 
-#. translators: Default privacy policy text.
-#: wp-admin/includes/class-wp-privacy-policy-content.php:594
-msgid "If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
-msgstr "Wenn Sie ein Konto auf dieser Website besitzen oder Kommentare geschrieben haben, können Sie einen Export Ihrer personenbezogenen Daten bei uns anfordern, inklusive aller Daten, die Sie uns mitgeteilt haben. Darüber hinaus können Sie die Löschung aller personenbezogenen Daten, die wir über Sie gespeichert haben, anfordern. Dies umfasst nicht die Daten, die wir für administrative, rechtliche oder sicherheitsrelevante Zwecke aufbewahren müssen."
-
 #. translators: Privacy policy tutorial.
 #: wp-admin/includes/class-wp-privacy-policy-content.php:489
 msgid "Personal data is not just created by a user&#8217;s interactions with your site. Personal data is also generated from technical processes such as contact forms, comments, cookies, analytics, and third party embeds."
 msgstr "Personenbezogene Daten werden nicht nur bei Interaktionen eines Benutzers mit Ihrer Website erstellt. Personenbezogene Daten werden auch bei technischen Prozessen wie Kontaktformularen, Kommentaren, Cookies, Analysewerkzeugen und Einbettungen von Drittanbietern erzeugt."
 
-#. translators: Default privacy policy text.
-#: wp-admin/includes/class-wp-privacy-policy-content.php:607
-msgid "Visitor comments may be checked through an automated spam detection service."
-msgstr "Besucher-Kommentare können von einem automatisierten Dienst zur Spam-Erkennung untersucht werden."
-
 #. translators: %s: Date of plugin deactivation.
 #: wp-admin/includes/class-wp-privacy-policy-content.php:396
 msgid "You deactivated this plugin on %s and may no longer need this policy."
 msgstr "Sie haben dieses Plugin am %s deaktiviert und benötigen möglicherweise dessen Abschnitt für die Datenschutzerklärung nicht mehr."
-
-#. translators: Default privacy policy text.
-#: wp-admin/includes/class-wp-privacy-policy-content.php:515
-msgid "If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website."
-msgstr "Wenn Sie Bilder auf die Website hochladen, sollten Sie vermeiden, Bilder mit eingebetteten Standortdaten (EXIF-GPS) hochzuladen. Besucher der Website können Bilder von der Website herunterladen und daraus beliebige Standortdaten extrahieren."
 
 #. translators: Privacy policy tutorial.
 #: wp-admin/includes/class-wp-privacy-policy-content.php:565
@@ -15066,6 +15040,11 @@ msgstr "Wenn Sie einen Kommentar auf unserer Website schreiben, können Sie einw
 #: wp-admin/includes/class-wp-privacy-policy-content.php:537
 msgid "When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed."
 msgstr "Wenn Sie sich anmelden, werden wir einige Cookies setzen, um Ihre Anmeldeinformationen und Anzeigeoptionen zu speichern. Anmelde-Cookies verfallen nach zwei Tagen und Cookies für die Anzeigeoptionen nach einem Jahr. Falls Sie bei der Anmeldung „Angemeldet bleiben“ auswählen, wird Ihre Anmeldung zwei Wochen lang aufrechterhalten. Mit der Abmeldung aus Ihrem Konto werden die Anmelde-Cookies gelöscht."
+
+#. translators: Default privacy policy text.
+#: wp-admin/includes/class-wp-privacy-policy-content.php:515
+msgid "If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website."
+msgstr "Wenn Sie Bilder auf die Website hochladen, sollten Sie vermeiden, Bilder mit eingebetteten Standortdaten (EXIF-GPS) hochzuladen. Besucher der Website können Bilder von der Website herunterladen und daraus beliebige Standortdaten extrahieren."
 
 #. translators: Privacy policy tutorial.
 #: wp-admin/includes/class-wp-privacy-policy-content.php:512
@@ -15385,10 +15364,6 @@ msgstr "Über diese Ansicht haben Sie Zugriff auf all Ihre Beiträge. Sie könne
 msgid "Web Address"
 msgstr "Webadresse"
 
-#: wp-admin/edit-link-form.php:69
-msgid "The boxes for link name, web address, and description have fixed positions, while the others may be repositioned using drag and drop. You can also hide boxes you do not use in the Screen Options tab, or minimize boxes by clicking on the title bar of the box."
-msgstr "Die Boxen für Link-Name, Webadresse und Beschreibung sind in dieser Ansicht fest positioniert. Alle anderen können Sie per Drag-and-drop in ihrer Position verändern. Über den Tab „Ansicht anpassen“ können Sie Boxen auch ganz ausblenden oder minimieren, indem Sie auf die Titelleiste der Box klicken."
-
 #: wp-admin/edit-form-advanced.php:369
 msgid "<strong>Publish</strong> &mdash; You can set the terms of publishing your post in the Publish box. For Status, Visibility, and Publish (immediately), click on the Edit link to reveal more options. Visibility includes options for password-protecting a post or making it stay at the top of your blog indefinitely (sticky). The Password protected option allows you to set an arbitrary password for each post. The Private option hides the post from everyone except editors and administrators. Publish (immediately) allows you to set a future or past date and time, so you can schedule a post to be published in the future or backdate a post."
 msgstr "<strong>Veröffentlichen</strong> &ndash; Sie können die Konditionen zur Veröffentlichung Ihres Beitrags in der Veröffentlichen-Box festlegen. Klicken Sie bei Status, Sichtbarkeit und (sofort) Veröffentlichen auf den Bearbeiten-Link, um mehr Optionen einzublenden. Die Sichtbarkeit beinhaltet Optionen für den Passwortschutz eines Beitrags oder die Festlegung, dass der Beitrag dauerhaft oben gehalten werden soll (sticky). Die Einstellung zum Passwortschutz ermöglicht Ihnen, für jeden Beitrag ein beliebiges Passwort festzulegen. Die Einstellung Privat versteckt Beiträge für jeden außer für Administratoren und Redakteure. (Sofort) Veröffentlichen ermöglicht Ihnen, ein künftiges oder zurückliegendes Datum und eine Uhrzeit festzulegen, damit Sie die Veröffentlichung Ihres Beitrags planen oder Beiträge zurückdatieren können."
@@ -15410,6 +15385,31 @@ msgstr "Vergessen Sie nicht, zum Schluss auf den Button „Änderungen speichern
 #: wp-admin/edit-tags.php:292
 msgid "<strong>Description</strong> &mdash; The description is not prominent by default; however, some themes may display it."
 msgstr "<strong>Beschreibung</strong> &ndash; Die Beschreibung wird standardmäßig nicht angezeigt. Einige Themes zeigen sie jedoch an."
+
+#: wp-admin/edit-tags.php:263
+msgid "You can delete Link Categories in the Bulk Action pull-down, but that action does not delete the links within the category. Instead, it moves them to the default Link Category."
+msgstr "Sie können Linkkategorien über das Drop-down-Menü Mehrfachaktionen löschen, jedoch löscht diese Aktion nicht die Links innerhalb der Kategorie. Stattdessen werden sie in die Standard-Linkkategorie verschoben."
+
+#: wp-admin/edit.php:265
+msgid "You can filter the list of posts by post status using the text links above the posts list to only show posts with that status. The default view is to show all posts."
+msgstr "Sie können die Beitragsliste nach Beitragsstatus filtern, indem Sie die Textlinks über der Beitragsliste benutzen, um nur Beiträge des gewählten Status anzuzeigen. Die Standardansicht ist, alle Beiträge anzuzeigen."
+
+#: wp-admin/edit-link-form.php:69
+msgid "The boxes for link name, web address, and description have fixed positions, while the others may be repositioned using drag and drop. You can also hide boxes you do not use in the Screen Options tab, or minimize boxes by clicking on the title bar of the box."
+msgstr "Die Boxen für Linkname, Webadresse und Beschreibung sind in dieser Ansicht fest positioniert. Alle anderen können Sie per Drag-and-drop in ihrer Position verändern. Über den Tab „Ansicht anpassen“ können Sie Boxen auch ganz ausblenden oder minimieren, indem Sie auf die Titelleiste der Box klicken."
+
+#: wp-admin/edit-tags.php:310
+msgid "<a href=\"https://codex.wordpress.org/Links_Link_Categories_Screen\">Documentation on Link Categories</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Links_Link_Categories_Screen\">Dokumentation zu Linkkategorien (engl.)</a>"
+
+#: wp-admin/export-personal-data.php:39
+msgid "<strong>Community Events Location</strong> &mdash; The IP Address of the user, which populates the Upcoming Community Events dashboard widget with relevant information."
+msgstr "<strong>Standort für WordPress-Veranstaltungen</strong> &ndash; Die IP-Adresse des Benutzers, die dazu verwendet wird, passende Einträge im Dashboard-Widget „WordPress-Veranstaltungen und Neuigkeiten“ anzuzeigen."
+
+#. translators: Default privacy policy text.
+#: wp-admin/includes/class-wp-privacy-policy-content.php:607
+msgid "Visitor comments may be checked through an automated spam detection service."
+msgstr "Kommentare von Besuchern werden möglicherweise durch einen automatisierten Spam-Erkennungsdienst überprüft."
 
 #. translators: %s: Number of comments.
 #: wp-admin/edit-comments.php:334
@@ -16063,30 +16063,6 @@ msgstr "https://make.wordpress.org/core/wordpress-%s-field-guide/"
 msgid "https://wordpress.org/download/"
 msgstr "https://de.wordpress.org/download/"
 
-#: wp-admin/comment.php:73 wp-admin/edit-comments.php:232
-#: wp-admin/edit-form-advanced.php:313 wp-admin/edit-form-advanced.php:331
-#: wp-admin/edit-form-advanced.php:349 wp-admin/edit-link-form.php:77
-#: wp-admin/edit-tags.php:315 wp-admin/edit.php:302 wp-admin/edit.php:327
-#: wp-admin/erase-personal-data.php:66 wp-admin/export-personal-data.php:66
-#: wp-admin/export.php:60 wp-admin/import.php:33
-#: wp-admin/includes/class-custom-background.php:111
-#: wp-admin/includes/class-custom-image-header.php:146 wp-admin/index.php:133
-#: wp-admin/link-manager.php:80 wp-admin/media-new.php:62
-#: wp-admin/my-sites.php:53 wp-admin/nav-menus.php:774
-#: wp-admin/options-discussion.php:33 wp-admin/options-general.php:61
-#: wp-admin/options-media.php:42 wp-admin/options-permalink.php:67
-#: wp-admin/options-reading.php:54 wp-admin/options-writing.php:54
-#: wp-admin/plugin-editor.php:159 wp-admin/plugin-install.php:122
-#: wp-admin/plugins.php:622 wp-admin/revision.php:159
-#: wp-admin/theme-editor.php:56 wp-admin/theme-install.php:157
-#: wp-admin/themes.php:210 wp-admin/tools.php:57 wp-admin/update-core.php:1055
-#: wp-admin/upload.php:201 wp-admin/upload.php:403 wp-admin/user-edit.php:79
-#: wp-admin/user-new.php:316 wp-admin/users.php:84 wp-admin/widgets-form.php:72
-#: wp-admin/network.php:83 wp-admin/network/settings.php:65
-#: wp-admin/network/themes.php:340 wp-admin/network/upgrade.php:38
-msgid "<a href=\"https://wordpress.org/support/forums/\">Support forums</a>"
-msgstr "<a href=\"https://de.wordpress.org/support/\">Support-Foren</a>"
-
 #: wp-admin/contribute.php:55
 msgid "Do you use WordPress for work, for personal projects, or even just for fun? You can help shape the long-term success of the open source project that powers millions of websites around the world."
 msgstr "Nutzen Sie WordPress für die Arbeit, für persönliche Projekte oder einfach nur zum Spaß? Sie können den langfristigen Erfolg des Open-Source-Projekts mitgestalten, das Millionen von Websites auf der ganzen Welt antreibt."
@@ -16114,6 +16090,30 @@ msgstr "Beitrag ohne Code"
 #: wp-admin/contribute.php:69
 msgid "WordPress may thrive on technical contributions, but you don&#8217;t have to code to contribute. Here are some of the ways you can make an impact without writing a single line of code:"
 msgstr "WordPress basiert zwar auf technischen Beiträgen, aber Sie müssen nicht programmieren können, um einen Beitrag zu leisten. Hier sind einige der Möglichkeiten, wie Sie etwas bewirken können, ohne eine einzige Zeile Code zu schreiben:"
+
+#: wp-admin/comment.php:73 wp-admin/edit-comments.php:232
+#: wp-admin/edit-form-advanced.php:313 wp-admin/edit-form-advanced.php:331
+#: wp-admin/edit-form-advanced.php:349 wp-admin/edit-link-form.php:77
+#: wp-admin/edit-tags.php:315 wp-admin/edit.php:302 wp-admin/edit.php:327
+#: wp-admin/erase-personal-data.php:66 wp-admin/export-personal-data.php:66
+#: wp-admin/export.php:60 wp-admin/import.php:33
+#: wp-admin/includes/class-custom-background.php:111
+#: wp-admin/includes/class-custom-image-header.php:146 wp-admin/index.php:133
+#: wp-admin/link-manager.php:80 wp-admin/media-new.php:62
+#: wp-admin/my-sites.php:53 wp-admin/nav-menus.php:774
+#: wp-admin/options-discussion.php:33 wp-admin/options-general.php:61
+#: wp-admin/options-media.php:42 wp-admin/options-permalink.php:67
+#: wp-admin/options-reading.php:54 wp-admin/options-writing.php:54
+#: wp-admin/plugin-editor.php:159 wp-admin/plugin-install.php:122
+#: wp-admin/plugins.php:622 wp-admin/revision.php:159
+#: wp-admin/theme-editor.php:56 wp-admin/theme-install.php:157
+#: wp-admin/themes.php:210 wp-admin/tools.php:57 wp-admin/update-core.php:1055
+#: wp-admin/upload.php:201 wp-admin/upload.php:403 wp-admin/user-edit.php:79
+#: wp-admin/user-new.php:316 wp-admin/users.php:84 wp-admin/widgets-form.php:72
+#: wp-admin/network.php:83 wp-admin/network/settings.php:65
+#: wp-admin/network/themes.php:340 wp-admin/network/upgrade.php:38
+msgid "<a href=\"https://wordpress.org/support/forums/\">Support forums</a>"
+msgstr "<a href=\"https://de.wordpress.org/support/\">Support-Foren</a>"
 
 #: wp-admin/contribute.php:71
 msgid "<strong>Share</strong> your knowledge in the WordPress support forums."
@@ -16423,11 +16423,11 @@ msgid "Be the future of WordPress"
 msgstr "Seien Sie die Zukunft von WordPress"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:351
-msgid "Explore the WordPress %s Field Guide. Learn about the changes in this release with detailed developer notes to help you build with WordPress."
-msgstr "Erkunden Sie den Leitfaden für WordPress %s. Erfahren Sie mehr über die Änderungen in dieser Version mit detaillierten Entwicklerhinweisen, die Ihnen helfen, mit WordPress zu arbeiten."
-
-#. translators: %s: WordPress version number.
 #: wp-admin/about.php:324
 msgid "Read the WordPress %s Release Notes for information on installation, enhancements, fixed issues, release contributors, learning resources, and the list of file changes."
 msgstr "Lesen Sie die WordPress-%s-Versionshinweise für Informationen zu Installation, Verbesserungen, behobenen Problemen, Mitwirkenden dieser Version, Lernressourcen und die Liste der Dateiänderungen."
+
+#. translators: %s: WordPress version number.
+#: wp-admin/about.php:351
+msgid "Explore the WordPress %s Field Guide. Learn about the changes in this release with detailed developer notes to help you build with WordPress."
+msgstr "Erkunden Sie den Leitfaden für WordPress %s. Erfahren Sie mehr über die Neuerungen in dieser Version anhand detaillierter Entwicklerhinweise, die Ihnen bei der Entwicklung mit WordPress helfen."
