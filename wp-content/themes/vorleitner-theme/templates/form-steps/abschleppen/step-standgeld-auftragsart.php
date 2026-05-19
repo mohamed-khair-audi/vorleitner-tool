@@ -1,7 +1,8 @@
 <div class="step-header">
-    <h2>Schritt 4: Standgeld & Zusatzleistungen</h2>
+    <h2>Schritt 4: Standgeld &amp; Auftragsart</h2>
 </div>
 
+<!-- Auftragsart -->
 <div class="form-section">
     <p class="form-section-legend">Auftragsart</p>
     <div class="checkbox-group">
@@ -13,6 +14,7 @@
     </div>
 </div>
 
+<!-- Standgeld -->
 <div class="form-section">
     <p class="form-section-legend">Standgeld</p>
     <div class="form-row">
@@ -34,20 +36,5 @@
                 </label>
             <?php endforeach; ?>
         </div>
-    </div>
-</div>
-
-<div class="form-section">
-    <p class="form-section-legend">Zusatzleistungen</p>
-    <div class="checkbox-group checkbox-group--grid">
-        <?php foreach (AbschleppFieldLabels::zusatzleistungen() as $dfValue => $dfLabel): ?>
-            <label class="checkbox-label">
-                <input type="checkbox" name="zusatzleistungen[]" value="<?= $dfValue ?>"> <?= $dfLabel ?>
-            </label>
-        <?php endforeach; ?>
-    </div>
-    <div class="form-field" style="margin-top:1rem">
-        <label for="bergung_stunden_anzahl">Bergung Std. (Anzahl)</label>
-        <input type="number" id="bergung_stunden_anzahl" name="bergung_stunden_anzahl" step="0.5" min="0" style="max-width:120px">
     </div>
 </div>

@@ -46,10 +46,19 @@
                             "required": "0"
                         },
                         {
+                            "name": "km_stand",
+                            "label": "KM-Stand",
+                            "description": "",
+                            "weight": 1,
+                            "type": "number",
+                            "number_decimals": "0",
+                            "required": "0"
+                        },
+                        {
                             "name": "kunde_vorname",
                             "label": "Vorname",
                             "description": "",
-                            "weight": 1,
+                            "weight": 2,
                             "type": "text",
                             "text_max_length": "100",
                             "required": "0"
@@ -58,7 +67,7 @@
                             "name": "kunde_nachname",
                             "label": "Nachname",
                             "description": "",
-                            "weight": 2,
+                            "weight": 3,
                             "type": "text",
                             "text_max_length": "100",
                             "required": "0"
@@ -67,7 +76,7 @@
                             "name": "kunde_strasse",
                             "label": "Straße",
                             "description": "",
-                            "weight": 3,
+                            "weight": 4,
                             "type": "text",
                             "text_max_length": "200",
                             "required": "0"
@@ -76,7 +85,7 @@
                             "name": "kunde_hausnummer",
                             "label": "Hausnummer",
                             "description": "",
-                            "weight": 4,
+                            "weight": 5,
                             "type": "text",
                             "text_max_length": "20",
                             "required": "0"
@@ -85,7 +94,7 @@
                             "name": "kunde_plz",
                             "label": "PLZ",
                             "description": "",
-                            "weight": 5,
+                            "weight": 6,
                             "type": "text",
                             "text_max_length": "10",
                             "required": "0"
@@ -94,7 +103,7 @@
                             "name": "kunde_ort",
                             "label": "Ort",
                             "description": "",
-                            "weight": 6,
+                            "weight": 7,
                             "type": "text",
                             "text_max_length": "100",
                             "required": "0"
@@ -103,7 +112,7 @@
                             "name": "kunde_telefon",
                             "label": "Telefon",
                             "description": "",
-                            "weight": 7,
+                            "weight": 8,
                             "type": "text",
                             "text_max_length": "50",
                             "required": "0"
@@ -112,7 +121,7 @@
                             "name": "datum",
                             "label": "Datum",
                             "description": "",
-                            "weight": 8,
+                            "weight": 9,
                             "type": "date",
                             "date_format": "d.m.Y",
                             "required": "0"
@@ -121,7 +130,7 @@
                             "name": "unterschrift_base64",
                             "label": "Unterschrift (Base64 PNG)",
                             "description": "",
-                            "weight": 9,
+                            "weight": 10,
                             "type": "paragraph",
                             "required": "0"
                         },
@@ -129,7 +138,7 @@
                             "name": "pdf_dateipfad",
                             "label": "PDF Dateipfad",
                             "description": "",
-                            "weight": 10,
+                            "weight": 11,
                             "type": "text",
                             "text_max_length": "500",
                             "required": "0"
@@ -138,7 +147,7 @@
                             "name": "interne_notizen",
                             "label": "Interne Notizen",
                             "description": "",
-                            "weight": 11,
+                            "weight": 12,
                             "type": "paragraph",
                             "required": "0"
                         }
@@ -556,44 +565,19 @@
                             "required": "0"
                         },
                         {
-                            "name": "kundenbeanstandung",
-                            "label": "Kundenbeanstandung",
-                            "description": "",
+                            "name": "ersatzfahrzeug_info",
+                            "label": "Ersatzfahrzeug – Zusatzinfo",
+                            "description": "z.B. Kennzeichen oder Modell des Ersatzfahrzeugs",
                             "weight": 7,
-                            "type": "paragraph",
-                            "required": "0"
-                        },
-                        {
-                            "name": "kostenangebot_euro",
-                            "label": "Kostenangebot (€)",
-                            "description": "",
-                            "weight": 8,
-                            "type": "number",
-                            "number_decimals": "2",
-                            "required": "0"
-                        },
-                        {
-                            "name": "arbeitsgang_und_ersatzteile",
-                            "label": "Arbeitsgang / Ersatzteile",
-                            "description": "",
-                            "weight": 9,
-                            "type": "paragraph",
-                            "required": "0"
-                        },
-                        {
-                            "name": "arbeitszeit_stunden",
-                            "label": "Arbeitszeit (Stunden)",
-                            "description": "",
-                            "weight": 10,
-                            "type": "number",
-                            "number_decimals": "1",
+                            "type": "text",
+                            "text_max_length": "200",
                             "required": "0"
                         },
                         {
                             "name": "kundenberater_name",
                             "label": "Kundenberater",
                             "description": "",
-                            "weight": 11,
+                            "weight": 8,
                             "type": "text",
                             "text_max_length": "100",
                             "required": "0"
@@ -602,16 +586,50 @@
                             "name": "zustaendiger_monteur_name",
                             "label": "Zuständiger Monteur",
                             "description": "",
-                            "weight": 12,
+                            "weight": 9,
                             "type": "text",
                             "text_max_length": "100",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kundenbeanstandung",
+                            "label": "Kundenbeanstandung",
+                            "description": "",
+                            "weight": 10,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "kostenangebot_euro",
+                            "label": "Kostenangebot (€)",
+                            "description": "",
+                            "weight": 11,
+                            "type": "number",
+                            "number_decimals": "2",
+                            "required": "0"
+                        },
+                        {
+                            "name": "arbeitsgang_und_ersatzteile",
+                            "label": "Arbeitsgang / Ersatzteile",
+                            "description": "",
+                            "weight": 12,
+                            "type": "paragraph",
+                            "required": "0"
+                        },
+                        {
+                            "name": "arbeitszeit_stunden",
+                            "label": "Arbeitszeit (Stunden)",
+                            "description": "",
+                            "weight": 13,
+                            "type": "number",
+                            "number_decimals": "1",
                             "required": "0"
                         },
                         {
                             "name": "probefahrt_durchgefuehrt",
                             "label": "Probefahrt durchgeführt",
                             "description": "",
-                            "weight": 13,
+                            "weight": 14,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -622,7 +640,7 @@
                             "name": "probefahrt_minuten",
                             "label": "Probefahrt (Minuten)",
                             "description": "",
-                            "weight": 14,
+                            "weight": 15,
                             "type": "number",
                             "number_decimals": "0",
                             "required": "0"
@@ -631,7 +649,7 @@
                             "name": "motorraum_verschluesse_zu",
                             "label": "Alle Verschlüsse / Deckel im Motorraum zu",
                             "description": "",
-                            "weight": 15,
+                            "weight": 16,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -642,7 +660,7 @@
                             "name": "fahrzeug_abholfertig_hergerichtet",
                             "label": "Fahrzeug abholfertig hergerichtet",
                             "description": "",
-                            "weight": 16,
+                            "weight": 17,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -653,7 +671,7 @@
                             "name": "abschlepphaken_entfernt",
                             "label": "Abschlepphaken entfernt",
                             "description": "",
-                            "weight": 17,
+                            "weight": 18,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -664,7 +682,7 @@
                             "name": "lack_spuren_entfernt",
                             "label": "Alle Spuren / Fingerabdrücke auf Lack entfernt",
                             "description": "",
-                            "weight": 18,
+                            "weight": 19,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -675,7 +693,7 @@
                             "name": "beleuchtung_ok",
                             "label": "Beleuchtung ok",
                             "description": "",
-                            "weight": 19,
+                            "weight": 20,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -686,7 +704,7 @@
                             "name": "serviceheft_eintrag_gemacht",
                             "label": "Servicehefteintrag gemacht",
                             "description": "",
-                            "weight": 20,
+                            "weight": 21,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -697,7 +715,7 @@
                             "name": "service_intervall_zurueckgestellt",
                             "label": "Service zurückgestellt",
                             "description": "",
-                            "weight": 21,
+                            "weight": 22,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -708,7 +726,7 @@
                             "name": "radschrauben_angezogen_durch",
                             "label": "Radschrauben / Muttern angezogen durch",
                             "description": "",
-                            "weight": 22,
+                            "weight": 23,
                             "type": "text",
                             "text_max_length": "100",
                             "required": "0"
@@ -717,7 +735,7 @@
                             "name": "oelablassschraube_nachgezogen_durch",
                             "label": "Ölablassschraube nachgezogen durch",
                             "description": "",
-                            "weight": 23,
+                            "weight": 24,
                             "type": "text",
                             "text_max_length": "100",
                             "required": "0"
@@ -726,7 +744,7 @@
                             "name": "fahrzeug_gereinigt_innen_aussen",
                             "label": "Fahrzeug gereinigt innen + außen",
                             "description": "",
-                            "weight": 24,
+                            "weight": 25,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -737,7 +755,7 @@
                             "name": "motoroel_stand_ok",
                             "label": "Motorölstand ok",
                             "description": "",
-                            "weight": 25,
+                            "weight": 26,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -748,7 +766,7 @@
                             "name": "motoroel_korrigiert_liter",
                             "label": "Motoröl korrigiert (Liter)",
                             "description": "",
-                            "weight": 26,
+                            "weight": 27,
                             "type": "number",
                             "number_decimals": "1",
                             "required": "0"
@@ -757,7 +775,7 @@
                             "name": "motoroel_spezifikation",
                             "label": "Motoröl-Spezifikation",
                             "description": "",
-                            "weight": 27,
+                            "weight": 28,
                             "type": "text",
                             "text_max_length": "100",
                             "required": "0"
@@ -766,7 +784,7 @@
                             "name": "kuehlmittel_ok",
                             "label": "Kühlmittel ok",
                             "description": "",
-                            "weight": 28,
+                            "weight": 29,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -777,7 +795,7 @@
                             "name": "kuehlmittel_korrigiert_liter",
                             "label": "Kühlmittel korrigiert (Liter)",
                             "description": "",
-                            "weight": 29,
+                            "weight": 30,
                             "type": "number",
                             "number_decimals": "1",
                             "required": "0"
@@ -786,7 +804,7 @@
                             "name": "frostschutz_ok",
                             "label": "Frostschutz ok",
                             "description": "",
-                            "weight": 30,
+                            "weight": 31,
                             "type": "boolean",
                             "boolean_yes_label": "Ja",
                             "boolean_no_label": "Nein",
@@ -797,16 +815,27 @@
                             "name": "frostschutz_temperatur_grad",
                             "label": "Frostschutz Temperatur (°C)",
                             "description": "",
-                            "weight": 31,
+                            "weight": 32,
                             "type": "number",
                             "number_decimals": "0",
+                            "required": "0"
+                        },
+                        {
+                            "name": "endkontrolle_durchgefuehrt",
+                            "label": "Endkontrolle durchgeführt",
+                            "description": "",
+                            "weight": 33,
+                            "type": "boolean",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nein",
+                            "boolean_default_state": "0",
                             "required": "0"
                         },
                         {
                             "name": "endkontrolle_fahrzeug_abholbereit",
                             "label": "Endkontrolle: Fahrzeug abholbereit",
                             "description": "",
-                            "weight": 32,
+                            "weight": 34,
                             "type": "boolean",
                             "boolean_yes_label": "Abholbereit",
                             "boolean_no_label": "Nicht abholbereit – darf nicht bewegt werden",
@@ -817,7 +846,7 @@
                             "name": "naechste_hauptuntersuchung",
                             "label": "Nächste HU",
                             "description": "",
-                            "weight": 33,
+                            "weight": 35,
                             "type": "date",
                             "date_format": "d.m.Y",
                             "required": "0"
@@ -826,7 +855,7 @@
                             "name": "werkstatt_notizen",
                             "label": "Werkstatt – Interne Notizen",
                             "description": "",
-                            "weight": 34,
+                            "weight": 36,
                             "type": "paragraph",
                             "required": "0"
                         }

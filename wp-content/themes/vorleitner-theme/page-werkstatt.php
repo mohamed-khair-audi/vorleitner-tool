@@ -5,10 +5,15 @@
 get_header();
 ?>
 
+<div class="auftrag-topbar">
+    <a href="<?= esc_url(AuftragHub::hubPageUrl()) ?>" class="auftrag-topbar__back">&#8592; Zur Startseite</a>
+    <span class="auftrag-topbar__title">Auftragskarte Werkstatt</span>
+</div>
+
 <main class="auftrag-form-container">
     <h1 class="auftrag-form-title">Auftragskarte Werkstatt</h1>
-    <?php if (current_user_can('manage_options')): ?>
-        <button id="fill-test-data-btn" class="btn-test-data">🧪 Testdaten ausfüllen</button>
+    <?php if (current_user_can('manage_options') && AuftragSettings::isTestdatenAktiv()): ?>
+        <button id="fill-test-data-btn" class="btn-test-data">&#129514; Testdaten ausf&uuml;llen</button>
     <?php endif; ?>
 
     <?php
@@ -60,7 +65,7 @@ get_header();
             <h2>Auftrag erfolgreich übermittelt!</h2>
             <p>Der Auftrag wurde erfasst und das PDF per E-Mail an uns weitergeleitet.</p>
 
-            <div class="pdf-actions-block" style="display:none">
+            <div class="pdf-actions-block" style="display:none;text-align:center">
                 <a href="#" id="pdf-download-btn" class="btn-pdf btn-pdf--view" target="_blank">&#128065; PDF anschauen</a>
             </div>
         </div>

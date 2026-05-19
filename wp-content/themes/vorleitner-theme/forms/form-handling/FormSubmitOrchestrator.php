@@ -9,7 +9,6 @@ class FormSubmitOrchestrator
         $dfPdfData     = (new AbschleppPdfDataPreparer())->prepare($dfSanitizedData);
         $dfPdfFilePath = (new PdfGenerator())->generateFromTemplate($dfPdfData, 'abschleppen');
 
-        (new AuftragPdfAttachment())->attachToPost($dfPostId, $dfPdfFilePath);
         update_post_meta($dfPostId, 'auftrag_form_data_json', wp_json_encode($dfSanitizedData));
 
         $dfToken     = PdfTokenStore::generateAndSave($dfPostId);
@@ -27,7 +26,6 @@ class FormSubmitOrchestrator
         $dfPdfData     = (new WerkstattPdfDataPreparer())->prepare($dfSanitizedData);
         $dfPdfFilePath = (new PdfGenerator())->generateFromTemplate($dfPdfData, 'werkstatt');
 
-        (new AuftragPdfAttachment())->attachToPost($dfPostId, $dfPdfFilePath);
         update_post_meta($dfPostId, 'auftrag_form_data_json', wp_json_encode($dfSanitizedData));
 
         $dfToken     = PdfTokenStore::generateAndSave($dfPostId);

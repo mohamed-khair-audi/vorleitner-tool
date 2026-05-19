@@ -4,13 +4,13 @@ defined('ABSPATH') || exit;
 $dfFormClassFiles = [
     'post-types/AuftragConstants.php',
     'helpers/PodsPickOptions.php',
+    'helpers/PodsFieldLabel.php',
     'form-handling/AbschleppValidationRules.php',
     'form-handling/WerkstattValidationRules.php',
     'form-handling/FormDataValidator.php',
     'form-handling/FormDataSanitizer.php',
     'form-handling/FormSubmitOrchestrator.php',
     'post-creation/AuftragPostFactory.php',
-    'post-creation/AuftragPdfAttachment.php',
     'pdf-generation/PdfFieldOutput.php',
     'pdf-generation/PdfGenerator.php',
     'pdf-generation/PdfTokenStore.php',
@@ -30,6 +30,7 @@ $dfFormClassFiles = [
     'rest-api/PdfDownloadEndpoint.php',
     'rest-api/PdfEmailEndpoint.php',
     'admin-settings/AuftragSettings.php',
+    'admin-settings/AuftragAdminView.php',
 ];
 
 foreach ($dfFormClassFiles as $dfClassFile) {
@@ -57,3 +58,4 @@ add_action('rest_api_init', function () {
 });
 
 PdfCleanup::register();
+AuftragAdminView::register();

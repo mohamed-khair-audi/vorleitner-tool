@@ -1,5 +1,29 @@
 *, *::before, *::after { box-sizing: border-box; }
 
+/* ── Topbar (Zurück + Formular-Titel) ── */
+.auftrag-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+    background: #D92B1A;
+    color: #fff;
+}
+.auftrag-topbar__back {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.9;
+    transition: opacity 0.15s;
+}
+.auftrag-topbar__back:hover { opacity: 1; text-decoration: underline; }
+.auftrag-topbar__title {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.85;
+}
+
 .btn-test-data {
     display: inline-flex;
     align-items: center;

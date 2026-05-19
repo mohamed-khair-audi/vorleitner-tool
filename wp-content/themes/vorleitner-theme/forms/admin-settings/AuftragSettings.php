@@ -3,9 +3,10 @@ defined('ABSPATH') || exit;
 
 class AuftragSettings
 {
-    private const PODS_SLUG   = AuftragConstants::PODS_SETTINGS_SLUG;
-    private const FIELD_AB    = 'recipient_email_abschleppen';
-    private const FIELD_WS    = 'recipient_email_werkstatt';
+    private const PODS_SLUG = AuftragConstants::PODS_SETTINGS_SLUG;
+    private const FIELD_AB  = 'recipient_email_abschleppen';
+    private const FIELD_WS  = 'recipient_email_werkstatt';
+    private const FIELD_TD  = 'vorleitner_testdaten_aktiv';
 
     public static function registerDefaults(): void
     {
@@ -16,6 +17,11 @@ class AuftragSettings
                 update_option($dfOptionKey, $dfAdminEmail);
             }
         }
+    }
+
+    public static function isTestdatenAktiv(): bool
+    {
+        return (bool) self::getSetting(self::FIELD_TD);
     }
 
     public static function getAbschleppRecipient(): string
@@ -37,6 +43,6 @@ class AuftragSettings
             $dfValue = '';
         }
 
-        return !empty($dfValue) ? $dfValue : (string) get_option('admin_email');
+        return !empty($dfValue) ? $dfValue : '';
     }
 }

@@ -1,12 +1,12 @@
 <div class="step-header">
-    <h2>Schritt 6: Abschluss</h2>
+    <h2>Schritt 9: Abschluss</h2>
 </div>
 
 <!-- Interne Notizen (erscheinen auf Seite 2 des PDFs) -->
 <div class="form-section">
     <p class="form-section-legend">Interne Notizen</p>
     <div class="form-field">
-        <textarea id="werkstatt_notizen" name="werkstatt_notizen" rows="4" placeholder="Nur intern sichtbar – erscheinen auf Seite 2 des PDFs"></textarea>
+        <textarea id="interne_notizen" name="interne_notizen" rows="4" placeholder="Nur intern sichtbar – erscheinen auf Seite 2 des PDFs"></textarea>
     </div>
 </div>
 

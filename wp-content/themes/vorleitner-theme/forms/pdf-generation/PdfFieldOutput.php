@@ -28,8 +28,9 @@ class PdfFieldOutput
             },
             $dfValue
         ) ?? $dfValue;
-        // uXXXX at word / punctuation boundaries (not glued to a letter before)
-        $dfValue = preg_replace_callback('/(?<![\\\w])u([0-9a-fA-F]{4})(?![0-9a-fA-F])/i', static function (array $dfM): string {
+        // uXXXX anywhere not preceded by backslash or word char — lookahead removed
+        // because the next char (e.g. "b" in "übergeben") may itself be a hex digit
+        $dfValue = preg_replace_callback('/(?<![\\\w])u([0-9a-fA-F]{4})/i', static function (array $dfM): string {
             return mb_chr((int) hexdec($dfM[1]), 'UTF-8');
         }, $dfValue) ?? $dfValue;
 

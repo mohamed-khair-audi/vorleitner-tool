@@ -1,20 +1,9 @@
 <div class="step-header">
-    <h2>Schritt 1: Auftragsgeber & Kundendaten</h2>
+    <h2>Schritt 1: Kundendaten</h2>
 </div>
 
 <div class="form-section">
-    <p class="form-section-legend">Auftragsgeber *</p>
-    <div class="radio-group">
-        <?php foreach (AbschleppFieldLabels::auftragsart() as $dfValue => $dfLabel): ?>
-            <label class="radio-label">
-                <input type="radio" name="auftragsart" value="<?= $dfValue ?>" required> <?= $dfLabel ?>
-            </label>
-        <?php endforeach; ?>
-    </div>
-</div>
-
-<div class="form-section">
-    <p class="form-section-legend">Kundendaten</p>
+    <p class="form-section-legend">Kontakt</p>
     <div class="form-row">
         <div class="form-field">
             <label for="kunde_vorname">Vorname *</label>
@@ -38,7 +27,7 @@
     <div class="form-row">
         <div class="form-field form-field--narrow">
             <label for="kunde_plz">PLZ</label>
-            <input type="text" id="kunde_plz" name="kunde_plz" pattern="[0-9]{5}" inputmode="numeric" autocomplete="postal-code" maxlength="5" data-error-message="PLZ muss genau 5 Ziffern enthalten">
+            <input type="text" id="kunde_plz" name="kunde_plz" pattern="[0-9]{5}" inputmode="numeric" maxlength="5" autocomplete="postal-code" data-error-message="PLZ muss genau 5 Ziffern enthalten">
         </div>
         <div class="form-field form-field--grow">
             <label for="kunde_ort">Ort</label>
