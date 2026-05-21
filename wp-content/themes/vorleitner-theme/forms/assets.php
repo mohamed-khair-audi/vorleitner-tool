@@ -26,7 +26,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('vorleitner-form-steps-navigation', $dfThemeUri . '/assets/js/form-steps-navigation.js', [], $dfThemeVersion, true);
     wp_enqueue_script('vorleitner-signature-pad-integration', $dfThemeUri . '/assets/js/signature-pad-integration.js', ['signature-pad-vendor'], $dfThemeVersion, true);
     wp_enqueue_script('vorleitner-form-ajax-submit', $dfThemeUri . '/assets/js/form-ajax-submit.js', ['vorleitner-form-steps-navigation'], $dfThemeVersion, true);
-    $dfTestdatenAktiv = current_user_can('manage_options') && AuftragSettings::isTestdatenAktiv();
+    $dfTestdatenAktiv = AuftragSettings::isTestdatenAktiv();
     if ($dfTestdatenAktiv) {
         wp_enqueue_script('vorleitner-form-test-data', $dfThemeUri . '/assets/js/form-test-data.js', [], $dfThemeVersion, true);
     }

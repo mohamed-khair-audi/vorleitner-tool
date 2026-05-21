@@ -12,7 +12,7 @@ get_header();
 
 <main class="auftrag-form-container">
     <h1 class="auftrag-form-title">Auftragskarte Abschleppdienst</h1>
-    <?php if (current_user_can('manage_options') && AuftragSettings::isTestdatenAktiv()): ?>
+    <?php if (AuftragSettings::isTestdatenAktiv()): ?>
         <button id="fill-test-data-btn" class="btn-test-data">&#129514; Testdaten ausf&uuml;llen</button>
     <?php endif; ?>
 
