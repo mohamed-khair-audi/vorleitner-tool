@@ -1,50 +1,6 @@
-# ──────────────────────────────────────────────
-# WordPress Core
-# ──────────────────────────────────────────────
-index.php
-license.txt
-readme.html
-wp-activate.php
-wp-admin/
-wp-blog-header.php
-wp-comments-post.php
-wp-config-sample.php
+# Sensible / generierte Dateien – nicht ins Repo
 wp-config.php
-wp-cron.php
-wp-includes/
-wp-links-opml.php
-wp-load.php
-wp-login.php
-wp-mail.php
-wp-settings.php
-wp-signup.php
-wp-trackback.php
-xmlrpc.php
-
-# ──────────────────────────────────────────────
-# wp-content – alles außer unserem Theme
-# ──────────────────────────────────────────────
-wp-content/debug.log
-wp-content/upgrade/
 wp-content/uploads/
-wp-content/languages/
-wp-content/plugins/
-wp-content/index.php
-
-# Alle anderen Themes ignorieren
-wp-content/themes/*/
-!wp-content/themes/vorleitner-theme/
-
-# ──────────────────────────────────────────────
-# Theme – vendor & generierte Dateien
-# ──────────────────────────────────────────────
-wp-content/themes/vorleitner-theme/vendor/
-wp-content/themes/vorleitner-theme/composer.lock
-
-# ──────────────────────────────────────────────
-# Sonstiges
-# ──────────────────────────────────────────────
-wp-cli.phar
-vorleitner-docker-setup/
+wp-content/debug.log
 *.log
 .DS_Store

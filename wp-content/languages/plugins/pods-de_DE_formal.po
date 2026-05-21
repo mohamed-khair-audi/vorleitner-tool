@@ -1,0 +1,1703 @@
+# Translation of Plugins - Pods &#8211; Custom Content Types and Fields - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Pods &#8211; Custom Content Types and Fields - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-05-10 20:27:47+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Pods &#8211; Custom Content Types and Fields - Stable (latest release)\n"
+
+#: components/I18n/I18n.php:704
+msgid "Locale"
+msgstr "Gebietsschema (Locale)"
+
+#: classes/fields/link.php:41
+msgid "Link"
+msgstr "Link"
+
+#: components/I18n/I18n.php:700
+msgid "Active"
+msgstr "Aktiv"
+
+#: components/I18n/I18n.php:696 components/I18n/I18n.php:707
+msgid "Language"
+msgstr "Sprache"
+
+#: components/I18n/I18n.php:695
+msgid "Languages"
+msgstr "Sprachen"
+
+#: classes/PodsI18n.php:211
+msgid "Icon"
+msgstr "Icon"
+
+#: classes/PodsI18n.php:168
+msgid "Remove"
+msgstr "Entfernen"
+
+#: classes/fields/boolean.php:35
+msgid "Yes / No"
+msgstr "Ja/Nein"
+
+#: classes/fields/currency.php:47
+msgid "Currency"
+msgstr "Währung"
+
+#: classes/fields/website.php:39
+msgid "Website"
+msgstr "Website"
+
+#: classes/fields/password.php:39
+msgid "Password"
+msgstr "Passwort"
+
+#: classes/fields/currency.php:388
+msgid "Euro"
+msgstr "Euro"
+
+#. translators: %s is the singular label for the content type.
+#: classes/PodsInit.php:2083 src/Pods/Admin/Config/Pod.php:414
+msgid "Uploaded to this %s"
+msgstr "Hochgeladen zu %s"
+
+#: classes/fields/website.php:78
+msgid "Open link in new window"
+msgstr "Link in einem neuen Fenster öffnen"
+
+#. translators: %s is the plural label for the content type.
+#: classes/PodsInit.php:2087 classes/PodsInit.php:2134
+msgid "%s navigation"
+msgstr "%s-Navigation"
+
+#. translators: %s is the singular label for the content type.
+#: classes/PodsInit.php:2081 src/Pods/Admin/Config/Pod.php:405
+msgid "Insert into %s"
+msgstr "Einfügen in %s"
+
+#. translators: %s is the singular label for the content type.
+#: classes/PodsInit.php:2077 src/Pods/Admin/Config/Pod.php:387
+msgid "%s Archives"
+msgstr "%s-Archiv"
+
+#: classes/PodsInit.php:2075
+msgid "Use as featured image"
+msgstr "Als Beitragsbild verwenden"
+
+#: classes/PodsInit.php:2073
+msgid "Set featured image"
+msgstr "Beitragsbild festlegen"
+
+#: classes/PodsInit.php:2074
+msgid "Remove featured image"
+msgstr "Beitragsbild entfernen"
+
+#: classes/PodsAdmin.php:4391 classes/PodsAdmin.php:4647
+msgid "REST API"
+msgstr "REST-API"
+
+#: ui/admin/shortcode.php:531
+msgid "Insert"
+msgstr "Einfügen"
+
+#: src/Pods/Admin/Config/Pod.php:943
+msgid "Author"
+msgstr "Autor"
+
+#: components/I18n/I18n.php:826 src/Pods/Admin/Config/Group.php:229
+#: ui/fields/color.php:29
+msgid "Default"
+msgstr "Standard"
+
+#: src/Pods/Admin/Config/Pod.php:933 ui/admin/widgets/field.php:24
+#: ui/admin/widgets/form.php:24 ui/admin/widgets/list.php:26
+#: ui/admin/widgets/single.php:26 ui/admin/widgets/view.php:24
+msgid "Title"
+msgstr "Titel"
+
+#: src/Pods/Whatsit/Block.php:45
+msgid "Options"
+msgstr "Optionen"
+
+#: classes/PodsAPI.php:1094 classes/PodsInit.php:2072
+#: src/Pods/Admin/Config/Pod.php:422 src/Pods/Admin/Config/Pod.php:948
+msgid "Featured Image"
+msgstr "Beitragsbild"
+
+#: ui/admin/upgrade/upgrade_2_0_0.php:23 ui/admin/upgrade/upgrade_2_1_0.php:23
+msgid "Getting Started"
+msgstr "Erste Schritte"
+
+#: src/Pods/Admin/Config/Pod.php:959
+msgid "Trackbacks"
+msgstr "Trackbacks"
+
+#: src/Pods/Admin/Config/Pod.php:954
+msgid "Excerpt"
+msgstr "Textauszug"
+
+#: src/Pods/Admin/Config/Field.php:224
+msgid "Required"
+msgstr "Erforderlich"
+
+#: src/Pods/Admin/Config/Field.php:159
+msgid "Field Type"
+msgstr "Feldtyp"
+
+#: ui/admin/setup-add.php:526
+msgid "Taxonomy"
+msgstr "Taxonomie"
+
+#: ui/admin/upgrade/upgrade_2_0_0.php:112
+#: ui/admin/upgrade/upgrade_2_0_0.php:220
+msgid "Templates"
+msgstr "Templates"
+
+#. Author URI of the plugin
+#: init.php
+msgid "https://pods.io/about/"
+msgstr "https://pods.io/about/"
+
+#: ui/admin/upgrade/upgrade_2_0_0.php:142
+#: ui/admin/upgrade/upgrade_2_0_0.php:250
+msgid "Content"
+msgstr "Inhalt"
+
+#: ui/admin/shortcode.php:449 ui/admin/widgets/form.php:52
+msgid "ID or Slug"
+msgstr "ID oder Titelform"
+
+#: src/Pods/Admin/Config/Pod.php:366
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+#: ui/admin/view.php:72 ui/forms/type/post.php:102
+msgid "Last Modified"
+msgstr "Zuletzt geändert"
+
+#: includes/data.php:2107
+msgid "and"
+msgstr "und"
+
+#: ui/admin/setup-add.php:201 ui/admin/setup-add.php:418
+msgid "Content Type"
+msgstr "Inhaltstyp"
+
+#: components/Roles/ui/edit.php:60 ui/forms/form.php:174
+msgid "Save"
+msgstr "Speichern"
+
+#: components/Pages.php:209 src/Pods/Admin/Config/Pod.php:631
+#: ui/admin/setup-add.php:256
+msgid "Page Title"
+msgstr "Seitentitel"
+
+#: components/Roles/Roles.php:84 components/Roles/Roles.php:257
+msgid "View Users"
+msgstr "Benutzer anzeigen"
+
+#: classes/PodsAdmin.php:981 ui/admin/upgrade/upgrade_2_0_0.php:85
+#: ui/admin/upgrade/upgrade_2_0_0.php:193 ui/admin/view.php:213
+#: ui/forms/type/post.php:475
+msgid "Fields"
+msgstr "Felder"
+
+#: components/Pages.php:418
+msgid "Page"
+msgstr "Seite"
+
+#: components/Pages.php:279
+msgid "Page Template"
+msgstr "Seiten-Template"
+
+#. translators: %s is the number of users.
+#: components/Roles/Roles.php:76 components/Roles/Roles.php:249
+msgid "%s User"
+msgid_plural "%s Users"
+msgstr[0] "%s Benutzer"
+msgstr[1] "%s Benutzer"
+
+#: components/Advanced-Relationships.php:68
+msgid "Themes"
+msgstr "Themes"
+
+#: classes/widgets/PodsWidgetForm.php:43 classes/widgets/PodsWidgetForm.php:64
+#: classes/widgets/PodsWidgetForm.php:79
+msgid "Submit"
+msgstr "Absenden"
+
+#: src/Pods/Whatsit/Storage/Collection.php:45
+msgid "Code"
+msgstr "Code"
+
+#: classes/fields/wysiwyg.php:48 src/Pods/Admin/Config/Pod.php:938
+msgid "Editor"
+msgstr "Editor"
+
+#: classes/fields/pick.php:3861
+msgid "San Marino"
+msgstr "San Marino"
+
+#: classes/fields/pick.php:3912
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: classes/fields/pick.php:3910
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: classes/fields/pick.php:3904
+msgid "Ukraine"
+msgstr "Ukraine"
+
+#: classes/fields/pick.php:3903
+msgid "Uganda"
+msgstr "Uganda"
+
+#: classes/fields/pick.php:3899
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: classes/fields/pick.php:3897
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+#: classes/fields/pick.php:3896
+msgid "Turkey"
+msgstr "Türkei"
+
+#: classes/fields/pick.php:3895
+msgid "Tunisia"
+msgstr "Tunesien"
+
+#: classes/fields/pick.php:3894
+msgid "Trinidad and Tobago"
+msgstr "Trinidad und Tobago"
+
+#: classes/fields/pick.php:3893
+msgid "Tonga"
+msgstr "Tonga"
+
+#: classes/fields/pick.php:3892
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: classes/fields/pick.php:3891
+msgid "Togo"
+msgstr "Togo"
+
+#: classes/fields/pick.php:3889
+msgid "Thailand"
+msgstr "Thailand"
+
+#: classes/fields/pick.php:3888
+msgid "Tanzania"
+msgstr "Tansania"
+
+#: classes/fields/pick.php:3886
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: classes/fields/pick.php:3884
+msgid "Syria"
+msgstr "Syrien"
+
+#: classes/fields/pick.php:3883
+msgid "Switzerland"
+msgstr "Schweiz"
+
+#: classes/fields/pick.php:3882
+msgid "Sweden"
+msgstr "Schweden"
+
+#: classes/fields/pick.php:3878
+msgid "Sudan"
+msgstr "Sudan"
+
+#: classes/fields/pick.php:3877
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: classes/fields/pick.php:3876
+msgid "Spain"
+msgstr "Spanien"
+
+#: classes/fields/pick.php:3875
+msgid "South Korea"
+msgstr "Südkorea"
+
+#: classes/fields/pick.php:3873
+msgid "South Africa"
+msgstr "Südafrika"
+
+#: classes/fields/pick.php:3872
+msgid "Somalia"
+msgstr "Somalia"
+
+#: classes/fields/pick.php:3868
+msgid "Singapore"
+msgstr "Singapur"
+
+#: classes/fields/pick.php:3867
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: classes/fields/pick.php:3866
+msgid "Seychelles"
+msgstr "Seychellen"
+
+#: classes/fields/pick.php:3865
+msgid "Serbia and Montenegro"
+msgstr "Serbien und Montenegro"
+
+#: classes/fields/pick.php:3864
+msgid "Serbia"
+msgstr "Serbien"
+
+#: classes/fields/pick.php:3863
+msgid "Senegal"
+msgstr "Senegal"
+
+#: classes/fields/pick.php:3983
+msgid "Pennsylvania"
+msgstr "Pennsylvania"
+
+#: classes/fields/pick.php:3982
+msgid "Oregon"
+msgstr "Oregon"
+
+#: classes/fields/pick.php:3981
+msgid "Oklahoma"
+msgstr "Oklahoma"
+
+#: classes/fields/pick.php:3980
+msgid "Ohio"
+msgstr "Ohio"
+
+#: classes/fields/pick.php:3977
+msgid "New York"
+msgstr "New York"
+
+#: classes/fields/pick.php:3973
+msgid "Nevada"
+msgstr "Nevada"
+
+#: classes/fields/pick.php:3972
+msgid "Nebraska"
+msgstr "Nebraska"
+
+#: classes/fields/pick.php:3971
+msgid "Montana"
+msgstr "Montana"
+
+#: classes/fields/pick.php:3970
+msgid "Missouri"
+msgstr "Missouri"
+
+#: classes/fields/pick.php:3969
+msgid "Mississippi"
+msgstr "Mississippi"
+
+#: classes/fields/pick.php:3968
+msgid "Minnesota"
+msgstr "Minnesota"
+
+#: classes/fields/pick.php:3967
+msgid "Michigan"
+msgstr "Michigan"
+
+#: classes/fields/pick.php:3966
+msgid "Massachusetts"
+msgstr "Massachusetts"
+
+#: classes/fields/pick.php:3964
+msgid "Maine"
+msgstr "Maine"
+
+#: classes/fields/pick.php:3963
+msgid "Louisiana"
+msgstr "Louisiana"
+
+#: classes/fields/pick.php:3962
+msgid "Kentucky"
+msgstr "Kentucky"
+
+#: classes/fields/pick.php:3961
+msgid "Kansas"
+msgstr "Kansas"
+
+#: classes/fields/pick.php:3960
+msgid "Iowa"
+msgstr "Iowa"
+
+#: classes/fields/pick.php:3959
+msgid "Indiana"
+msgstr "Indiana"
+
+#: classes/fields/pick.php:3958
+msgid "Illinois"
+msgstr "Illinois"
+
+#: classes/fields/pick.php:3957
+msgid "Idaho"
+msgstr "Idaho"
+
+#: classes/fields/pick.php:3956
+msgid "Hawaii"
+msgstr "Hawaii"
+
+#: classes/fields/pick.php:3954
+msgid "Florida"
+msgstr "Florida"
+
+#: classes/fields/pick.php:3952
+msgid "Delaware"
+msgstr "Delaware"
+
+#: classes/fields/pick.php:3951
+msgid "Connecticut"
+msgstr "Connecticut"
+
+#: classes/fields/pick.php:3950
+msgid "Colorado"
+msgstr "Colorado"
+
+#: classes/fields/pick.php:3948
+msgid "Arkansas"
+msgstr "Arkansas"
+
+#: classes/fields/pick.php:3947
+msgid "Arizona"
+msgstr "Arizona"
+
+#: classes/fields/pick.php:3946
+msgid "Alaska"
+msgstr "Alaska"
+
+#: classes/fields/pick.php:3945
+msgid "Alabama"
+msgstr "Alabama"
+
+#: classes/fields/pick.php:3919
+msgid "Yemen"
+msgstr "Jemen"
+
+#: classes/fields/pick.php:3915
+msgid "Vietnam"
+msgstr "Vietnam"
+
+#: classes/fields/pick.php:3914
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: components/Advanced-Relationships.php:82
+msgid "Sidebars"
+msgstr "Seitenleisten"
+
+#: components/Advanced-Relationships.php:51
+msgid "Database Tables"
+msgstr "Datenbanktabellen"
+
+#: classes/fields/pick.php:3995
+msgid "Wyoming"
+msgstr "Wyoming"
+
+#: classes/fields/pick.php:3994
+msgid "Wisconsin"
+msgstr "Wisconsin"
+
+#: classes/fields/pick.php:3992
+msgid "Washington"
+msgstr "Washington"
+
+#: classes/fields/pick.php:3991
+msgid "Virginia"
+msgstr "Virginia"
+
+#: classes/fields/pick.php:3990
+msgid "Vermont"
+msgstr "Vermont"
+
+#: classes/fields/pick.php:3989
+msgid "Utah"
+msgstr "Utah"
+
+#: classes/fields/pick.php:3988
+msgid "Texas"
+msgstr "Texas"
+
+#: classes/fields/pick.php:3987
+msgid "Tennessee"
+msgstr "Tennessee"
+
+#: components/Advanced-Relationships.php:75
+msgid "Page Templates"
+msgstr "Seiten-Templates"
+
+#: src/Pods/Blocks/Types/Item_List.php:281
+#: src/Pods/Blocks/Types/Related_Item_List.php:176 ui/admin/shortcode.php:467
+#: ui/admin/widgets/list.php:115
+msgid "Where"
+msgstr "Wo"
+
+#: components/Templates/includes/element-pod_reference-content.php:28
+#: components/Templates/includes/element-pod_reference.php:39
+#: ui/admin/shortcode.php:473 ui/admin/widgets/field.php:68
+msgid "Field"
+msgstr "Feld"
+
+#: classes/fields/pick.php:3881
+msgid "Swaziland"
+msgstr "Eswatini"
+
+#: classes/fields/pick.php:3870
+msgid "Slovenia"
+msgstr "Slowenien"
+
+#: classes/fields/pick.php:3869
+msgid "Slovakia"
+msgstr "Slowakei"
+
+#: classes/fields/pick.php:3862
+msgid "Saudi Arabia"
+msgstr "Saudi-Arabien"
+
+#: classes/fields/pick.php:3860
+msgid "Samoa"
+msgstr "Samoa"
+
+#: src/Pods/Blocks/Types/Field.php:127 src/Pods/Blocks/Types/Form.php:187
+#: src/Pods/Blocks/Types/Item_Single.php:191
+#: src/Pods/Blocks/Types/Item_Single_List_Fields.php:91
+#: src/Pods/Blocks/Types/Related_Item_List.php:118
+#: ui/admin/widgets/field.php:53 ui/admin/widgets/single.php:55
+msgid "Slug or ID"
+msgstr "Titelform oder ID"
+
+#: classes/fields/pick.php:3920
+msgid "Zambia"
+msgstr "Sambia"
+
+#: classes/fields/pick.php:3918
+msgid "Western Sahara"
+msgstr "Westsahara"
+
+#: classes/fields/pick.php:3913
+msgid "Vatican City"
+msgstr "Vatikanstadt"
+
+#: classes/fields/pick.php:3911
+msgid "Uzbekistan"
+msgstr "Usbekistan"
+
+#: classes/fields/pick.php:3906
+msgid "United Arab Emirates"
+msgstr "Vereinigte Arabische Emirate"
+
+#: ui/admin/upgrade/upgrade_2_0_0.php:29
+msgid "Migrate"
+msgstr "Migrieren"
+
+#: ui/admin/shortcode.php:510 ui/admin/widgets/list.php:128
+#: ui/admin/widgets/view.php:43
+msgid "Site Transient"
+msgstr "Website-Transient"
+
+#: ui/admin/shortcode.php:509 ui/admin/widgets/list.php:127
+#: ui/admin/widgets/view.php:42
+msgid "Transient"
+msgstr "Transient"
+
+#: components/Templates/class-pods_templates.php:197
+#: src/Pods/Blocks/Types/Item_List.php:235
+#: src/Pods/Blocks/Types/Item_Single.php:197
+#: src/Pods/Blocks/Types/Related_Item_List.php:130 ui/admin/shortcode.php:400
+#: ui/admin/shortcode.php:416 ui/admin/widgets/list.php:60
+#: ui/admin/widgets/list.php:76 ui/admin/widgets/single.php:76
+#: ui/admin/widgets/single.php:92
+msgid "Template"
+msgstr "Template"
+
+#: src/Pods/Blocks/Types/Item_List.php:243
+#: src/Pods/Blocks/Types/Item_Single.php:205
+#: src/Pods/Blocks/Types/Related_Item_List.php:138 ui/admin/shortcode.php:403
+#: ui/admin/shortcode.php:425 ui/admin/widgets/list.php:63
+#: ui/admin/widgets/list.php:91 ui/admin/widgets/single.php:79
+#: ui/admin/widgets/single.php:101
+msgid "Custom Template"
+msgstr "Individuelles Template"
+
+#: classes/fields/pick.php:3879
+msgid "Suriname"
+msgstr "Surinam"
+
+#: classes/fields/pick.php:753
+msgid "User Capabilities"
+msgstr "Benutzerberechtigungen"
+
+#: classes/fields/pick.php:740 components/Roles/Roles.php:101
+#: ui/admin/setup-add.php:427
+msgid "Users"
+msgstr "Benutzer"
+
+#: classes/fields/datetime.php:134 classes/fields/pick.php:595
+msgid "Custom"
+msgstr "Individuell"
+
+#: classes/fields/pick.php:3661
+msgid "Algeria"
+msgstr "Algerien"
+
+#: classes/fields/pick.php:3660
+msgid "Albania"
+msgstr "Albanien"
+
+#: classes/fields/pick.php:3659
+msgid "Afghanistan"
+msgstr "Afghanistan"
+
+#: classes/fields/pick.php:819
+msgid "Countries"
+msgstr "Länder"
+
+#: classes/fields/pick.php:789
+msgid "Post Status"
+msgstr "Beitragsstatus"
+
+#: classes/fields/pick.php:784 src/Pods/Admin/Config/Pod.php:984
+msgid "Post Formats"
+msgstr "Beitragsformate"
+
+#: classes/fields/pick.php:779
+msgid "Navigation Menus"
+msgstr "Navigationsmenüs"
+
+#: classes/fields/pick.php:772
+msgid "Image Sizes"
+msgstr "Bildgrößen"
+
+#: classes/fields/pick.php:766 src/Pods/Admin/Config/Pod.php:969
+#: ui/admin/setup-add.php:428
+msgid "Comments"
+msgstr "Kommentare"
+
+#: classes/fields/pick.php:746
+msgid "User Roles"
+msgstr "Benutzerrollen"
+
+#: classes/fields/pick.php:733 src/Pods/Admin/Config/Pod.php:1049
+#: src/Pods/Admin/Config/Pod.php:1050
+msgid "Taxonomies"
+msgstr "Taxonomien"
+
+#: classes/fields/pick.php:670 src/Pods/Admin/Config/Pod.php:1385
+#: src/Pods/Admin/Config/Pod.php:1386
+msgid "Post Types"
+msgstr "Inhaltstypen"
+
+#: classes/fields/pick.php:3709
+msgid "Comoros"
+msgstr "Komoren"
+
+#: classes/fields/pick.php:3708
+msgid "Colombia"
+msgstr "Kolumbien"
+
+#: classes/fields/pick.php:3706
+msgid "Christmas Island"
+msgstr "Weihnachtsinsel"
+
+#: classes/fields/pick.php:3705
+msgid "China"
+msgstr "China"
+
+#: classes/fields/pick.php:3704
+msgid "Chile"
+msgstr "Chile"
+
+#: classes/fields/pick.php:3703
+msgid "Chad"
+msgstr "Tschad"
+
+#: classes/fields/pick.php:3702
+msgid "Central African Republic"
+msgstr "Zentralafrikanische Republik"
+
+#: classes/fields/pick.php:3698
+msgid "Canada"
+msgstr "Kanada"
+
+#: classes/fields/pick.php:3697
+msgid "Cameroon"
+msgstr "Kamerun"
+
+#: classes/fields/pick.php:3696
+msgid "Cambodia"
+msgstr "Kambodscha"
+
+#: classes/fields/pick.php:3695
+msgid "Burundi"
+msgstr "Burundi"
+
+#: classes/fields/pick.php:3694
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: classes/fields/pick.php:3693
+msgid "Bulgaria"
+msgstr "Bulgarien"
+
+#: classes/fields/pick.php:3692
+msgid "Brunei"
+msgstr "Brunei"
+
+#: classes/fields/pick.php:3688
+msgid "Brazil"
+msgstr "Brasilien"
+
+#: classes/fields/pick.php:3686
+msgid "Botswana"
+msgstr "Botswana"
+
+#: classes/fields/pick.php:3685
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnien und Herzegowina"
+
+#: classes/fields/pick.php:3684
+msgid "Bolivia"
+msgstr "Bolivien"
+
+#: classes/fields/pick.php:3683
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: classes/fields/pick.php:3682
+msgid "Bermuda"
+msgstr "Bermuda"
+
+#: classes/fields/pick.php:3681
+msgid "Benin"
+msgstr "Benin"
+
+#: classes/fields/pick.php:3680
+msgid "Belize"
+msgstr "Belize"
+
+#: classes/fields/pick.php:3679
+msgid "Belgium"
+msgstr "Belgien"
+
+#: classes/fields/pick.php:3677
+msgid "Barbados"
+msgstr "Barbados"
+
+#: classes/fields/pick.php:3676
+msgid "Bangladesh"
+msgstr "Bangladesch"
+
+#: classes/fields/pick.php:3675
+msgid "Bahrain"
+msgstr "Bahrain"
+
+#: classes/fields/pick.php:3674
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: classes/fields/pick.php:3672
+msgid "Austria"
+msgstr "Österreich"
+
+#: classes/fields/pick.php:3671
+msgid "Australia"
+msgstr "Australien"
+
+#: classes/fields/pick.php:3670
+msgid "Aruba"
+msgstr "Aruba"
+
+#: classes/fields/pick.php:3669
+msgid "Armenia"
+msgstr "Armenien"
+
+#: classes/fields/pick.php:3668
+msgid "Argentina"
+msgstr "Argentinien"
+
+#: classes/fields/pick.php:3665
+msgid "Anguilla"
+msgstr "Anguilla"
+
+#: classes/fields/pick.php:3664
+msgid "Angola"
+msgstr "Angola"
+
+#: classes/fields/pick.php:3663
+msgid "Andorra"
+msgstr "Andorra"
+
+#: classes/fields/pick.php:3762
+msgid "Iceland"
+msgstr "Island"
+
+#: classes/fields/pick.php:3761
+msgid "Hungary"
+msgstr "Ungarn"
+
+#: classes/fields/pick.php:3759
+msgid "Honduras"
+msgstr "Honduras"
+
+#: classes/fields/pick.php:3757
+msgid "Haiti"
+msgstr "Haiti"
+
+#: classes/fields/pick.php:3756
+msgid "Guyana"
+msgstr "Guyana"
+
+#: classes/fields/pick.php:3754
+msgid "Guinea"
+msgstr "Guinea"
+
+#: classes/fields/pick.php:3753
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#: classes/fields/pick.php:3752
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: classes/fields/pick.php:3751
+msgid "Guam"
+msgstr "Guam"
+
+#: classes/fields/pick.php:3750
+msgid "Guadeloupe"
+msgstr "Guadeloupe"
+
+#: classes/fields/pick.php:3749
+msgid "Grenada"
+msgstr "Grenada"
+
+#: classes/fields/pick.php:3748
+msgid "Greenland"
+msgstr "Grönland"
+
+#: classes/fields/pick.php:3747
+msgid "Greece"
+msgstr "Griechenland"
+
+#: classes/fields/pick.php:3746
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: classes/fields/pick.php:3745
+msgid "Ghana"
+msgstr "Ghana"
+
+#: classes/fields/pick.php:3744
+msgid "Germany"
+msgstr "Deutschland"
+
+#: classes/fields/pick.php:3743 classes/fields/pick.php:3955
+msgid "Georgia"
+msgstr "Georgien"
+
+#: classes/fields/pick.php:3742
+msgid "Gambia"
+msgstr "Gambia"
+
+#: classes/fields/pick.php:3741
+msgid "Gabon"
+msgstr "Gabun"
+
+#: classes/fields/pick.php:3737
+msgid "French Guiana"
+msgstr "Französisch-Guayana"
+
+#: classes/fields/pick.php:3736
+msgid "France"
+msgstr "Frankreich"
+
+#: classes/fields/pick.php:3735
+msgid "Finland"
+msgstr "Finnland"
+
+#: classes/fields/pick.php:3731
+msgid "Ethiopia"
+msgstr "Äthiopien"
+
+#: classes/fields/pick.php:3730
+msgid "Estonia"
+msgstr "Estland"
+
+#: classes/fields/pick.php:3729
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: classes/fields/pick.php:3727
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: classes/fields/pick.php:3726
+msgid "Egypt"
+msgstr "Ägypten"
+
+#: classes/fields/pick.php:3725
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#: classes/fields/pick.php:3721
+msgid "Dominica"
+msgstr "Dominica"
+
+#: classes/fields/pick.php:3719
+msgid "Denmark"
+msgstr "Dänemark"
+
+#: classes/fields/pick.php:3716
+msgid "Cyprus"
+msgstr "Zypern"
+
+#: classes/fields/pick.php:3715
+msgid "Cuba"
+msgstr "Kuba"
+
+#: classes/fields/pick.php:3714
+msgid "Croatia"
+msgstr "Kroatien"
+
+#: classes/fields/pick.php:3713
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: classes/fields/pick.php:3811
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: classes/fields/pick.php:3810
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: classes/fields/pick.php:3809
+msgid "Mongolia"
+msgstr "Mongolei"
+
+#: classes/fields/pick.php:3805
+msgid "Micronesia"
+msgstr "Mikronesien"
+
+#: classes/fields/pick.php:3804
+msgid "Mexico"
+msgstr "Mexiko"
+
+#: classes/fields/pick.php:3802
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: classes/fields/pick.php:3801
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: classes/fields/pick.php:3797
+msgid "Malta"
+msgstr "Malta"
+
+#: classes/fields/pick.php:3796
+msgid "Mali"
+msgstr "Mali"
+
+#: classes/fields/pick.php:3795
+msgid "Maldives"
+msgstr "Malediven"
+
+#: classes/fields/pick.php:3792
+msgid "Madagascar"
+msgstr "Madagaskar"
+
+#: classes/fields/pick.php:3789
+msgid "Luxembourg"
+msgstr "Luxemburg"
+
+#: classes/fields/pick.php:3788
+msgid "Lithuania"
+msgstr "Litauen"
+
+#: classes/fields/pick.php:3787
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: classes/fields/pick.php:3786
+msgid "Libya"
+msgstr "Libyen"
+
+#: classes/fields/pick.php:3783
+msgid "Lebanon"
+msgstr "Libanon"
+
+#: classes/fields/pick.php:3782
+msgid "Latvia"
+msgstr "Lettland"
+
+#: classes/fields/pick.php:3781
+msgid "Laos"
+msgstr "Laos"
+
+#: classes/fields/pick.php:3779
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: classes/fields/pick.php:3778
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: classes/fields/pick.php:3777
+msgid "Kenya"
+msgstr "Kenia"
+
+#: classes/fields/pick.php:3775
+msgid "Jordan"
+msgstr "Jordanien"
+
+#: classes/fields/pick.php:3773
+msgid "Jersey"
+msgstr "Jersey"
+
+#: classes/fields/pick.php:3772
+msgid "Japan"
+msgstr "Japan"
+
+#: classes/fields/pick.php:3771
+msgid "Jamaica"
+msgstr "Jamaika"
+
+#: classes/fields/pick.php:3770
+msgid "Italy"
+msgstr "Italien"
+
+#: classes/fields/pick.php:3769
+msgid "Israel"
+msgstr "Israel"
+
+#: classes/fields/pick.php:3767
+msgid "Ireland"
+msgstr "Irland"
+
+#: classes/fields/pick.php:3766
+msgid "Iraq"
+msgstr "Irak"
+
+#: classes/fields/pick.php:3765
+msgid "Iran"
+msgstr "Iran"
+
+#: classes/fields/pick.php:3764
+msgid "Indonesia"
+msgstr "Indonesien"
+
+#: classes/fields/pick.php:3763
+msgid "India"
+msgstr "Indien"
+
+#: classes/fields/pick.php:3851
+msgid "Rwanda"
+msgstr "Ruanda"
+
+#: classes/fields/pick.php:3850
+msgid "Russia"
+msgstr "Russland"
+
+#: classes/fields/pick.php:3849
+msgid "Romania"
+msgstr "Rumänien"
+
+#: classes/fields/pick.php:3847
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#: classes/fields/pick.php:3846
+msgid "Portugal"
+msgstr "Portugal"
+
+#: classes/fields/pick.php:3845
+msgid "Poland"
+msgstr "Polen"
+
+#: classes/fields/pick.php:3843
+msgid "Philippines"
+msgstr "Philippinen"
+
+#: classes/fields/pick.php:3842
+msgid "Peru"
+msgstr "Peru"
+
+#: classes/fields/pick.php:3840
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: classes/fields/pick.php:3837
+msgid "Panama"
+msgstr "Panama"
+
+#: classes/fields/pick.php:3834
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: classes/fields/pick.php:3832
+msgid "Oman"
+msgstr "Oman"
+
+#: classes/fields/pick.php:3831
+msgid "Norway"
+msgstr "Norwegen"
+
+#: classes/fields/pick.php:3828
+msgid "North Korea"
+msgstr "Nordkorea"
+
+#: classes/fields/pick.php:3826
+msgid "Niue"
+msgstr "Niue"
+
+#: classes/fields/pick.php:3825
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: classes/fields/pick.php:3824
+msgid "Niger"
+msgstr "Niger"
+
+#: classes/fields/pick.php:3822
+msgid "New Zealand"
+msgstr "Neuseeland"
+
+#: classes/fields/pick.php:3818
+msgid "Netherlands"
+msgstr "Niederlande"
+
+#: classes/fields/pick.php:3817
+msgid "Nepal"
+msgstr "Nepal"
+
+#: classes/fields/pick.php:3816
+msgid "Nauru"
+msgstr "Nauru"
+
+#: classes/fields/pick.php:3815
+msgid "Namibia"
+msgstr "Namibia"
+
+#: classes/fields/pick.php:3666
+msgid "Antarctica"
+msgstr "Antarktis"
+
+#: classes/fields/pick.php:3717
+msgid "Czech Republic"
+msgstr "Tschechien"
+
+#: classes/fields/pick.php:3780
+msgid "Kyrgyzstan"
+msgstr "Kirgisistan"
+
+#: classes/fields/pick.php:3776
+msgid "Kazakhstan"
+msgstr "Kasachstan"
+
+#: classes/fields/pick.php:3738
+msgid "French Polynesia"
+msgstr "Französisch-Polynesien"
+
+#: classes/fields/pick.php:3734
+msgid "Fiji"
+msgstr "Fidschi"
+
+#: classes/fields/pick.php:3755
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissau"
+
+#: classes/fields/pick.php:3662
+msgid "American Samoa"
+msgstr "Amerikanisch-Samoa"
+
+#: classes/fields/pick.php:3678
+msgid "Belarus"
+msgstr "Belarus"
+
+#: classes/fields/pick.php:3848
+msgid "Qatar"
+msgstr "Katar"
+
+#: classes/fields/pick.php:3823
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: classes/fields/pick.php:3813
+msgid "Mozambique"
+msgstr "Mosambik"
+
+#: classes/fields/pick.php:3812
+msgid "Morocco"
+msgstr "Marokko"
+
+#: classes/fields/pick.php:3808
+msgid "Monaco"
+msgstr "Monaco"
+
+#: classes/fields/pick.php:3807
+msgid "Moldova"
+msgstr "Moldau"
+
+#: classes/fields/pick.php:3799
+msgid "Martinique"
+msgstr "Martinique"
+
+#: classes/fields/pick.php:3794
+msgid "Malaysia"
+msgstr "Malaysia"
+
+#: classes/fields/pick.php:3793
+msgid "Malawi"
+msgstr "Malawi"
+
+#: classes/fields/pick.php:3791
+msgid "Macedonia"
+msgstr "Nordmazedonien"
+
+#: classes/fields/pick.php:3785
+msgid "Liberia"
+msgstr "Liberia"
+
+#: classes/fields/pick.php:3784
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: classes/PodsAdmin.php:3747 src/Pods/Admin/Config/Field.php:152
+msgid "Description"
+msgstr "Beschreibung"
+
+#: classes/PodsUI.php:3240
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: classes/PodsUI.php:3212 classes/PodsUI.php:4960
+msgid "Apply"
+msgstr "Anwenden"
+
+#: classes/PodsUI.php:5141
+msgid "Current page"
+msgstr "Aktuelle Seite"
+
+#: classes/fields/file.php:157
+msgid "Upload File"
+msgstr "Datei hochladen"
+
+#: classes/PodsAdmin.php:3769 ui/admin/settings.php:35
+msgid "Tools"
+msgstr "Werkzeuge"
+
+#. translators: %s is the plural label for the content type.
+#. translators: %s is the singular label for the content type.
+#: classes/PodsInit.php:2065 src/Pods/Admin/Config/Pod.php:372
+msgid "No %s Found"
+msgstr "Kein %s gefunden"
+
+#: classes/PodsAdmin.php:3739 classes/PodsAdmin.php:3776
+msgid "Category"
+msgstr "Kategorie"
+
+#. translators: %s is the plural label for the content type.
+#. translators: %s is the plural label.
+#: classes/PodsInit.php:2061 classes/PodsInit.php:2108
+#: src/Pods/Admin/Config/Pod.php:310
+msgid "All %s"
+msgstr "Alle %s"
+
+#: classes/PodsUI.php:4799 includes/access.php:1880 includes/access.php:1945
+#: includes/access.php:1968 includes/access.php:1990 includes/access.php:2017
+#: src/Pods/Admin/Settings.php:210 src/Pods/Admin/Settings.php:237
+#: src/Pods/Admin/Settings.php:256 src/Pods/Admin/Settings.php:276
+#: src/Pods/Admin/Settings.php:299 src/Pods/Admin/Settings.php:318
+#: src/Pods/Admin/Settings.php:369
+msgid "Disable"
+msgstr "Deaktivieren"
+
+#: classes/PodsAdmin.php:4414 classes/PodsUI.php:4798 includes/access.php:1879
+#: includes/access.php:1944 includes/access.php:1967
+#: src/Pods/Admin/Settings.php:209 src/Pods/Admin/Settings.php:236
+#: src/Pods/Admin/Settings.php:255 src/Pods/Admin/Settings.php:275
+#: src/Pods/Admin/Settings.php:298 src/Pods/Admin/Settings.php:317
+#: src/Pods/Admin/Settings.php:368
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: classes/fields/boolean.php:64 classes/fields/boolean.php:231
+#: classes/fields/boolean.php:254 classes/PodsAdmin.php:4719
+#: classes/PodsAdmin.php:4723 classes/PodsAdmin.php:4731
+#: classes/PodsAdmin.php:4735 classes/PodsAdmin.php:4739
+#: classes/PodsAdmin.php:4743 classes/PodsAdmin.php:4747
+#: classes/PodsAdmin.php:4751 classes/PodsAdmin.php:4755
+#: classes/PodsAdmin.php:4759 classes/PodsAdmin.php:4763
+#: classes/PodsAdmin.php:4775 classes/PodsAdmin.php:4783
+#: classes/PodsAdmin.php:4787 classes/PodsAdmin.php:4791
+#: classes/PodsAdmin.php:4799 classes/PodsAdmin.php:4803
+#: classes/PodsAdmin.php:4807 classes/PodsAdmin.php:4811
+#: classes/PodsAdmin.php:4815 classes/PodsAdmin.php:4819
+#: classes/PodsAdmin.php:4872 classes/PodsUI.php:3072 classes/PodsUI.php:3547
+#: classes/PodsUI.php:3817 src/Pods/Whatsit/Block_Field.php:304
+msgid "No"
+msgstr "Nein"
+
+#: classes/fields/boolean.php:59 classes/fields/boolean.php:230
+#: classes/fields/boolean.php:253 classes/PodsAdmin.php:4719
+#: classes/PodsAdmin.php:4723 classes/PodsAdmin.php:4731
+#: classes/PodsAdmin.php:4735 classes/PodsAdmin.php:4739
+#: classes/PodsAdmin.php:4743 classes/PodsAdmin.php:4747
+#: classes/PodsAdmin.php:4751 classes/PodsAdmin.php:4755
+#: classes/PodsAdmin.php:4759 classes/PodsAdmin.php:4763
+#: classes/PodsAdmin.php:4775 classes/PodsAdmin.php:4783
+#: classes/PodsAdmin.php:4787 classes/PodsAdmin.php:4791
+#: classes/PodsAdmin.php:4799 classes/PodsAdmin.php:4803
+#: classes/PodsAdmin.php:4807 classes/PodsAdmin.php:4811
+#: classes/PodsAdmin.php:4815 classes/PodsAdmin.php:4819
+#: classes/PodsAdmin.php:4872 classes/PodsUI.php:3071 classes/PodsUI.php:3546
+#: classes/PodsUI.php:3816 src/Pods/Whatsit/Block_Field.php:300
+msgid "Yes"
+msgstr "Ja"
+
+#: classes/fields/phone.php:58
+msgid "International"
+msgstr "International"
+
+#: classes/PodsAPI.php:2112 classes/PodsMeta.php:993
+#: src/Pods/Tools/Repair.php:453 src/Pods/Whatsit.php:1687
+#: ui/admin/view.php:211
+msgid "More Fields"
+msgstr "Weitere Felder"
+
+#: classes/fields/file.php:255 classes/fields/file.php:267
+#: ui/fields/attachment.php:127
+msgid "Add File"
+msgstr "Datei hinzufügen"
+
+#: classes/fields/file.php:261
+msgid "Attach a file"
+msgstr "Datei anhängen"
+
+#. translators: %s is the singular label for the content type.
+#. translators: %s is the singular item label.
+#. translators: %s is the singular label.
+#: classes/PodsInit.php:2053 classes/PodsInit.php:2114
+#: classes/PodsInit.php:2766 classes/PodsUI.php:780
+#: src/Pods/Admin/Config/Pod.php:210
+msgid "Edit %s"
+msgstr "%s bearbeiten"
+
+#: classes/PodsUI.php:3432
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#. translators: %s is the singular label for the content type.
+#. translators: %s is the plural label for the content type.
+#. translators: %s is the singular item label.
+#. translators: %s is the singular label.
+#. translators: %s is the plural label.
+#. translators: %s is the item label.
+#. translators: %s: The singular item label.
+#: classes/PodsInit.php:2055 classes/PodsInit.php:2057
+#: classes/PodsInit.php:2059 classes/PodsInit.php:2116 classes/PodsUI.php:784
+#: classes/PodsUI.php:807 src/Pods/Admin/Config/Pod.php:257
+#: src/Pods/Admin/Config/Pod.php:265 ui/admin/view.php:43 ui/forms/form.php:125
+#: ui/forms/type/post.php:72
+msgid "View %s"
+msgstr "%s anzeigen"
+
+#: classes/PodsUI.php:3191
+msgid "Bulk Actions"
+msgstr "Mehrfachaktionen"
+
+#: classes/PodsInit.php:1965 components/Pages.php:536
+#: components/Templates/Templates.php:285
+msgid "Custom field deleted."
+msgstr "Individuelles Feld wurde gelöscht."
+
+#: classes/PodsInit.php:1964 components/Pages.php:535
+#: components/Templates/Templates.php:284
+msgid "Custom field updated."
+msgstr "Individuelles Feld wurde aktualisiert."
+
+#: classes/PodsAdmin.php:3771
+msgid "Migration"
+msgstr "Migration"
+
+#: classes/PodsAdmin.php:3770
+msgid "Integration"
+msgstr "Integration"
+
+#: classes/fields/boolean.php:63
+msgid "No Label"
+msgstr "Nein-Beschriftung"
+
+#: classes/fields/boolean.php:58
+msgid "Yes Label"
+msgstr "Ja-Beschriftung"
+
+#: classes/fields/file.php:254
+msgid "Add Button Text"
+msgstr "Button-Text hinzufügen"
+
+#: classes/fields/file.php:158
+msgid "Media Library"
+msgstr "Mediathek"
+
+#: classes/PodsUI.php:3165
+msgid "Reset Filters"
+msgstr "Filter zurücksetzen"
+
+#: classes/fields/time.php:102 classes/fields/time.php:123
+msgid "Time Format"
+msgstr "Zeitformat"
+
+#: classes/fields/currency.php:74 classes/fields/number.php:54
+msgid "Slider"
+msgstr "Slider"
+
+#: classes/PodsAdmin.php:1929 classes/PodsI18n.php:174 classes/PodsUI.php:764
+#: classes/PodsUI.php:767 classes/PodsUI.php:4687 includes/access.php:1922
+#: src/Pods/Admin/Config/Pod.php:250 src/Pods/Blocks/Types/View.php:172
+msgid "View"
+msgstr "Anzeigen"
+
+#: classes/PodsAdmin.php:3768
+msgid "Field Types"
+msgstr "Feldtypen"
+
+#: classes/PodsAdmin.php:3785
+msgid "Developer Preview"
+msgstr "Entwickler-Vorschau"
+
+#: classes/fields/code.php:50 classes/fields/heading.php:66
+#: classes/fields/html.php:59 classes/fields/paragraph.php:52
+#: classes/fields/text.php:48 classes/fields/wysiwyg.php:89
+msgid "Output Options"
+msgstr "Ausgabe-Optionen"
+
+#: classes/PodsUI.php:5132
+msgid "Go to the first page"
+msgstr "Zur ersten Seite"
+
+#: classes/PodsUI.php:5135
+msgid "Go to the previous page"
+msgstr "Zur vorherigen Seite"
+
+#: classes/PodsUI.php:5189
+msgid "Go to the last page"
+msgstr "Zur letzten Seite"
+
+#: classes/PodsUI.php:5186
+msgid "Go to the next page"
+msgstr "Zur nächsten Seite"
+
+#. Translators: %s stands for a name/identifier.
+#. translators: %s is the plural label for the content type.
+#. translators: %s is the plural items label.
+#. translators: %s is the plural label.
+#: classes/PodsI18n.php:181 classes/PodsInit.php:2063 classes/PodsInit.php:2104
+#: classes/PodsUI.php:788 src/Pods/Admin/Config/Pod.php:324
+msgid "Search %s"
+msgstr "%s durchsuchen"
+
+#. translators: %s is the singular label.
+#. translators: %s is the singular label for the content type.
+#. translators: %s is the singular item label.
+#: classes/PodsAdmin.php:289 classes/PodsAdmin.php:317
+#: classes/PodsAdmin.php:319 classes/PodsInit.php:2046
+#: classes/PodsInit.php:2048 classes/PodsInit.php:2120 classes/PodsUI.php:761
+#: classes/PodsUI.php:778 classes/PodsUI.php:797 classes/PodsUI.php:799
+msgid "Add New %s"
+msgstr "%s hinzufügen"
+
+#: classes/PodsAdmin.php:286 classes/PodsAdmin.php:363 classes/PodsI18n.php:176
+#: classes/PodsInit.php:2051 classes/PodsUI.php:762 classes/PodsUI.php:4715
+#: src/Pods/Admin/Config/Pod.php:203 src/Pods/Admin/Config/Pod.php:1538
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: classes/Pods.php:4135 classes/PodsAdmin.php:805 classes/PodsForm.php:469
+#: ui/admin/components-admin.php:121
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: classes/PodsAdmin.php:1354 classes/PodsUI.php:763 classes/PodsUI.php:4743
+#: src/Pods/Admin/Config/Pod.php:226 src/Pods/Admin/Config/Pod.php:1539
+msgid "Duplicate"
+msgstr "Duplizieren"
+
+#: classes/Pods.php:4647 classes/PodsAdmin.php:1360 classes/PodsUI.php:4771
+#: src/Pods/Admin/Config/Pod.php:1540 ui/admin/view.php:99
+#: ui/forms/type/post.php:148
+msgid "Delete"
+msgstr "Löschen"
+
+#: classes/Pods.php:4539 src/Pods/Admin/Config/Pod.php:1589
+#: src/Pods/Tools/Repair.php:160 src/Pods/Tools/Repair.php:329
+#: src/Pods/Tools/Repair.php:405 src/Pods/Tools/Repair.php:602
+#: src/Pods/Tools/Repair.php:708 src/Pods/Tools/Repair.php:822
+#: src/Pods/Tools/Repair.php:892 src/Pods/Tools/Repair.php:1038
+msgid "ID"
+msgstr "ID"
+
+#. translators: %1$s is the settings label, %2$s is the action performed.
+#: classes/PodsAdmin.php:570 classes/PodsAdmin.php:591
+#: ui/admin/components-admin.php:24 ui/admin/settings-settings.php:105
+#: ui/admin/settings-settings.php:110 ui/admin/settings.php:34
+#: ui/admin/upgrade/upgrade_2_0_0.php:211
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: classes/PodsAdmin.php:965 classes/PodsAdmin.php:1398
+#: classes/PodsAdmin.php:1522 classes/PodsAdmin.php:1936
+#: src/Pods/Admin/Config/Pod.php:1602 src/Pods/Tools/Repair.php:403
+msgid "Type"
+msgstr "Typ"
+
+#: classes/PodsAdmin.php:3772 src/Pods/Admin/Config/Field.php:57
+#: src/Pods/Admin/Config/Group.php:29 src/Pods/Admin/Config/Group.php:208
+#: ui/admin/setup-add.php:314 ui/admin/setup-add.php:544
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: classes/Pods.php:3576 classes/PodsI18n.php:178 classes/PodsUI.php:766
+#: classes/PodsUI.php:3135 classes/PodsUI.php:3440
+#: src/Pods/Admin/Config/Pod.php:317
+msgid "Search"
+msgstr "Suchen"
+
+#: classes/PodsAdmin.php:962 classes/PodsAdmin.php:1519
+#: classes/PodsAdmin.php:3731 classes/PodsUI.php:823
+#: components/Roles/Roles.php:98 components/Roles/ui/add.php:58
+#: src/Pods/Admin/Config/Field.php:141 src/Pods/Admin/Config/Group.php:103
+#: src/Pods/Admin/Config/Pod.php:1595 src/Pods/Tools/Repair.php:327
+#: src/Pods/Tools/Repair.php:401 src/Pods/Tools/Repair.php:820
+#: src/Pods/Tools/Repair.php:890 src/Pods/Tools/Repair.php:1036
+msgid "Name"
+msgstr "Name"
+
+#: classes/Pods.php:4640 src/Pods/Admin/Config/Pod.php:1542
+msgid "Export"
+msgstr "Exportieren"
+
+#: classes/PodsAdmin.php:282 classes/PodsAdmin.php:1396
+#: classes/PodsAdmin.php:1927 classes/PodsAdmin.php:3766
+msgid "All"
+msgstr "Alle"
+
+#: classes/PodsAdmin.php:586 ui/admin/upgrade/upgrade_2_1_0.php:29
+msgid "Upgrade"
+msgstr "Aktualisierung"
+
+#: classes/fields/pick.php:300 classes/fields/pick.php:1050
+#: classes/PodsAdmin.php:365 classes/PodsAdmin.php:384
+#: classes/PodsAdmin.php:552 classes/PodsField.php:600 classes/PodsI18n.php:156
+#: src/Pods/Admin/Config/Field.php:275 src/Pods/Admin/Config/Pod.php:1537
+msgid "Add New"
+msgstr "Hinzufügen"
+
+#: src/Pods/Admin/Config/Pod.php:842
+msgid "Enable Archive Page"
+msgstr "Archivseite aktivieren"
+
+#: classes/PodsAdmin.php:1471 classes/PodsAdmin.php:1701
+#: classes/PodsAdmin.php:2893 includes/access.php:1576
+#: src/Pods/Admin/Config/Pod.php:771 src/Pods/Admin/Config/Pod.php:790
+#: src/Pods/Admin/Config/Pod.php:1224 src/Pods/Admin/Config/Pod.php:1244
+msgid "Public"
+msgstr "Öffentlich"
+
+#: src/Pods/Admin/Config/Pod.php:690
+msgid "Menu Icon"
+msgstr "Menü-Icon"
+
+#: src/Pods/Admin/Config/Pod.php:680 src/Pods/Admin/Config/Pod.php:1128
+#: src/Pods/Admin/Config/Pod.php:1439 src/Pods/Admin/Config/Pod.php:1508
+msgid "Menu Position"
+msgstr "Menü-Position"
+
+#: src/Pods/Admin/Config/Pod.php:637 src/Pods/Admin/Config/Pod.php:674
+#: src/Pods/Admin/Config/Pod.php:1100
+msgid "Menu Name"
+msgstr "Menü-Name"
+
+#: src/Pods/Admin/Config/Pod.php:60
+msgid "Labels"
+msgstr "Beschriftungen"
+
+#: classes/PodsAdmin.php:959 classes/PodsAdmin.php:1516
+#: components/Roles/Roles.php:97 components/Roles/ui/add.php:49
+#: src/Pods/Admin/Config/Field.php:133 src/Pods/Admin/Config/Group.php:96
+#: src/Pods/Admin/Config/Pod.php:147
+msgid "Label"
+msgstr "Beschriftung"
+
+#: classes/PodsAdmin.php:359 classes/PodsAdmin.php:385 classes/PodsUI.php:759
+#: components/Roles/ui/edit.php:48 src/Pods/Admin/Config/Pod.php:279
+#: ui/admin/view.php:25 ui/forms/type/post.php:54
+msgid "Manage"
+msgstr "Verwalten"
+
+#: classes/PodsAdmin.php:576 classes/PodsAdmin.php:597
+msgid "Help"
+msgstr "Hilfe"
+
+#: src/Pods/Admin/Config/Field.php:335
+msgid "Values"
+msgstr "Werte"
+
+#: src/Pods/Admin/Config/Field.php:343
+msgid "Default Value"
+msgstr "Standardwert"
+
+#: src/Pods/Admin/Config/Pod.php:1138 src/Pods/Admin/Config/Pod.php:1449
+#: src/Pods/Admin/Config/Pod.php:1518
+msgid "Menu Icon URL"
+msgstr "Menü-Icon-URL"
+
+#: src/Pods/Admin/Config/Pod.php:1123 src/Pods/Admin/Config/Pod.php:1434
+msgid "Custom Menu Location"
+msgstr "Individuelle Menü-Position"
+
+#: src/Pods/Admin/Config/Pod.php:919
+msgid "Default Status"
+msgstr "Standardstatus"
+
+#: src/Pods/Admin/Config/Pod.php:858 src/Pods/Admin/Config/Pod.php:1272
+#: src/Pods/Admin/Config/Pod.php:1662
+msgid "Hierarchical"
+msgstr "Hierarchisch"
+
+#: classes/PodsAPI.php:944 classes/PodsAPI.php:955
+msgid "Closed"
+msgstr "Geschlossen"
+
+#: classes/PodsAPI.php:943 classes/PodsAPI.php:954
+msgid "Open"
+msgstr "Offen"
+
+#: src/Pods/Admin/Config/Pod.php:72
+msgid "Advanced Options"
+msgstr "Erweiterte Optionen"
+
+#: classes/PodsAdmin.php:546
+msgid "Edit Pods"
+msgstr "Pods bearbeiten"
+
+#: src/Pods/Admin/Config/Field.php:387 src/Pods/Admin/Config/Group.php:126
+msgid "Visibility"
+msgstr "Sichtbarkeit"
+
+#: src/Pods/Admin/Config/Pod.php:1106 src/Pods/Admin/Config/Pod.php:1421
+#: ui/admin/setup-add.php:279
+msgid "Menu Location"
+msgstr "Menüposition"
