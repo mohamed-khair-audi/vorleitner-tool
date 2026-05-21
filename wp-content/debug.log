@@ -199,3 +199,4 @@ Stack trace:
 [19-May-2026 01:10:58 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/widgets.php on line 1652
 [19-May-2026 02:23:05 UTC] PHP Warning:  Undefined array key "d.m.Y H:i" in /var/www/html/wp-content/plugins/pods/classes/fields/datetime.php on line 555
 [19-May-2026 02:26:15 UTC] PHP Warning:  Undefined array key "d.m.Y H:i" in /var/www/html/wp-content/plugins/pods/classes/fields/datetime.php on line 555
+[21-May-2026 01:15:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/widgets.php on line 1652
