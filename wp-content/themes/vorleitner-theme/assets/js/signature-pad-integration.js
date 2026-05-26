@@ -1,47 +1,121 @@
 class SignaturePadIntegration {
     constructor(dfCanvasSelector, dfHiddenInputSelector) {
-        this.dfCanvas       = document.querySelector(dfCanvasSelector);
-        this.dfHiddenInput  = document.querySelector(dfHiddenInputSelector);
+        this.dfCanvas      = document.querySelector(dfCanvasSelector);
+        this.dfHiddenInput = document.querySelector(dfHiddenInputSelector);
+        this.dfWrapper     = this.dfCanvas?.closest('.signature-pad-wrapper') ?? null;
         this.dfSignaturePad = null;
-        this.dfInitialized  = false;
+        this.dfResizeTimer  = null;
     }
 
     init() {
         if (!this.dfCanvas || typeof SignaturePad === 'undefined') return;
 
-        this.dfSignaturePad = new SignaturePad(this.dfCanvas, {
-            backgroundColor: 'rgb(255, 255, 255)',
-            penColor: 'rgb(0, 0, 0)',
-        });
-
         const dfClearButton = document.querySelector('[data-action="clear-signature"]');
         if (dfClearButton) {
-            dfClearButton.addEventListener('click', () => this.dfSignaturePad.clear());
+            dfClearButton.addEventListener('click', () => this.clear());
         }
 
         window.addEventListener('resize', () => {
-            if (this.dfCanvas.offsetWidth > 0) this.resizeCanvas();
+            clearTimeout(this.dfResizeTimer);
+            this.dfResizeTimer = setTimeout(() => this.fitCanvas(true), 150);
         });
 
-        // Canvas is inside a hidden step — resize when it first becomes visible
-        const dfObserver = new ResizeObserver(() => {
-            if (this.dfCanvas.offsetWidth > 0 && !this.dfInitialized) {
-                this.dfInitialized = true;
-                this.resizeCanvas();
-            }
+        document.addEventListener('vorleitner:step-shown', (dfEvent) => {
+            if (!dfEvent.detail?.step?.contains(this.dfCanvas)) return;
+            requestAnimationFrame(() => this.ensureReady());
         });
-        dfObserver.observe(this.dfCanvas);
+
+        if (this.dfCanvas.offsetParent !== null) {
+            this.ensureReady();
+        }
     }
 
-    resizeCanvas() {
-        const dfPixelRatio   = Math.max(window.devicePixelRatio || 1, 1);
-        const dfCurrentWidth = this.dfCanvas.offsetWidth;
-        const dfCurrentHeight= this.dfCanvas.offsetHeight;
-        if (dfCurrentWidth === 0 || dfCurrentHeight === 0) return;
-        this.dfCanvas.width  = dfCurrentWidth  * dfPixelRatio;
-        this.dfCanvas.height = dfCurrentHeight * dfPixelRatio;
-        this.dfCanvas.getContext('2d').scale(dfPixelRatio, dfPixelRatio);
+    ensureReady(dfAttempt = 0) {
+        if (!this.dfCanvas) return;
+
+        const dfWidth  = this.dfCanvas.parentElement?.clientWidth || this.dfCanvas.offsetWidth;
+        const dfHeight = parseInt(getComputedStyle(this.dfCanvas).height, 10) || 200;
+
+        if (dfWidth < 10) {
+            if (dfAttempt < 40) {
+                requestAnimationFrame(() => this.ensureReady(dfAttempt + 1));
+            }
+            return;
+        }
+
+        if (!this.dfSignaturePad) {
+            this.applyCanvasSize(dfWidth, dfHeight);
+            this.dfSignaturePad = new SignaturePad(this.dfCanvas, {
+                backgroundColor: 'rgb(255, 255, 255)',
+                penColor:        'rgb(17, 24, 39)',
+                minWidth:        1.2,
+                maxWidth:        3.2,
+                throttle:        8,
+                velocityFilterWeight: 0.65,
+            });
+            this.dfSignaturePad.addEventListener('beginStroke', () => this.setState('drawing'));
+            this.dfSignaturePad.addEventListener('endStroke', () => {
+                this.updateHiddenInput();
+                this.setState(this.dfSignaturePad.isEmpty() ? 'empty' : 'signed');
+            });
+        } else {
+            this.fitCanvas(true);
+        }
+
+        this.setState(this.dfSignaturePad?.isEmpty() ? 'empty' : 'signed');
+    }
+
+    applyCanvasSize(dfWidth, dfHeight) {
+        const dfRatio = Math.max(window.devicePixelRatio || 1, 1);
+        this.dfCanvas.width  = Math.floor(dfWidth * dfRatio);
+        this.dfCanvas.height = Math.floor(dfHeight * dfRatio);
+        this.dfCanvas.style.width  = dfWidth + 'px';
+        this.dfCanvas.style.height = dfHeight + 'px';
+        const dfCtx = this.dfCanvas.getContext('2d');
+        dfCtx.setTransform(1, 0, 0, 1, 0, 0);
+        dfCtx.scale(dfRatio, dfRatio);
+    }
+
+    fitCanvas(dfPreserve = false) {
+        if (!this.dfCanvas) return;
+
+        const dfWidth  = this.dfCanvas.parentElement?.clientWidth || this.dfCanvas.offsetWidth;
+        const dfHeight = parseInt(getComputedStyle(this.dfCanvas).height, 10) || 200;
+        if (dfWidth < 10) return;
+
+        const dfData = dfPreserve && this.dfSignaturePad && !this.dfSignaturePad.isEmpty()
+            ? this.dfSignaturePad.toData()
+            : null;
+
+        this.applyCanvasSize(dfWidth, dfHeight);
+
+        if (this.dfSignaturePad) {
+            this.dfSignaturePad.clear();
+            if (dfData?.length) {
+                this.dfSignaturePad.fromData(dfData);
+            }
+            this.updateHiddenInput();
+        }
+    }
+
+    clear() {
         if (this.dfSignaturePad) this.dfSignaturePad.clear();
+        if (this.dfHiddenInput) this.dfHiddenInput.value = '';
+        this.setState('empty');
+    }
+
+    setState(dfState) {
+        if (!this.dfWrapper) return;
+        this.dfWrapper.classList.remove('is-empty', 'is-drawing', 'is-signed');
+        this.dfWrapper.classList.add(
+            dfState === 'signed' ? 'is-signed' : (dfState === 'drawing' ? 'is-drawing' : 'is-empty')
+        );
+        const dfStatus = this.dfWrapper.querySelector('.signature-pad-status');
+        if (dfStatus) {
+            dfStatus.textContent = dfState === 'signed'
+                ? 'Unterschrift erfasst'
+                : (dfState === 'drawing' ? 'Wird unterschrieben…' : 'Noch keine Unterschrift');
+        }
     }
 
     getBase64DataUrl() {
@@ -53,5 +127,9 @@ class SignaturePadIntegration {
         if (this.dfHiddenInput) {
             this.dfHiddenInput.value = this.getBase64DataUrl();
         }
+    }
+
+    isEmpty() {
+        return !this.dfSignaturePad || this.dfSignaturePad.isEmpty();
     }
 }

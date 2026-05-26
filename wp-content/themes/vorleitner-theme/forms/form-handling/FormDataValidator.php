@@ -13,6 +13,18 @@ class FormDataValidator
         return $this->runRules($dfData, WerkstattValidationRules::get());
     }
 
+    public function validateEndkunde(array $dfData): array
+    {
+        $dfErrors = $this->runRules($dfData, EndkundeValidationRules::getAll($dfData));
+        $dfSig    = (string) ($dfData['unterschrift_base64'] ?? '');
+
+        if (empty($dfErrors['unterschrift_base64']) && $dfSig !== '' && !preg_match('/^data:image\/png;base64,/', $dfSig)) {
+            $dfErrors['unterschrift_base64'] = 'Digitale Unterschrift: Ungültiges Format';
+        }
+
+        return $dfErrors;
+    }
+
     public function isValid(array $dfErrors): bool
     {
         return empty($dfErrors);

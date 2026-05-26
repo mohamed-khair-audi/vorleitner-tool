@@ -6,10 +6,10 @@ class FormDataSanitizer
     private array $dfTextareaFields = [
         'einsatzort', 'schaden_beschreibung', 'sonstiges_bemerkung', 'fahrzeuginhalt_gegenstaende',
         'interne_notizen', 'werkstatt_notizen', 'kundenbeanstandung', 'arbeitsgang_und_ersatzteile',
-        'unterschrift_base64',
+        'unterschrift_base64', 'schaden_beschreibung', 'sonstige_anmerkungen', 'wertgegenstaende_beschreibung',
     ];
 
-    private array $dfEmailFields   = ['kunde_email'];
+    private array $dfEmailFields   = ['kunde_email', 'eigentuemer_email'];
     private array $dfArrayFields   = ['standgeld_hingewiesen_per', 'zusatzleistungen', 'einsatz_typ'];
     private array $dfDecimalFields = [
         'standgeld_betrag_euro', 'bergung_stunden_anzahl', 'kostenangebot_euro',
@@ -19,6 +19,7 @@ class FormDataSanitizer
 
     public function sanitizeAbschleppen(array $dfRaw): array { return $this->sanitizeAll($dfRaw); }
     public function sanitizeWerkstatt(array $dfRaw): array   { return $this->sanitizeAll($dfRaw); }
+    public function sanitizeEndkunde(array $dfRaw): array    { return $this->sanitizeAll($dfRaw); }
 
     private function sanitizeAll(array $dfRaw): array
     {

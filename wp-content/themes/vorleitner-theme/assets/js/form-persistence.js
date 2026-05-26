@@ -45,8 +45,12 @@ class FormPersistence {
         this.dfForm.querySelectorAll('input, textarea, select').forEach((dfInput) => {
             if (!dfInput.name || this.dfSkipFields.has(dfInput.name)) return;
             if (dfInput.type === 'checkbox') {
-                if (!Array.isArray(dfData[dfInput.name])) dfData[dfInput.name] = [];
-                if (dfInput.checked) dfData[dfInput.name].push(dfInput.value);
+                if (dfInput.name.endsWith('[]')) {
+                    if (!Array.isArray(dfData[dfInput.name])) dfData[dfInput.name] = [];
+                    if (dfInput.checked) dfData[dfInput.name].push(dfInput.value);
+                } else if (dfInput.checked) {
+                    dfData[dfInput.name] = dfInput.value;
+                }
             } else if (dfInput.type === 'radio') {
                 if (dfInput.checked) dfData[dfInput.name] = dfInput.value;
             } else {

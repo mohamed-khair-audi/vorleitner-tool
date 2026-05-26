@@ -36,4 +36,19 @@ class FormSubmitOrchestrator
 
         return ['success' => true, 'post_id' => $dfPostId, 'pdf_token' => $dfToken];
     }
+
+    public function handleEndkundeSubmit(array $dfSanitizedData): array
+    {
+        $dfPostId      = (new AuftragPostFactory())->createEndkundePost($dfSanitizedData);
+        $dfPdfData     = (new EndkundePdfDataPreparer())->prepare($dfSanitizedData);
+        $dfPdfFilePath = (new PdfGenerator())->generateFromTemplate($dfPdfData, 'endkunde');
+
+        update_post_meta($dfPostId, 'auftrag_form_data_json', wp_json_encode($dfSanitizedData));
+
+        (new EndkundeEmailContent())->sendAll($dfSanitizedData, $dfPdfFilePath);
+
+        @unlink($dfPdfFilePath);
+
+        return ['success' => true, 'post_id' => $dfPostId];
+    }
 }

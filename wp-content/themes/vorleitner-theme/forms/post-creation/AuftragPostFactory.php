@@ -34,6 +34,22 @@ class AuftragPostFactory
         return $dfPostId;
     }
 
+    public function createEndkundePost(array $dfData): int
+    {
+        $dfPostTitle = sprintf(
+            'Kundenanfrage – %s – %s – %s',
+            $dfData['kennzeichen'] ?? 'kein Kennzeichen',
+            trim(($dfData['kunde_nachname'] ?? '') . ' ' . ($dfData['kunde_vorname'] ?? '')),
+            date('d.m.Y H:i')
+        );
+
+        $dfPostId = $this->savePodsPost($dfPostTitle, $dfData);
+
+        wp_set_object_terms($dfPostId, AuftragConstants::TAXONOMY_TERM_ENDKUNDE, AuftragConstants::TAXONOMY_SLUG);
+
+        return $dfPostId;
+    }
+
     private function savePodsPost(string $dfPostTitle, array $dfData): int
     {
         $dfFieldValues = array_merge(['post_title' => $dfPostTitle, 'post_status' => 'publish'], $dfData);

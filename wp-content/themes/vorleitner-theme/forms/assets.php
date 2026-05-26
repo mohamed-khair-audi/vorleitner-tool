@@ -2,7 +2,7 @@
 defined('ABSPATH') || exit;
 
 add_action('wp_enqueue_scripts', function () {
-    $dfFormTemplates = ['page-abschleppen.php', 'page-werkstatt.php'];
+    $dfFormTemplates = ['page-abschleppen.php', 'page-werkstatt.php', 'page-endkunde.php'];
     if (!is_page_template($dfFormTemplates)) {
         return;
     }
@@ -21,16 +21,28 @@ add_action('wp_enqueue_scripts', function () {
         true
     );
 
-    wp_enqueue_script('vorleitner-form-persistence',   $dfThemeUri . '/assets/js/form-persistence.js',   [], $dfThemeVersion, true);
+    $dfIsEndkunde = is_page_template('page-endkunde.php');
+    if (!$dfIsEndkunde) {
+        wp_enqueue_script('vorleitner-form-persistence', $dfThemeUri . '/assets/js/form-persistence.js', [], $dfThemeVersion, true);
+    }
     wp_enqueue_script('vorleitner-form-pdf-actions',   $dfThemeUri . '/assets/js/form-pdf-actions.js',   [], $dfThemeVersion, true);
-    wp_enqueue_script('vorleitner-form-steps-navigation', $dfThemeUri . '/assets/js/form-steps-navigation.js', [], $dfThemeVersion, true);
+    wp_enqueue_script('vorleitner-form-conditional-fields', $dfThemeUri . '/assets/js/form-conditional-fields.js', [], $dfThemeVersion, true);
+    wp_enqueue_script('vorleitner-form-steps-navigation', $dfThemeUri . '/assets/js/form-steps-navigation.js', ['vorleitner-form-conditional-fields'], $dfThemeVersion, true);
     wp_enqueue_script('vorleitner-signature-pad-integration', $dfThemeUri . '/assets/js/signature-pad-integration.js', ['signature-pad-vendor'], $dfThemeVersion, true);
     wp_enqueue_script('vorleitner-form-ajax-submit', $dfThemeUri . '/assets/js/form-ajax-submit.js', ['vorleitner-form-steps-navigation'], $dfThemeVersion, true);
     $dfTestdatenAktiv = AuftragSettings::isTestdatenAktiv();
     if ($dfTestdatenAktiv) {
         wp_enqueue_script('vorleitner-form-test-data', $dfThemeUri . '/assets/js/form-test-data.js', [], $dfThemeVersion, true);
     }
-    $dfAutoInitDeps = ['vorleitner-form-ajax-submit', 'vorleitner-signature-pad-integration', 'vorleitner-form-persistence', 'vorleitner-form-pdf-actions'];
+    $dfAutoInitDeps = [
+        'vorleitner-form-ajax-submit',
+        'vorleitner-form-conditional-fields',
+        'vorleitner-signature-pad-integration',
+    ];
+    if (!$dfIsEndkunde) {
+        $dfAutoInitDeps[] = 'vorleitner-form-persistence';
+        $dfAutoInitDeps[] = 'vorleitner-form-pdf-actions';
+    }
     if ($dfTestdatenAktiv) {
         $dfAutoInitDeps[] = 'vorleitner-form-test-data';
     }

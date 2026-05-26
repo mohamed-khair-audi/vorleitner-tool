@@ -14,9 +14,11 @@ class PdfRegenerator
 
         $dfType = $this->resolveFormType($dfPostId);
 
-        $dfPdfData = $dfType === 'abschleppen'
-            ? (new AbschleppPdfDataPreparer())->prepare($dfFormData)
-            : (new WerkstattPdfDataPreparer())->prepare($dfFormData);
+        $dfPdfData = match ($dfType) {
+            'abschleppen' => (new AbschleppPdfDataPreparer())->prepare($dfFormData),
+            'endkunde'    => (new EndkundePdfDataPreparer())->prepare($dfFormData),
+            default       => (new WerkstattPdfDataPreparer())->prepare($dfFormData),
+        };
 
         return (new PdfGenerator())->generateFromTemplate($dfPdfData, $dfType);
     }
@@ -24,8 +26,14 @@ class PdfRegenerator
     private function resolveFormType(int $dfPostId): string
     {
         $dfSlugs = wp_get_post_terms($dfPostId, AuftragConstants::TAXONOMY_SLUG, ['fields' => 'slugs']);
-        return in_array(AuftragConstants::TAXONOMY_TERM_ABSCHLEPPEN, (array) $dfSlugs, true)
-            ? 'abschleppen'
-            : 'werkstatt';
+
+        if (in_array(AuftragConstants::TAXONOMY_TERM_ABSCHLEPPEN, (array) $dfSlugs, true)) {
+            return 'abschleppen';
+        }
+        if (in_array(AuftragConstants::TAXONOMY_TERM_ENDKUNDE, (array) $dfSlugs, true)) {
+            return 'endkunde';
+        }
+
+        return 'werkstatt';
     }
 }

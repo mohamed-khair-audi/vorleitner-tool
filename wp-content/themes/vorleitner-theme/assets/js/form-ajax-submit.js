@@ -21,8 +21,12 @@ class FormAjaxSubmit {
         this.dfForm.querySelectorAll('input, textarea, select').forEach((dfInput) => {
             if (!dfInput.name) return;
             if (dfInput.type === 'checkbox') {
-                if (!Array.isArray(dfData[dfInput.name])) dfData[dfInput.name] = [];
-                if (dfInput.checked) dfData[dfInput.name].push(dfInput.value);
+                if (dfInput.name.endsWith('[]')) {
+                    if (!Array.isArray(dfData[dfInput.name])) dfData[dfInput.name] = [];
+                    if (dfInput.checked) dfData[dfInput.name].push(dfInput.value);
+                } else if (dfInput.checked) {
+                    dfData[dfInput.name] = dfInput.value;
+                }
             } else if (dfInput.type === 'radio') {
                 if (dfInput.checked) dfData[dfInput.name] = dfInput.value;
             } else {
@@ -38,7 +42,26 @@ class FormAjaxSubmit {
     async submitFormData() {
         const dfButton  = this.dfForm.querySelector('.btn-submit');
         const dfSuccess = this.dfForm.querySelector('.form-success-message');
-        const dfData    = this.collectFields();
+
+        if (this.dfSignPad) {
+            this.dfSignPad.ensureReady();
+            this.dfSignPad.updateHiddenInput();
+        }
+        if (this.dfSignPad && this.dfSignPad.isEmpty()) {
+            const dfWrap = document.querySelector('.signature-pad-wrapper');
+            if (dfWrap) {
+                dfWrap.classList.add('field-error');
+                dfWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            alert('Bitte leisten Sie Ihre digitale Unterschrift im Unterschriftsfeld.');
+            return;
+        }
+
+        if (this.dfNavigation && !this.dfNavigation.validateCurrentStep()) {
+            return;
+        }
+
+        const dfData = this.collectFields();
 
         dfButton.disabled    = true;
         dfButton.textContent = 'Wird gesendet…';
@@ -74,7 +97,7 @@ class FormAjaxSubmit {
         } catch (dfError) {
             alert('Fehler: ' + dfError.message + '\nBitte prüfen Sie Ihre Eingaben und versuchen Sie es erneut.');
             dfButton.disabled    = false;
-            dfButton.textContent = 'Auftrag absenden';
+            dfButton.textContent = this.dfForm.dataset.publicForm === '1' ? 'Anfrage absenden' : 'Auftrag absenden';
         }
     }
 }

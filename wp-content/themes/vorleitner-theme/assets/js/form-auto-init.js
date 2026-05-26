@@ -3,18 +3,39 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!dfForm) return;
 
     const dfFormType  = dfForm.dataset.formType;
-    const dfCanvasId  = dfFormType === 'abschleppen' ? 'abschlepp-signature-canvas' : 'werkstatt-signature-canvas';
-    const dfStoreKey  = 'vorleitner_form_' + dfFormType;
+    const dfCanvasMap = {
+        abschleppen: 'abschlepp-signature-canvas',
+        werkstatt:   'werkstatt-signature-canvas',
+        endkunde:    'endkunde-signature-canvas',
+    };
+    const dfCanvasId  = dfCanvasMap[dfFormType] || null;
+    const dfIsEndkunde    = dfFormType === 'endkunde';
+    const dfStoreKey      = 'vorleitner_form_' + dfFormType;
+    const dfPersistence   = dfIsEndkunde
+        ? null
+        : new FormPersistence('.multi-step-form', dfStoreKey);
 
-    const dfPersistence = new FormPersistence('.multi-step-form', dfStoreKey);
-    const dfStepsNav    = new FormStepsNavigation('.multi-step-form');
-    const dfSignPad     = new SignaturePadIntegration('#' + dfCanvasId, '#unterschrift_base64');
-    const dfPdfActions  = new FormPdfActions();
-    const dfFormSubmit  = new FormAjaxSubmit('.multi-step-form', dfFormType, dfSignPad, dfStepsNav, dfPersistence, dfPdfActions);
+    if (dfIsEndkunde) {
+        try {
+            sessionStorage.removeItem(dfStoreKey);
+        } catch (_) {}
+    }
 
-    dfPersistence.init();
+    const dfConditional  = new FormConditionalFields('.multi-step-form');
+    const dfStepsNav     = new FormStepsNavigation('.multi-step-form', dfConditional);
+    const dfSignPad      = dfCanvasId
+        ? new SignaturePadIntegration('#' + dfCanvasId, '#unterschrift_base64')
+        : null;
+    const dfPdfActions   = dfForm.dataset.publicForm === '1' ? null : new FormPdfActions();
+    const dfFormSubmit   = new FormAjaxSubmit('.multi-step-form', dfFormType, dfSignPad, dfStepsNav, dfPersistence, dfPdfActions);
+
+    dfConditional.init();
+    if (dfPersistence) dfPersistence.init();
     dfStepsNav.init();
-    dfSignPad.init();
+    if (dfSignPad) {
+        dfSignPad.init();
+        window.vorleitnerSignPad = dfSignPad;
+    }
     dfFormSubmit.init();
 
     if (typeof FormTestData !== 'undefined') {

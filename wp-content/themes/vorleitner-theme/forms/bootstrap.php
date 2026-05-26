@@ -5,8 +5,10 @@ $dfFormClassFiles = [
     'post-types/AuftragConstants.php',
     'helpers/PodsPickOptions.php',
     'helpers/PodsFieldLabel.php',
+    'legal/EndkundeLegalText.php',
     'form-handling/AbschleppValidationRules.php',
     'form-handling/WerkstattValidationRules.php',
+    'form-handling/EndkundeValidationRules.php',
     'form-handling/FormDataValidator.php',
     'form-handling/FormDataSanitizer.php',
     'form-handling/FormSubmitOrchestrator.php',
@@ -18,15 +20,21 @@ $dfFormClassFiles = [
     'pdf-generation/PdfRegenerator.php',
     'pdf-generation/AbschleppFieldLabels.php',
     'pdf-generation/WerkstattFieldLabels.php',
+    'pdf-generation/EndkundeFieldLabels.php',
     'pdf-generation/AbschleppPdfDataPreparer.php',
     'pdf-generation/WerkstattPdfDataPreparer.php',
+    'pdf-generation/EndkundePdfDataPreparer.php',
+    'email/EmailHtmlLayout.php',
     'email/EmailSender.php',
     'email/AbschleppEmailContent.php',
     'email/WerkstattEmailContent.php',
+    'email/EndkundeEmailContent.php',
     'rest-api/FormRestPermission.php',
     'rest-api/RestApiRouter.php',
     'rest-api/AbschleppRestEndpoint.php',
     'rest-api/WerkstattRestEndpoint.php',
+    'rest-api/PublicFormRestPermission.php',
+    'rest-api/EndkundeRestEndpoint.php',
     'rest-api/PdfDownloadEndpoint.php',
     'rest-api/PdfEmailEndpoint.php',
     'admin-settings/AuftragSettings.php',
@@ -39,6 +47,11 @@ foreach ($dfFormClassFiles as $dfClassFile) {
 
 require_once __DIR__ . '/assets.php';
 
+add_filter('theme_page_templates', function (array $dfTemplates): array {
+    $dfTemplates['page-endkunde.php'] = 'Kundenformular';
+    return $dfTemplates;
+});
+
 // Priorität 20 – nach Pods (Priorität 11) damit CPT + Taxonomie bereits registriert sind
 add_action('init', function () {
     AuftragSettings::registerDefaults();
@@ -50,6 +63,9 @@ add_action('init', function () {
     }
     if (!term_exists('werkstatt', AuftragConstants::TAXONOMY_SLUG)) {
         wp_insert_term('Werkstatt', AuftragConstants::TAXONOMY_SLUG, ['slug' => 'werkstatt']);
+    }
+    if (!term_exists('endkunde', AuftragConstants::TAXONOMY_SLUG)) {
+        wp_insert_term('Endkunde', AuftragConstants::TAXONOMY_SLUG, ['slug' => 'endkunde']);
     }
 }, 20);
 

@@ -16,7 +16,7 @@ class FormTestData {
     fill() {
         const dfData = this.dfFormType === 'abschleppen'
             ? this.buildAbschleppData()
-            : this.buildWerkstattData();
+            : (this.dfFormType === 'endkunde' ? this.buildEndkundeData() : this.buildWerkstattData());
 
         Object.entries(dfData).forEach(([dfName, dfValue]) => {
             if (Array.isArray(dfValue)) {
@@ -28,15 +28,69 @@ class FormTestData {
             const dfRadio = this.dfForm.querySelector(
                 `[name="${CSS.escape(dfName)}"][value="${CSS.escape(String(dfValue))}"]`
             );
-            if (dfRadio && dfRadio.type === 'radio') { dfRadio.checked = true; return; }
+            if (dfRadio && dfRadio.type === 'radio') {
+                dfRadio.checked = true;
+                dfRadio.dispatchEvent(new Event('change', { bubbles: true }));
+                return;
+            }
+            const dfCheckbox = this.dfForm.querySelector(
+                `[name="${CSS.escape(dfName)}"][type="checkbox"]`
+            );
+            if (dfCheckbox && !dfName.endsWith('[]')) {
+                dfCheckbox.checked = dfValue === dfCheckbox.value || dfValue === true || dfValue === '1';
+                return;
+            }
             const dfInput = this.dfForm.querySelector(`[name="${CSS.escape(dfName)}"]`);
             if (dfInput) dfInput.value = dfValue;
         });
+
+        if (this.dfFormType === 'endkunde') {
+            this.applyTestSignature();
+        }
 
         this.dfForm.dispatchEvent(new Event('input', { bubbles: true }));
         if (typeof window.dfUpdateConditionals === 'function') {
             window.dfUpdateConditionals();
         }
+    }
+
+    applyTestSignature() {
+        const dfPad = window.vorleitnerSignPad;
+        if (!dfPad) return;
+
+        const dfSteps    = Array.from(this.dfForm.querySelectorAll('.form-step'));
+        const dfLastIdx  = dfSteps.length - 1;
+        const dfLastStep = dfSteps[dfLastIdx];
+        if (!dfLastStep) return;
+
+        dfSteps.forEach((dfStep, dfI) => {
+            dfStep.style.display = dfI === dfLastIdx ? 'block' : 'none';
+        });
+        document.querySelectorAll('.progress-step').forEach((dfPs, dfI) => {
+            dfPs.classList.toggle('active', dfI === dfLastIdx);
+            dfPs.classList.toggle('completed', dfI < dfLastIdx);
+        });
+        document.dispatchEvent(new CustomEvent('vorleitner:step-shown', {
+            detail: { index: dfLastIdx, step: dfLastStep },
+        }));
+
+        requestAnimationFrame(() => {
+            dfPad.ensureReady();
+            const dfSignature = dfPad.dfSignaturePad;
+            if (!dfSignature) return;
+
+            const dfTime = Date.now();
+            dfSignature.fromData([{
+                points: [
+                    { x: 70,  y: 120, pressure: 0.5, time: dfTime },
+                    { x: 160, y: 115, pressure: 0.5, time: dfTime + 40 },
+                    { x: 260, y: 118, pressure: 0.5, time: dfTime + 80 },
+                    { x: 340, y: 122, pressure: 0.5, time: dfTime + 120 },
+                ],
+            }]);
+            dfPad.updateHiddenInput();
+            dfPad.setState('signed');
+        });
     }
 
     buildAbschleppData() {
@@ -160,6 +214,60 @@ class FormTestData {
             endkontrolle_fahrzeug_abholbereit:  '1',
             naechste_hauptuntersuchung:         '2028-06-15',
             werkstatt_notizen:                  'HINWEIS: Testdaten – bitte nicht absenden.\nFahrzeug wurde am Vormittag übergeben.',
+        };
+    }
+
+    buildEndkundeData() {
+        return {
+            // ── Schritt 1: Kundendaten ──
+            kunde_vorname:                  'Peter',
+            kunde_nachname:                 'Kundenmann',
+            kunde_strasse:                  'Hauptstraße',
+            kunde_hausnummer:               '8',
+            kunde_plz:                      '80331',
+            kunde_ort:                      'München',
+            kunde_telefon:                  '0176 12345678',
+            kunde_email:                    'peter.kundenmann@example.com',
+
+            // ── Schritt 2: Fahrzeugeigentümer (Nein → Zusatzfelder) ──
+            ist_fahrzeugeigentuemer:        'nein',
+            eigentuemer_name:               'Erika Eigentümerin',
+            eigentuemer_strasse:            'Nebenstraße',
+            eigentuemer_hausnummer:         '3',
+            eigentuemer_plz:                '80333',
+            eigentuemer_ort:                'München',
+            eigentuemer_telefon:            '089 555 12 34',
+            eigentuemer_email:              'erika.eigentuemerin@example.com',
+
+            // ── Schritt 3: Fahrzeugdaten ──
+            fahrzeug_hersteller:            'Volkswagen',
+            fahrzeug_typ:                   'Golf VII 1.4 TSI',
+            kennzeichen:                    'M-PK 2026',
+            km_stand:                       '124500',
+
+            // ── Schritt 4: Unfall / Panne ──
+            unfall_oder_panne:              'unfall',
+            unfall_schuldfrage:             'gegner_schuld',
+
+            // ── Schritt 5: Schadenbeschreibung ──
+            schaden_beschreibung:           'Frontschaden links: Stoßfänger beschädigt, Scheinwerfer gebrochen, Kotflügel verbeult. Fahrzeug fährt noch, Lenkung unauffällig.',
+
+            // ── Schritt 6: Werkstattleistung ──
+            werkstattleistung_gewuenscht:   'ja',
+            werkstattleistung_option:       'beauftragung',
+
+            // ── Schritt 7: Zusatzoptionen ──
+            ersatzfahrzeug_gewuenscht:      'ja',
+            auto_selbst_abholung:           'nein',
+            sammeltransport_geplant:        'ja',
+            wertgegenstaende_im_fzg:        'ja',
+            wertgegenstaende_beschreibung:  'Laptop-Tasche im Kofferraum, Sonnenbrille im Handschuhfach',
+
+            // ── Schritt 8: Anmerkungen ──
+            sonstige_anmerkungen:           'HINWEIS: Testdaten – bitte nicht absenden.\nBitte vor Reparatur telefonisch Rückruf.',
+
+            // ── Schritt 9: Rechtstext & Unterschrift ──
+            agb_akzeptiert:                 '1',
         };
     }
 }
