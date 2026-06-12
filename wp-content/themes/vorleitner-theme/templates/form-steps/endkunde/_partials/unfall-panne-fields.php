@@ -16,18 +16,12 @@
     <div class="form-section">
         <p class="form-section-legend">Schuldfrage</p>
         <div class="radio-group" role="radiogroup">
-            <label class="radio-option">
-                <input type="radio" name="unfall_schuldfrage" value="selbst_schuld" data-required-when-visible>
-                <span>Sind Sie selbst schuld?</span>
-            </label>
-            <label class="radio-option">
-                <input type="radio" name="unfall_schuldfrage" value="gegner_schuld" data-required-when-visible>
-                <span>Ist der Unfallgegner schuld?</span>
-            </label>
-            <label class="radio-option">
-                <input type="radio" name="unfall_schuldfrage" value="schuld_unklar" data-required-when-visible>
-                <span>Schuldfrage unklar?</span>
-            </label>
+            <?php foreach (EndkundeFieldLabels::unfallSchuld() as $dfValue => $dfLabel): ?>
+                <label class="radio-option">
+                    <input type="radio" name="unfall_schuldfrage" value="<?= esc_attr($dfValue) ?>" data-required-when-visible>
+                    <span><?= esc_html($dfLabel) ?></span>
+                </label>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

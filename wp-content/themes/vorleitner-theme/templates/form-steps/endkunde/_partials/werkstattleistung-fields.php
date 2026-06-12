@@ -16,18 +16,12 @@
     <div class="form-section">
         <p class="form-section-legend">Wenn ja – bitte auswählen:</p>
         <div class="radio-group radio-group--stacked" role="radiogroup">
-            <label class="radio-option">
-                <input type="radio" name="werkstattleistung_option" value="nur_diagnose" data-required-when-visible>
-                <span>Wollen Sie vorerst die Diagnose (71,00&nbsp;–&nbsp;238,00&nbsp;Euro, Kosten ist zu rechnen)</span>
-            </label>
-            <label class="radio-option">
-                <input type="radio" name="werkstattleistung_option" value="nur_anruf" data-required-when-visible>
-                <span>Wollen Sie erstmal nur einen Anruf?</span>
-            </label>
-            <label class="radio-option">
-                <input type="radio" name="werkstattleistung_option" value="beauftragung" data-required-when-visible>
-                <span>Hiermit beauftrag ich die Firma Vorleitner mit der Reparatur, Diagnose und Ersatzteile Bestellung</span>
-            </label>
+            <?php foreach (EndkundeFieldLabels::werkstattOption() as $dfValue => $dfLabel): ?>
+                <label class="radio-option">
+                    <input type="radio" name="werkstattleistung_option" value="<?= esc_attr($dfValue) ?>" data-required-when-visible>
+                    <span><?= esc_html($dfLabel) ?></span>
+                </label>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

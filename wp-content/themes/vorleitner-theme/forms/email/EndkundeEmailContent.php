@@ -27,13 +27,13 @@ class EndkundeEmailContent
         $dfKz    = $dfData['kennzeichen'] ?? 'ohne Kennzeichen';
         $dfName  = trim(($dfData['kunde_nachname'] ?? '') . ' ' . ($dfData['kunde_vorname'] ?? ''));
 
-        return sprintf('Kundenanfrage: %s – %s – %s', $dfKz, $dfName, date('d.m.Y H:i'));
+        return sprintf('Kundenauftrag: %s – %s – %s', $dfKz, $dfName, date('d.m.Y H:i'));
     }
 
     private function buildAdminBody(array $dfData): string
     {
         $dfContent = EmailHtmlLayout::intro(
-            'Eine neue Anfrage ist über das <strong>öffentliche Kundenformular</strong> eingegangen. '
+            'Ein neuer Kundenauftrag ist über das <strong>öffentliche Kundenformular</strong> eingegangen. '
             . 'Alle Details finden Sie unten – die vollständige Auftragskarte mit Unterschrift ist als <strong>PDF im Anhang</strong>.'
         );
 
@@ -55,11 +55,11 @@ class EndkundeEmailContent
         $dfContent .= EmailHtmlLayout::section('Abschluss', $this->rowsAbschluss($dfData));
 
         $dfContent .= '<div style="margin-top:20px">'
-            . EmailHtmlLayout::notice('📎 <strong>PDF-Anhang:</strong> Vollständige Kundenanfrage inkl. digitaler Unterschrift und Infotext.')
+            . EmailHtmlLayout::notice('📎 <strong>PDF-Anhang:</strong> Vollständiger Kundenauftrag inkl. digitaler Unterschrift und Infotext.')
             . '</div>';
 
         return EmailHtmlLayout::wrap(
-            'Neue Kundenanfrage',
+            'Neuer Kundenauftrag',
             $dfContent,
             'Online-Formular'
         );

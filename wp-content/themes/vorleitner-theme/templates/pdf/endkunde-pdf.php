@@ -40,7 +40,7 @@ function ekVal(array $dfData, string $dfKey, string $dfDefault = ''): string {
         <?php endif; ?>
     </td>
     <td style="width:50%">
-        <div class="hdr-main">Kundenanfrage</div>
+        <div class="hdr-main">Kundenauftrag</div>
         <div class="hdr-sub">Werkstatt &amp; Service</div>
     </td>
 </tr>

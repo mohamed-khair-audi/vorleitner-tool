@@ -16,18 +16,18 @@ class EndkundeFieldLabels
     public static function unfallSchuld(): array
     {
         return [
-            'selbst_schuld'  => 'Sind Sie selbst schuld?',
-            'gegner_schuld'  => 'Ist der Unfallgegner schuld?',
-            'schuld_unklar'  => 'Schuldfrage unklar?',
+            'selbst_schuld'  => 'Sie sind selbst schuld',
+            'gegner_schuld'  => 'Der Unfallgegner ist schuld',
+            'schuld_unklar'  => 'Schuldfrage ist unklar',
         ];
     }
 
     public static function werkstattOption(): array
     {
         return [
-            'nur_diagnose' => 'Wollen Sie vorerst die Diagnose (71,00 – 238,00 Euro, Kosten ist zu rechnen)',
-            'nur_anruf'    => 'Wollen Sie erstmal nur einen Anruf?',
-            'beauftragung' => 'Hiermit beauftrag ich die Firma Vorleitner mit der Reparatur, Diagnose und Ersatzteile Bestellung',
+            'nur_diagnose' => 'Sie wünschen vorerst nur die Diagnose (71,00 – 238,00 Euro, Kosten sind zu rechnen)',
+            'nur_anruf'    => 'Sie wünschen zunächst nur einen Anruf',
+            'beauftragung' => 'Sie beauftragen die Firma Vorleitner mit Reparatur, Diagnose und Ersatzteile-Bestellung',
         ];
     }
 

@@ -37,7 +37,7 @@ class AuftragPostFactory
     public function createEndkundePost(array $dfData): int
     {
         $dfPostTitle = sprintf(
-            'Kundenanfrage – %s – %s – %s',
+            'Kundenauftrag – %s – %s – %s',
             $dfData['kennzeichen'] ?? 'kein Kennzeichen',
             trim(($dfData['kunde_nachname'] ?? '') . ' ' . ($dfData['kunde_vorname'] ?? '')),
             date('d.m.Y H:i')
