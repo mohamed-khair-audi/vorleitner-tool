@@ -13,7 +13,7 @@ get_header();
         <h1 class="kundenformular-hero__title">
             <span class="kundenformular-hero__brand">Autohaus Vorleitner</span>
             <span class="kundenformular-hero__sep">·</span>
-            Werkstatt-Anfrage
+            Kundenauftrag
         </h1>
         <p class="kundenformular-hero__intro">Schritt für Schritt ausfüllen und absenden.</p>
     </header>
