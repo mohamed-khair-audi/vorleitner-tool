@@ -22,6 +22,7 @@ class FormTestData {
             if (Array.isArray(dfValue)) {
                 this.dfForm.querySelectorAll(`[name="${CSS.escape(dfName)}"]`).forEach((dfEl) => {
                     dfEl.checked = dfValue.includes(dfEl.value);
+                    dfEl.dispatchEvent(new Event('change', { bubbles: true }));
                 });
                 return;
             }
@@ -38,6 +39,7 @@ class FormTestData {
             );
             if (dfCheckbox && !dfName.endsWith('[]')) {
                 dfCheckbox.checked = dfValue === dfCheckbox.value || dfValue === true || dfValue === '1';
+                dfCheckbox.dispatchEvent(new Event('change', { bubbles: true }));
                 return;
             }
             const dfInput = this.dfForm.querySelector(`[name="${CSS.escape(dfName)}"]`);
@@ -220,8 +222,8 @@ class FormTestData {
     buildEndkundeData() {
         return {
             // ── Schritt 1: Kundendaten ──
-            kunde_vorname:                  'Peter',
             kunde_nachname:                 'Kundenmann',
+            kunde_vorname:                  'Peter',
             kunde_strasse:                  'Hauptstraße',
             kunde_hausnummer:               '8',
             kunde_plz:                      '80331',
@@ -229,7 +231,7 @@ class FormTestData {
             kunde_telefon:                  '0176 12345678',
             kunde_email:                    'peter.kundenmann@example.com',
 
-            // ── Schritt 2: Fahrzeugeigentümer (Nein → Zusatzfelder) ──
+            // ── Schritt 2: Fahrzeugeigentümer (Nein → Zusatzfelder öffnen sich) ──
             ist_fahrzeugeigentuemer:        'nein',
             eigentuemer_name:               'Erika Eigentümerin',
             eigentuemer_strasse:            'Nebenstraße',
@@ -243,30 +245,35 @@ class FormTestData {
             fahrzeug_hersteller:            'Volkswagen',
             fahrzeug_typ:                   'Golf VII 1.4 TSI',
             kennzeichen:                    'M-PK 2026',
-            km_stand:                       '124500',
+            km_stand:                       '124.500',   // vorformatiert mit Tausender-Punkt
 
             // ── Schritt 4: Unfall / Panne ──
             unfall_oder_panne:              'unfall',
             unfall_schuldfrage:             'gegner_schuld',
-
-            // ── Schritt 5: Schadenbeschreibung ──
             schaden_beschreibung:           'Frontschaden links: Stoßfänger beschädigt, Scheinwerfer gebrochen, Kotflügel verbeult. Fahrzeug fährt noch, Lenkung unauffällig.',
 
-            // ── Schritt 6: Werkstattleistung ──
-            werkstattleistung_gewuenscht:   'ja',
+            // ── Schritt 5: Leistungen & Werkstatt ──
+            // Checkboxen (Array) → bedingte Werkstatt-Detailoptionen öffnen sich automatisch
+            'beauftragte_leistungen[]':     ['abschleppen', 'werkstattauftrag'],
             werkstattleistung_option:       'beauftragung',
 
-            // ── Schritt 7: Zusatzoptionen ──
+            // ── Schritt 5: Zusatzoptionen ──
             ersatzfahrzeug_gewuenscht:      'ja',
+            // auto_selbst_abholung = nein → Abholer-Block öffnet sich
             auto_selbst_abholung:           'nein',
+            abholer_name:                   'Klaus Abholer',
+            abholer_strasse:                'Abholerweg',
+            abholer_hausnummer:             '5',
+            abholer_plz:                    '85649',
+            abholer_ort:                    'Brunnthal',
+            abholer_telefon:                '0176 99887766',
+            abholer_vollmacht:              '1',
             sammeltransport_geplant:        'ja',
             wertgegenstaende_im_fzg:        'ja',
             wertgegenstaende_beschreibung:  'Laptop-Tasche im Kofferraum, Sonnenbrille im Handschuhfach',
 
-            // ── Schritt 8: Anmerkungen ──
+            // ── Schritt 6: Abschluss ──
             sonstige_anmerkungen:           'HINWEIS: Testdaten – bitte nicht absenden.\nBitte vor Reparatur telefonisch Rückruf.',
-
-            // ── Schritt 9: Rechtstext & Unterschrift ──
             agb_akzeptiert:                 '1',
         };
     }

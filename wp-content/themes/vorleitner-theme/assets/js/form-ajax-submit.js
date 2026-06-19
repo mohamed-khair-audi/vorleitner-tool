@@ -29,6 +29,9 @@ class FormAjaxSubmit {
                 }
             } else if (dfInput.type === 'radio') {
                 if (dfInput.checked) dfData[dfInput.name] = dfInput.value;
+            } else if (dfInput.dataset.formatThousands !== undefined) {
+                // Strip thousands separators before sending to server
+                dfData[dfInput.name] = dfInput.value.replace(/\./g, '').replace(/\s/g, '');
             } else {
                 dfData[dfInput.name] = dfInput.value;
             }

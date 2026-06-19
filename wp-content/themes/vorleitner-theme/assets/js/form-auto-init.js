@@ -38,6 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     dfFormSubmit.init();
 
+    // Thousands-separator formatting for km_stand (data-format-thousands)
+    dfForm.querySelectorAll('[data-format-thousands]').forEach((dfInput) => {
+        const dfFmt = (val) => {
+            const dfDigits = val.replace(/\D/g, '');
+            return dfDigits === '' ? '' : parseInt(dfDigits, 10).toLocaleString('de-DE');
+        };
+        dfInput.addEventListener('input', () => { dfInput.value = dfFmt(dfInput.value); });
+        dfInput.addEventListener('blur',  () => { dfInput.value = dfFmt(dfInput.value); });
+    });
+
     if (typeof FormTestData !== 'undefined') {
         new FormTestData('.multi-step-form', dfFormType).init();
     }

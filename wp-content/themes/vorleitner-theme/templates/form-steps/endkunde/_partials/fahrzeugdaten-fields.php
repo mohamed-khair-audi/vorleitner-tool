@@ -17,7 +17,7 @@
         </div>
         <div class="form-field">
             <label for="km_stand">Kilometerstand (circa, optional)</label>
-            <input type="number" id="km_stand" name="km_stand" min="0" step="1" inputmode="numeric">
+            <input type="text" id="km_stand" name="km_stand" inputmode="numeric" data-format-thousands placeholder="z.&nbsp;B. 125.000" maxlength="10">
         </div>
     </div>
 </div>

@@ -233,5 +233,16 @@ function ekVal(array $dfData, string $dfKey, string $dfDefault = ''): string {
 </tr>
 </table>
 
+
+<div style="margin-top:14px;border-top:1pt solid #D92B1A;padding-top:6px;font-size:7pt;color:#555;line-height:1.5;text-align:center">
+    <strong style="color:#1a1a1a">Helmut&nbsp;Vorleitner&nbsp;e.K.</strong> &nbsp;&bull;&nbsp;
+    Otterloherstr.&nbsp;10,&nbsp;85649&nbsp;Brunnthal &nbsp;&bull;&nbsp;
+    Tel.:&nbsp;08102&nbsp;7885-0 &nbsp;&bull;&nbsp;
+    info@vorleitner.de &nbsp;&bull;&nbsp;
+    www.vorleitner.de &nbsp;&bull;&nbsp;
+    HRA&nbsp;84969 &nbsp;&bull;&nbsp;
+    Ust.-IdNr.:&nbsp;DE316657917
+</div>
+
 </body>
 </html>
