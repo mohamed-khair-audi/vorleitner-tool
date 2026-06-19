@@ -669,6 +669,37 @@ select.field-error {
 
 .radio-group--stacked .radio-option { margin-bottom: 0; }
 
+.auftrag-form-container--public .checkbox-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+}
+.auftrag-form-container--public .checkbox-option:hover {
+    border-color: #93c5fd;
+    background: var(--kf-primary-soft);
+}
+.auftrag-form-container--public .checkbox-option:has(input:checked) {
+    border-color: var(--kf-primary);
+    background: var(--kf-primary-soft);
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.12);
+}
+.auftrag-form-container--public .checkbox-option input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: var(--kf-primary);
+    cursor: pointer;
+}
+.checkbox-option__check { display: none; }
+.checkbox-group.field-error { border: 1.5px solid #dc2626; border-radius: 10px; padding: 0.5rem; }
+.form-section-hint { font-size: 0.8125rem; color: #6b7280; margin: -0.25rem 0 0.5rem; }
+
 .legal-text-box {
     max-height: 240px;
     overflow-y: auto;

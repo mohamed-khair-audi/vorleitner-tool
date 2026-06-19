@@ -37,6 +37,7 @@ class EndkundeEmailContent
             . 'Alle Details finden Sie unten – die vollständige Auftragskarte mit Unterschrift ist als <strong>PDF im Anhang</strong>.'
         );
 
+        $dfContent .= EmailHtmlLayout::section('Beauftragte Leistungen', EmailHtmlLayout::row('Leistungen', $dfData['beauftragte_leistungen_label'] ?? ''));
         $dfContent .= EmailHtmlLayout::section('Kontakt / Auftraggeber', $this->rowsKontakt($dfData));
 
         if (($dfData['ist_fahrzeugeigentuemer'] ?? '') === 'nein') {
@@ -45,7 +46,9 @@ class EndkundeEmailContent
 
         $dfContent .= EmailHtmlLayout::section('Fahrzeug', $this->rowsFahrzeug($dfData));
         $dfContent .= EmailHtmlLayout::section('Unfall / Panne & Schaden', $this->rowsSchaden($dfData));
-        $dfContent .= EmailHtmlLayout::section('Werkstattleistung', $this->rowsWerkstatt($dfData));
+        if (!empty($dfData['werkstattleistung_option_label'])) {
+            $dfContent .= EmailHtmlLayout::section('Werkstattauftrag – Umfang', $this->rowsWerkstatt($dfData));
+        }
         $dfContent .= EmailHtmlLayout::section('Zusatzoptionen', $this->rowsOptionen($dfData));
 
         if (!empty(trim($dfData['sonstige_anmerkungen'] ?? ''))) {
@@ -102,20 +105,22 @@ class EndkundeEmailContent
 
     private function rowsWerkstatt(array $dfData): string
     {
-        $dfRows = EmailHtmlLayout::row('Gewünscht', $dfData['werkstattleistung_gewuenscht_label'] ?? '');
-
-        if (($dfData['werkstattleistung_gewuenscht'] ?? '') === 'ja') {
-            $dfRows .= EmailHtmlLayout::row('Option', $dfData['werkstattleistung_option_label'] ?? '');
-        }
-
-        return $dfRows;
+        return EmailHtmlLayout::row('Umfang', $dfData['werkstattleistung_option_label'] ?? '');
     }
 
     private function rowsOptionen(array $dfData): string
     {
         $dfRows = EmailHtmlLayout::row('Ersatzfahrzeug / Mietfahrzeug', $dfData['ersatzfahrzeug_gewuenscht_label'] ?? '')
-            . EmailHtmlLayout::row('Ich hole das Auto selbst ab', $dfData['auto_selbst_abholung_label'] ?? '')
-            . EmailHtmlLayout::row('Sammeltransport ADAC / andere Versicherung', $dfData['sammeltransport_geplant_label'] ?? '')
+            . EmailHtmlLayout::row('Ich hole das Fahrzeug selbst ab', $dfData['auto_selbst_abholung_label'] ?? '');
+
+        if (($dfData['auto_selbst_abholung'] ?? '') === 'nein') {
+            $dfRows .= EmailHtmlLayout::row('Abholer Name', $dfData['abholer_name'] ?? '')
+                . EmailHtmlLayout::row('Abholer Adresse', trim(($dfData['abholer_strasse'] ?? '') . ' ' . ($dfData['abholer_hausnummer'] ?? '')) . ', ' . ($dfData['abholer_plz'] ?? '') . ' ' . ($dfData['abholer_ort'] ?? ''))
+                . EmailHtmlLayout::row('Abholer Telefon', $dfData['abholer_telefon'] ?? '')
+                . EmailHtmlLayout::row('Abholervollmacht', $dfData['abholer_vollmacht_label'] ?? '');
+        }
+
+        $dfRows .= EmailHtmlLayout::row('Sammeltransport ADAC / andere Versicherung', $dfData['sammeltransport_geplant_label'] ?? '')
             . EmailHtmlLayout::row('Wertgegenstände im Fahrzeug', $dfData['wertgegenstaende_im_fzg_label'] ?? '');
 
         if (($dfData['wertgegenstaende_im_fzg'] ?? '') === 'ja') {

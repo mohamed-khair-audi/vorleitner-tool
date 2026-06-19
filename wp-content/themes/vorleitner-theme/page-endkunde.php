@@ -11,7 +11,7 @@ get_header();
 <main class="auftrag-form-container auftrag-form-container--public">
     <header class="kundenformular-hero">
         <h1 class="kundenformular-hero__title">
-            <span class="kundenformular-hero__brand">Autohaus Vorleitner</span>
+            <span class="kundenformular-hero__brand">Vorleitner Abschleppdienst Kfz-Meisterbetrieb Autokran und Autovermietung</span>
             <span class="kundenformular-hero__sep">·</span>
             Kundenauftrag
         </h1>

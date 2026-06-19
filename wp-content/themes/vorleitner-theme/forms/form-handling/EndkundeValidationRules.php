@@ -6,6 +6,12 @@ class EndkundeValidationRules
     public static function getBase(): array
     {
         return [
+            'beauftragte_leistungen' => [
+                'required' => true,
+                'type'     => 'array',
+                'in'       => array_keys(EndkundeFieldLabels::beauftragteLeistungen()),
+                'label'    => 'Beauftragte Leistungen',
+            ],
             'kunde_vorname'      => ['required' => true, 'max_length' => 100, 'label' => 'Vorname'],
             'kunde_nachname'     => ['required' => true, 'max_length' => 100, 'label' => 'Name'],
             'kunde_strasse'      => ['required' => true, 'max_length' => 200, 'label' => 'Straße'],
@@ -20,8 +26,7 @@ class EndkundeValidationRules
             'kennzeichen'        => ['required' => true, 'max_length' => 20, 'label' => 'Kennzeichen'],
             'km_stand'           => ['type' => 'integer', 'min' => 0, 'label' => 'Kilometerstand'],
             'unfall_oder_panne'  => ['required' => true, 'in' => ['unfall', 'panne'], 'label' => 'Unfall oder Panne'],
-            'schaden_beschreibung' => ['required' => true, 'max_length' => 5000, 'label' => 'Schadenbeschreibung (Was fehlt Ihrem Fahrzeug?)'],
-            'werkstattleistung_gewuenscht' => ['required' => true, 'in' => ['ja', 'nein'], 'label' => 'Werkstattleistung'],
+            'schaden_beschreibung' => ['required' => true, 'max_length' => 5000, 'label' => 'Was fehlt Ihrem Fahrzeug? (Schadenbeschreibung)'],
             'ersatzfahrzeug_gewuenscht' => ['required' => true, 'in' => ['ja', 'nein'], 'label' => 'Ersatzfahrzeug'],
             'auto_selbst_abholung' => ['required' => true, 'in' => ['ja', 'nein'], 'label' => 'Fahrzeugabholung'],
             'sammeltransport_geplant' => ['required' => true, 'in' => ['ja', 'nein'], 'label' => 'Sammeltransport'],
@@ -46,6 +51,16 @@ class EndkundeValidationRules
             $dfRules['eigentuemer_email']   = ['required' => true, 'type' => 'email', 'label' => 'E-Mail (Eigentümer)'];
         }
 
+        if (($dfData['auto_selbst_abholung'] ?? '') === 'nein') {
+            $dfRules['abholer_name']     = ['required' => true, 'max_length' => 200, 'label' => 'Name des Abholers'];
+            $dfRules['abholer_strasse']  = ['required' => true, 'max_length' => 200, 'label' => 'Straße (Abholer)'];
+            $dfRules['abholer_hausnummer'] = ['required' => true, 'max_length' => 20, 'label' => 'Hausnr. (Abholer)'];
+            $dfRules['abholer_plz']      = ['required' => true, 'pattern' => '/^\d{5}$/', 'label' => 'PLZ (Abholer)'];
+            $dfRules['abholer_ort']      = ['required' => true, 'max_length' => 100, 'label' => 'Ort (Abholer)'];
+            $dfRules['abholer_telefon']  = ['required' => true, 'max_length' => 50, 'pattern' => '/^[\+]?[0-9][\d\s\-]{5,50}$/', 'label' => 'Telefonnummer (Abholer)'];
+            $dfRules['abholer_vollmacht'] = ['required' => true, 'in' => ['1'], 'label' => 'Vollmacht für Abholer'];
+        }
+
         if (($dfData['unfall_oder_panne'] ?? '') === 'unfall') {
             $dfRules['unfall_schuldfrage'] = [
                 'required' => true,
@@ -54,11 +69,12 @@ class EndkundeValidationRules
             ];
         }
 
-        if (($dfData['werkstattleistung_gewuenscht'] ?? '') === 'ja') {
+        $dfLeistungen = (array)($dfData['beauftragte_leistungen[]'] ?? $dfData['beauftragte_leistungen'] ?? []);
+        if (in_array('werkstattauftrag', $dfLeistungen, true)) {
             $dfRules['werkstattleistung_option'] = [
                 'required' => true,
                 'in'       => array_keys(EndkundeFieldLabels::werkstattOption()),
-                'label'    => 'Werkstattleistung – Option',
+                'label'    => 'Werkstattauftrag – Umfang',
             ];
         }
 

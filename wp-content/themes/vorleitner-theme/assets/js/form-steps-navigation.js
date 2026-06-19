@@ -110,6 +110,15 @@ class FormStepsNavigation {
             }
         });
 
+        // Validate checkbox groups that require at least one selection
+        dfStep.querySelectorAll('[data-checkbox-required]').forEach((dfGroup) => {
+            if (this.dfConditional && !this.dfConditional.isVisible(dfGroup)) return;
+            if (!dfGroup.querySelector('input[type="checkbox"]:checked')) {
+                this.addError(dfGroup, 'Bitte mindestens eine Option auswählen');
+                dfValid = false;
+            }
+        });
+
         return dfValid;
     }
 

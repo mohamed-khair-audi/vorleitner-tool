@@ -34,16 +34,24 @@ class FormDataValidator
     {
         $dfErrors = [];
 
+        // Normalize "field[]" keys → "field" (sent by JS for checkbox/multi-select groups)
+        $dfNormalized = [];
+        foreach ($dfData as $dfKey => $dfVal) {
+            $dfNormalized[rtrim($dfKey, '[]')] = $dfVal;
+        }
+        $dfData = $dfNormalized;
+
         foreach ($dfRules as $dfField => $dfRule) {
             $dfValue = $dfData[$dfField] ?? '';
             $dfLabel = $dfRule['label'] ?? $dfField;
 
-            if (!empty($dfRule['required']) && ($dfValue === '' || $dfValue === null)) {
+            $dfIsEmpty = $dfValue === '' || $dfValue === null || (is_array($dfValue) && empty($dfValue));
+            if (!empty($dfRule['required']) && $dfIsEmpty) {
                 $dfErrors[$dfField] = "{$dfLabel} ist ein Pflichtfeld";
                 continue;
             }
 
-            if ($dfValue === '' || $dfValue === null) continue;
+            if ($dfValue === '' || $dfValue === null || (is_array($dfValue) && empty($dfValue))) continue;
 
             if (($dfRule['type'] ?? '') === 'email' && !is_email((string) $dfValue)) {
                 $dfErrors[$dfField] = "{$dfLabel}: Ungültige E-Mail-Adresse";

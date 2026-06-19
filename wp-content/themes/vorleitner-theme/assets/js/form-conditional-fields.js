@@ -30,8 +30,9 @@ class FormConditionalFields {
 
     updateBlock(dfBlock, dfFieldName, dfShowValue, dfShouldScroll) {
         const dfWasHidden = dfBlock.hidden;
-        const dfChecked   = this.dfForm.querySelector(`[name="${dfFieldName}"]:checked`);
-        const dfVisible   = dfChecked && dfChecked.value === dfShowValue;
+        // Supports both radios and checkboxes: looks for the exact [value] being checked
+        const dfChecked   = this.dfForm.querySelector(`[name="${dfFieldName}"][value="${dfShowValue}"]:checked`);
+        const dfVisible   = !!dfChecked;
 
         dfBlock.hidden = !dfVisible;
 

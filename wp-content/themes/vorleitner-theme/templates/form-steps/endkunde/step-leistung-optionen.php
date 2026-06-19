@@ -5,6 +5,7 @@
 
 <?php
 $dfPartialDir = get_template_directory() . '/templates/form-steps/endkunde/_partials/';
+include $dfPartialDir . 'leistungen-fields.php';
 include $dfPartialDir . 'werkstattleistung-fields.php';
 include $dfPartialDir . 'zusatzoptionen-fields.php';
 ?>

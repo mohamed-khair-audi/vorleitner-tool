@@ -10,7 +10,7 @@ class FormDataSanitizer
     ];
 
     private array $dfEmailFields   = ['kunde_email', 'eigentuemer_email'];
-    private array $dfArrayFields   = ['standgeld_hingewiesen_per', 'zusatzleistungen', 'einsatz_typ'];
+    private array $dfArrayFields   = ['standgeld_hingewiesen_per', 'zusatzleistungen', 'einsatz_typ', 'beauftragte_leistungen'];
     private array $dfDecimalFields = [
         'standgeld_betrag_euro', 'bergung_stunden_anzahl', 'kostenangebot_euro',
         'arbeitszeit_stunden', 'motoroel_korrigiert_liter', 'kuehlmittel_korrigiert_liter',

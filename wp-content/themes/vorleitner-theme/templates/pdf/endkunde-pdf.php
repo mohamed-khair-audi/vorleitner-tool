@@ -41,7 +41,7 @@ function ekVal(array $dfData, string $dfKey, string $dfDefault = ''): string {
     </td>
     <td style="width:50%">
         <div class="hdr-main">Kundenauftrag</div>
-        <div class="hdr-sub">Werkstatt &amp; Service</div>
+        <div class="hdr-sub">Abschleppen, Werkstatt &amp; Service</div>
     </td>
 </tr>
 </table>
@@ -109,7 +109,12 @@ function ekVal(array $dfData, string $dfKey, string $dfDefault = ''): string {
 </tr>
 <tr>
     <td class="lbl" style="border:0.5pt solid #ccc">KM-Stand (ca.)</td>
-    <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'km_stand') ?></td>
+    <td class="val" style="border:0.5pt solid #ccc"><?php
+        $dfKm = $dfData['km_stand'] ?? '';
+        echo ($dfKm !== '' && is_numeric($dfKm))
+            ? number_format((int)$dfKm, 0, ',', '.') . ' km'
+            : PdfFieldOutput::text((string)$dfKm);
+    ?></td>
 </tr>
 </table>
 
@@ -133,18 +138,20 @@ function ekVal(array $dfData, string $dfKey, string $dfDefault = ''): string {
 </table>
 
 <table style="margin-bottom:8px;border:0.5pt solid #ccc">
-<tr><td colspan="2" class="sec">Werkstattleistung</td></tr>
+<tr><td colspan="2" class="sec">Beauftragte Leistungen</td></tr>
 <tr>
-    <td class="lbl" style="width:32%;border:0.5pt solid #ccc">Gew&uuml;nscht</td>
-    <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'werkstattleistung_gewuenscht_label') ?></td>
+    <td class="val" colspan="2" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'beauftragte_leistungen_label') ?></td>
 </tr>
-<?php if (($dfData['werkstattleistung_gewuenscht'] ?? '') === 'ja'): ?>
-<tr>
-    <td class="lbl" style="border:0.5pt solid #ccc">Option</td>
-    <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'werkstattleistung_option_label') ?></td>
-</tr>
-<?php endif; ?>
 </table>
+
+<?php if (!empty($dfData['werkstattleistung_option_label'])): ?>
+<table style="margin-bottom:8px;border:0.5pt solid #ccc">
+<tr><td colspan="2" class="sec">Werkstattauftrag – Umfang</td></tr>
+<tr>
+    <td class="val" colspan="2" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'werkstattleistung_option_label') ?></td>
+</tr>
+</table>
+<?php endif; ?>
 
 <table style="margin-bottom:8px;border:0.5pt solid #ccc">
 <tr><td colspan="2" class="sec">Zusatzoptionen</td></tr>
@@ -153,9 +160,30 @@ function ekVal(array $dfData, string $dfKey, string $dfDefault = ''): string {
     <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'ersatzfahrzeug_gewuenscht_label') ?></td>
 </tr>
 <tr>
-    <td class="lbl" style="border:0.5pt solid #ccc">Ich hole das Auto selbst ab</td>
+    <td class="lbl" style="border:0.5pt solid #ccc">Ich hole das Fahrzeug selbst ab</td>
     <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'auto_selbst_abholung_label') ?></td>
 </tr>
+<?php if (($dfData['auto_selbst_abholung'] ?? '') === 'nein'): ?>
+<tr>
+    <td class="lbl" style="border:0.5pt solid #ccc">Abholer Name</td>
+    <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'abholer_name') ?></td>
+</tr>
+<tr>
+    <td class="lbl" style="border:0.5pt solid #ccc">Abholer Adresse</td>
+    <td class="val" style="border:0.5pt solid #ccc">
+        <?= ekVal($dfData,'abholer_strasse') ?> <?= ekVal($dfData,'abholer_hausnummer') ?>,
+        <?= ekVal($dfData,'abholer_plz') ?> <?= ekVal($dfData,'abholer_ort') ?>
+    </td>
+</tr>
+<tr>
+    <td class="lbl" style="border:0.5pt solid #ccc">Abholer Telefon</td>
+    <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'abholer_telefon') ?></td>
+</tr>
+<tr>
+    <td class="lbl" style="border:0.5pt solid #ccc">Abholervollmacht</td>
+    <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'abholer_vollmacht_label') ?></td>
+</tr>
+<?php endif; ?>
 <tr>
     <td class="lbl" style="border:0.5pt solid #ccc">Sammeltransport ADAC / andere Versicherung</td>
     <td class="val" style="border:0.5pt solid #ccc"><?= ekVal($dfData,'sammeltransport_geplant_label') ?></td>

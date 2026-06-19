@@ -16,19 +16,35 @@ class EndkundeFieldLabels
     public static function unfallSchuld(): array
     {
         return [
-            'selbst_schuld'  => 'Sie sind selbst schuld',
+            'selbst_schuld'  => 'Ich bin selbst schuld',
             'gegner_schuld'  => 'Der Unfallgegner ist schuld',
-            'schuld_unklar'  => 'Schuldfrage ist unklar',
+            'schuld_unklar'  => 'Schuldfrage unklar',
         ];
     }
 
     public static function werkstattOption(): array
     {
         return [
-            'nur_diagnose' => 'Sie wünschen vorerst nur die Diagnose (71,00 – 238,00 Euro, Kosten sind zu rechnen)',
-            'nur_anruf'    => 'Sie wünschen zunächst nur einen Anruf',
-            'beauftragung' => 'Sie beauftragen die Firma Vorleitner mit Reparatur, Diagnose und Ersatzteile-Bestellung',
+            'nur_diagnose' => 'Ich wünsche vorerst nur eine Diagnose.',
+            'nur_anruf'    => 'Ich möchte zunächst nur einen Anruf.',
+            'beauftragung' => 'Hiermit beauftrage ich die Firma Vorleitner mit der Reparatur, Diagnose und Ersatzteile-Bestellung.',
         ];
+    }
+
+    public static function beauftragteLeistungen(): array
+    {
+        return [
+            'abschleppen'      => 'Abschleppleistung',
+            'pannenhilfe'      => 'Pannenhilfe',
+            'werkstattauftrag' => 'Werkstattauftrag für Diagnose und Reparatur',
+        ];
+    }
+
+    public static function leistungenLabel(array $dfValues): string
+    {
+        $dfMap    = self::beauftragteLeistungen();
+        $dfLabels = array_map(fn($v) => $dfMap[$v] ?? $v, (array) $dfValues);
+        return implode(', ', $dfLabels);
     }
 
     public static function label(string $dfKey, string $dfValue): string

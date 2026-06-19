@@ -15,7 +15,7 @@ class EmailHtmlLayout
             . '<tr><td align="center">'
             . '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e2e8f0">'
             . '<tr><td style="background:linear-gradient(145deg,#1e293b 0%,#334155 100%);padding:24px 28px;color:#fff">'
-            . '<p style="margin:0 0 4px;font-size:13px;font-weight:600;color:#93c5fd">Autohaus Vorleitner</p>'
+            . '<p style="margin:0 0 4px;font-size:13px;font-weight:600;color:#93c5fd">Vorleitner Abschleppdienst Kfz-Meisterbetrieb Autokran und Autovermietung</p>'
             . $dfBadgeHtml
             . '<h1 style="margin:0;font-size:22px;font-weight:700;line-height:1.3;color:#fff">' . esc_html($dfTitle) . '</h1>'
             . '</td></tr>'
